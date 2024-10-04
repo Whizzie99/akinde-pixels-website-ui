@@ -16,6 +16,8 @@ const config: Config = {
       },
       colors: {
         colorPrimary: "#F28E2C",
+        "white-alpha-1": "rgba(253, 253, 253, 0.4)",
+
         // background: "var(--background)",
         // foreground: "var(--foreground)",
       },
