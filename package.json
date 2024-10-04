@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -14,6 +15,7 @@
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.79.4",
+    "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.3"
   },
   "devDependencies": {
