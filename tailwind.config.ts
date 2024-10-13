@@ -8,9 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        lato: ["var(--font-lato)"],
+      },
+      backgroundImage: {
+        "sub-hero-bg": "url('/images/sub-hero-img.png')",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        colorPrimary: "#F28E2C",
+        "white-alpha-1": "rgba(253, 253, 253, 0.4)",
+
+        // background: "var(--background)",
+        // foreground: "var(--foreground)",
       },
     },
   },

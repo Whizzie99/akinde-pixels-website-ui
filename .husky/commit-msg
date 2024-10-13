@@ -1,0 +1,12 @@
+# Regex for commit message format
+commit_message_regex="^(feat|bugFix|quickFix|chore|docs|style|refactor|test|perf|setup):\s.+$"
+error_msg="Aborting commit. Your commit message is invalid. Please use the format: '<type>: <description>'"
+
+# Get the commit message
+commit_message="$(cat "$1")"
+
+# Check if the commit message matches the regex
+if ! echo "$commit_message" | grep -Eq "$commit_message_regex"; then
+  echo "$error_msg" >&2
+  exit 1
+fi
