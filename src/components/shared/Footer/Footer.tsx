@@ -4,7 +4,7 @@ import footpix from "../../../../public/images/footer-pix.png";
 import footerPix1 from "../../../../public/images/footer-pix1.png";
 
 import Link from "next/link";
-import { footerNav, footerPix, footerSocials } from "../../../../db/data";
+import { footerNav, footerSocials } from "../../../../db/data";
 import Image from "next/image";
 
 const Footer = () => {

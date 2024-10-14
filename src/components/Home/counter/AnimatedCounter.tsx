@@ -2,9 +2,6 @@
 
 import React from "react";
 import CountUp from "react-countup";
-import { VscRemoteExplorer } from "react-icons/vsc";
-import { RiLuggageDepositLine } from "react-icons/ri";
-import { MdEventRepeat } from "react-icons/md";
 
 const AnimatedCounter = () => {
   return (
