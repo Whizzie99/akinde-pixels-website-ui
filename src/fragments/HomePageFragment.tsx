@@ -11,7 +11,7 @@ export default function HomePageFragment() {
       <Galleries />
       <OurBrand />
       <AnimatedCounter />
-      <Testimonials/>
+      <Testimonials />
     </>
   );
 }

@@ -12,28 +12,31 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    image: '/images/Rectangle 3712.png',
-    imageWidth: 400, 
+    image: "/images/Rectangle 3712.png",
+    imageWidth: 400,
     imageHeight: 400,
     title: "Amazing Experience",
-    details: "The photography service was exceptional. They captured every moment perfectly!"
+    details:
+      "The photography service was exceptional. They captured every moment perfectly!",
   },
   {
     id: 2,
-    image: '/images/Rectangle 3712 (1).png',
-    imageWidth: 400, 
-    imageHeight: 400, 
+    image: "/images/Rectangle 3712 (1).png",
+    imageWidth: 400,
+    imageHeight: 400,
     title: "Professional and Creative",
-    details: "I was impressed by their creativity and attention to detail. Highly recommended!"
+    details:
+      "I was impressed by their creativity and attention to detail. Highly recommended!",
   },
   {
     id: 3,
-    image: '/images/Rectangle 3712.png',
+    image: "/images/Rectangle 3712.png",
     imageWidth: 400,
     imageHeight: 400,
     title: "Exceeded Expectations",
-    details: "The photos turned out even better than I imagined. A truly talented team!"
-  }
+    details:
+      "The photos turned out even better than I imagined. A truly talented team!",
+  },
 ];
 
 export interface footerNavItems {
@@ -85,9 +88,7 @@ export const footerNav: footerNavItems[] = [
     name: "Contact Us",
     link: "/contact",
   },
-  
 ];
-
 
 import { ReactNode } from "react";
 import { IconType } from "react-icons";
@@ -95,14 +96,14 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export interface FooterSocial {
   id: number;
-  icon: IconType; 
+  icon: IconType;
   link: string;
 }
 
 export const footerSocials: FooterSocial[] = [
   {
     id: 1,
-    icon: FaFacebookF, 
+    icon: FaFacebookF,
     link: "https://www.facebook.com/akinde.pixels",
   },
   {
@@ -131,4 +132,4 @@ export const footerPix: footerPix[] = [
     id: 2,
     image: "/images/footer-pix1.png",
   },
-]
+];
