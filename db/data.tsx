@@ -1,4 +1,7 @@
-// db/data.ts
+import { ReactNode } from "react";
+import { IconType } from "react-icons";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+
 
 export interface Testimonial {
   id: number;
@@ -7,6 +10,23 @@ export interface Testimonial {
   imageHeight: number;
   title: string;
   details: string;
+}
+
+export interface footerNavItems {
+  id: number;
+  name: string;
+  link: string;
+}
+
+export interface FooterSocial {
+  id: number;
+  icon: IconType;
+  link: string;
+}
+
+export interface footerPix {
+  id: number;
+  image: string;
 }
 
 export const testimonials: Testimonial[] = [
@@ -38,12 +58,6 @@ export const testimonials: Testimonial[] = [
       "The photos turned out even better than I imagined. A truly talented team!",
   },
 ];
-
-export interface footerNavItems {
-  id: number;
-  name: string;
-  link: string;
-}
 
 export const footerNav: footerNavItems[] = [
   {
@@ -90,16 +104,6 @@ export const footerNav: footerNavItems[] = [
   },
 ];
 
-import { ReactNode } from "react";
-import { IconType } from "react-icons";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-
-export interface FooterSocial {
-  id: number;
-  icon: IconType;
-  link: string;
-}
-
 export const footerSocials: FooterSocial[] = [
   {
     id: 1,
@@ -117,11 +121,6 @@ export const footerSocials: FooterSocial[] = [
     link: "https://www.twitter.com/akinde.pixels",
   },
 ];
-
-export interface footerPix {
-  id: number;
-  image: string;
-}
 
 export const footerPix: footerPix[] = [
   {
