@@ -1,0 +1,41 @@
+.swiperContainer {
+  position: relative;
+}
+
+.swiperButtonNext,
+.swiperButtonPrev {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 30px;
+  height: 30px;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiperButtonNext::after,
+.swiperButtonPrev::after {
+  font-size: 8px;
+  color: white;
+}
+
+.swiperButtonNext:hover,
+.swiperButtonPrev:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.swiperPagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.swiperPaginationBullet {
+  background: white;
+  opacity: 0.5;
+}
+
+.swiperPaginationBulletActive {
+  opacity: 1;
+}
