@@ -54,7 +54,7 @@ const TestimonialCarousel = () => {
               src={slide.image}
               alt={slide.caption}
               width={100}
-              height={100} 
+              height={100}
               className="w-full h-auto object-cover rounded-lg"
             />
             <div className="mt-2 flex flex-col items-center">
