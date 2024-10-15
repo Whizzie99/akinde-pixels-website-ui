@@ -8,7 +8,6 @@ import { footerNav, footerSocials } from "../../../../db/data";
 import Image from "next/image";
 
 const Footer = () => {
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -73,7 +72,7 @@ const Footer = () => {
           <hr className="bg-black lg:w-[40%] w-full h-[12px] my-4" />
         </div>
         <div className="text-center py-4 text-sm text-gray-600">
-          &copy; copyrights Akinde Pixels {currentYear} 
+          &copy; copyrights Akinde Pixels {currentYear}
         </div>
       </div>
     </footer>

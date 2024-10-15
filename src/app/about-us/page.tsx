@@ -1,8 +1,8 @@
-import AboutPageFragments from '@/fragments/AboutPageFragments'
-import React from 'react'
+import AboutPageFragments from "@/fragments/AboutPageFragments";
+import React from "react";
 
 const page = () => {
-  return <AboutPageFragments />
-}
+  return <AboutPageFragments />;
+};
 
-export default page
+export default page;

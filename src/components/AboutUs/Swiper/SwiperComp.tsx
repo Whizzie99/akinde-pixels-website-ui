@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { aboutSwiper } from "../../../../db/data";
 
-import styles from "../../Home/Testimonials/SwiperCustom.module.css";
 
 // Import Swiper styles
 import "swiper/css";
@@ -40,8 +39,8 @@ const TestimonialCarousel = () => {
         slidesPerView={2.5}
         loop={true}
         navigation={{
-          prevEl: '.swiper-button-prev',
-          nextEl: '.swiper-button-next',
+          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
         }}
         breakpoints={{
           1024: {
@@ -52,7 +51,11 @@ const TestimonialCarousel = () => {
       >
         {aboutSwiper.map((slide) => (
           <SwiperSlide key={slide.id} className="flex flex-col items-center">
-            <img src={slide.image} alt={slide.caption} className="w-full h-auto object-cover rounded-lg" />
+            <img
+              src={slide.image}
+              alt={slide.caption}
+              className="w-full h-auto object-cover rounded-lg"
+            />
             <div className="mt-2 flex flex-col items-center">
               <p className="text-center pb-2 text-[#F28E2C]">{slide.caption}</p>
               <hr className="w-[35%] border-[#F28E2C]" />

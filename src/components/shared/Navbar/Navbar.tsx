@@ -29,13 +29,15 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "visible";
-    return () => { document.body.style.overflow = "visible"; };
+    return () => {
+      document.body.style.overflow = "visible";
+    };
   }, [isMenuOpen]);
 
   return (
@@ -51,7 +53,7 @@ const Navbar = () => {
             className="cursor-pointer"
           />
         </div>
-        <Link href='/' className="w-[150px] h-[75px] relative mx-auto">
+        <Link href="/" className="w-[150px] h-[75px] relative mx-auto">
           <Image
             src={logo}
             alt="Akinde Pixels"
@@ -63,7 +65,11 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex items-center gap-6">
           {navData.map((item) => (
-            <Link key={item.id} href={item.link} className="capitalize font-lato">
+            <Link
+              key={item.id}
+              href={item.link}
+              className="capitalize font-lato"
+            >
               {item.name}
             </Link>
           ))}
@@ -78,9 +84,9 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div 
+      <div
         className={`fixed inset-0 bg-white z-50 transition-all px-6 pb-8 duration-300 ease-in-out md:hidden ${
-          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         style={{ overflowY: "auto" }}
       >
@@ -112,10 +118,11 @@ const Navbar = () => {
                 className="mo"
               />
             </div>
-            <p className="my-6 text-xl font-medium">
-              Capture Your Moments!
-            </p>
-            <Link href='/contact' className="w-full bg-[#F28E2C] text-white py-3 px-12 rounded text-lg font-semibold">
+            <p className="my-6 text-xl font-medium">Capture Your Moments!</p>
+            <Link
+              href="/contact"
+              className="w-full bg-[#F28E2C] text-white py-3 px-12 rounded text-lg font-semibold"
+            >
               Book Us Now!
             </Link>
           </div>

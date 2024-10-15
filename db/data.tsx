@@ -54,7 +54,7 @@ export const aboutSwiper: aboutSwiper[] = [
     image: "/images/aboutSwiper3.png",
     caption: "Editorials",
   },
-]
+];
 
 export const testimonials: Testimonial[] = [
   {
