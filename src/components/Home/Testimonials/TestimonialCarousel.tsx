@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { testimonials } from "../../../../db/data";
-import { Star } from "lucide-react";
+import { IoMdStar } from "react-icons/io";
 import styles from "./SwiperCustom.module.css";
 
 // Import Swiper styles
@@ -55,7 +55,7 @@ const TestimonialCarousel = () => {
             <p className="mt-2 text-gray-600">{testimonial.details}</p>
             <div className="flex mt-4 space-x-2">
               {[...Array(5)].map((_, index) => (
-                <Star key={index} className="text-black" size={20} />
+                <IoMdStar key={index} className="text-black" size={20} />
               ))}
             </div>
           </SwiperSlide>

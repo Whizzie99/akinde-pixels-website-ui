@@ -1,7 +1,5 @@
-import { ReactNode } from "react";
 import { IconType } from "react-icons";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-
 
 export interface Testimonial {
   id: number;
@@ -28,6 +26,35 @@ export interface footerPix {
   id: number;
   image: string;
 }
+
+export interface aboutSwiper {
+  id: number;
+  image: string;
+  caption: string;
+}
+
+export const aboutSwiper: aboutSwiper[] = [
+  {
+    id: 1,
+    image: "/images/aboutSwiper.png",
+    caption: "Weddings",
+  },
+  {
+    id: 2,
+    image: "/images/aboutSwiper1.png",
+    caption: "Portraits",
+  },
+  {
+    id: 3,
+    image: "/images/aboutSwiper2.png",
+    caption: "Birthdays",
+  },
+  {
+    id: 4,
+    image: "/images/aboutSwiper3.png",
+    caption: "Editorials",
+  },
+]
 
 export const testimonials: Testimonial[] = [
   {

@@ -8,8 +8,11 @@ import { footerNav, footerSocials } from "../../../../db/data";
 import Image from "next/image";
 
 const Footer = () => {
+
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="bg-[#7B7B7B4D] py-8">
+    <footer className="bg-[#7B7B7B4D] py-8">
       <div className="custom-container">
         <div className="flex justify-between items-center py-8">
           <hr className="bg-black lg:w-[40%] w-full h-[12px] my-4" />
@@ -69,8 +72,11 @@ const Footer = () => {
         <div className="flex justify-center items-center">
           <hr className="bg-black lg:w-[40%] w-full h-[12px] my-4" />
         </div>
+        <div className="text-center py-4 text-sm text-gray-600">
+          &copy; copyrights Akinde Pixels {currentYear} 
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -14,11 +14,11 @@ const OurBrand = () => {
           our brand
         </h2>
       </div>
-      <div className=" bg-[#FEF8F2] py-12">
+      <div className="bg-[#FEF8F2] py-12">
         <div className="custom-container">
-          <div className="flex gap-6 items-center">
-            <div className="w-1/2">
-              <div className="relative w-[500px] h-[333.33px]">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 w-full">
+            <div className="w-full flex justify-center lg:w-auto">
+              <div className="relative w-[500px] h-[333.33px] top-10 lg:max-w-full">
                 <Image
                   src={logo}
                   alt="sample"
@@ -29,16 +29,16 @@ const OurBrand = () => {
                 />
               </div>
             </div>
-            <div className="w-1/2">
+            <div>
               <p className="font-lato text-black text-left mb-6 leading-[24px]">
-                Akinde Pixels is not just a visual storytelling agency; we are a
-                powerhouse of creativity and emotions. We specialize in crafting
-                images that don&apos;t just capture moments but immortalize
-                them. We believe that every picture has the power to tell
-                story-one that resonates deeply with its audience, transcending
-                the boundaries of language and culture. Our passion lies in
-                creating visually stunning and emotionally charged images that
-                linger in the minds of those who view them.
+                    Akinde Pixels is not just a visual storytelling agency; we are a
+                    powerhouse of creativity and emotions. We specialize in crafting
+                    images that don&apos;t just capture moments but immortalize
+                    them. We believe that every picture has the power to tell
+                    story-one that resonates deeply with its audience, transcending
+                    the boundaries of language and culture. Our passion lies in
+                    creating visually stunning and emotionally charged images that
+                    linger in the minds of those who view them.
               </p>
               <p>
                 Akinde Pixels is not just a visual storytelling agency; we are a
@@ -65,7 +65,8 @@ const OurBrand = () => {
       </div>
       <div className="custom-container">
         <div className="flex items-end gap-4 mt-[7rem]">
-          <div className="relative w-full h-[380px] flex items-end justify-center pb-8">
+          {/* First Image */}
+          <div className="relative w-full h-[380px] md:w-[calc(50%-0.67rem)] lg:w-[calc(33%-0.67rem)] flex items-end justify-center pb-8">
             <Image
               src={sampleImg}
               alt="sample"
@@ -74,12 +75,10 @@ const OurBrand = () => {
               priority
               className="object-cover"
             />
-            {/* <p className="font-lato relative z-10 text-black bg-white-alpha-1 p-4 font-bold capitalize text-[1.25rem]">
-              weddings
-            </p> */}
           </div>
-          <div className="relative w-full h-[450px] flex items-end justify-center pb-8">
-            <Image
+          {/* Middle Image with Original Height */}
+          <div className="relative w-full h-[450px] md:w-[calc(50%-0.67rem)] lg:w-[calc(33%-0.67rem)] flex items-end justify-center pb-8">
+          <Image
               src={sampleImg}
               alt="sample"
               fill
@@ -87,11 +86,9 @@ const OurBrand = () => {
               priority
               className="object-cover"
             />
-            {/* <p className="font-lato relative z-10 text-black bg-white-alpha-1 p-4 font-bold capitalize text-[1.25rem]">
-              weddings
-            </p> */}
           </div>
-          <div className="relative w-full h-[380px] flex items-end justify-center pb-8">
+          {/* Last Image, Hidden on Small Screens */}
+          <div className="relative hidden lg:flex w-full h-[380px] lg:w-[calc(33%-0.67rem)] items-end justify-center pb-8">
             <Image
               src={sampleImg}
               alt="sample"
@@ -100,14 +97,11 @@ const OurBrand = () => {
               priority
               className="object-cover"
             />
-            {/* <p className="font-lato relative z-10 text-black bg-white-alpha-1 p-4 font-bold capitalize text-[1.25rem]">
-              weddings
-            </p> */}
           </div>
         </div>
       </div>
     </div>
-  );
+    );
 };
 
 export default OurBrand;
