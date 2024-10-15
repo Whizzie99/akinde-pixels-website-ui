@@ -15,7 +15,7 @@ const AnimatedCounter = () => {
           <h3 className="mb-2 text-[12px] lg:text-[28px]">Photographed</h3>
         </div>
         <div className="text-center">
-          <div className="text-[20px] lg:text-[48px] flex items-center justify-center gap-3">
+          <div className="text-[20px] lg:text-[48px] flex items-center justify-center">
             <CountUp end={10} duration={5} separator="," />
           </div>
           <h3 className="mb-2 text-[12px] lg:text-[28px]">Years in business</h3>
