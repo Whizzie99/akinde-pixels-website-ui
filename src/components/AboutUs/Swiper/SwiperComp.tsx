@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { aboutSwiper } from "../../../../db/data";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -51,9 +50,11 @@ const TestimonialCarousel = () => {
       >
         {aboutSwiper.map((slide) => (
           <SwiperSlide key={slide.id} className="flex flex-col items-center">
-            <img
+            <Image
               src={slide.image}
               alt={slide.caption}
+              width={100}
+              height={100} 
               className="w-full h-auto object-cover rounded-lg"
             />
             <div className="mt-2 flex flex-col items-center">
