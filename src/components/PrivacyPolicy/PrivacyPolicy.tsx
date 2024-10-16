@@ -160,7 +160,7 @@ const PrivacyPolicy = () => {
           <p className="font-semibold text-xl capitalize">Rescheduling</p>
           <p>
             In the event of rescheduling, We will use commercially reasonable
-            efforts to accommodate Client’s change despite using commercially
+            efforts to accommodate Client&apos;s change despite using commercially
             reasonable efforts, the parties agree that such rescheduling will be
             deemed as cancellation by client and that Akinde Pixels will be
             under no obligation to perform the services other than on the
@@ -169,7 +169,7 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="mb-4">
-          <p className="font-semibold text-xl capitalize">children's privacy</p>
+          <p className="font-semibold text-xl capitalize">children&apos;s privacy</p>
           <p>
             Our website and services are not directed to individuals under the
             age of 13. We do not knowingly collect personal information from
