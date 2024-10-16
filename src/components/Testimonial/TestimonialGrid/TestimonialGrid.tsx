@@ -1,3 +1,5 @@
+'use client'
+
 import { testimonies } from "../../../../db/data";
 import { IoMdStar } from "react-icons/io";
 import Image from "next/image";
