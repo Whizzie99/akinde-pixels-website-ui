@@ -33,6 +33,60 @@ export interface aboutSwiper {
   caption: string;
 }
 
+export interface Testimony {
+  id: number;
+  image: string;
+  title: string;
+  details: string;
+}
+
+export const testimonies: Testimony[] = [
+  {
+    id: 1,
+    image: "/images/Rectangle 3712.png",
+    title: "Mr & Mrs Cole",
+    details:
+      "The photography service was exceptional. They captured every moment perfectly!",
+  },
+  {
+    id: 2,
+    image: "/images/Rectangle 3712 (1).png",
+    title: "Jennifer",
+    details:
+      "I was impressed by their creativity and attention to detail. Highly recommended!",
+  },
+  {
+    id: 3,
+    image: "/images/Rectangle 3712 (1).png",
+    title: "Taylor",
+    details:
+      "I was impressed by their creativity and attention to detail. Highly recommended!",
+  },
+
+  {
+    id: 4,
+    image: "/images/Rectangle 3712.png",
+    title: "Mr and Mrs Cole",
+    details:
+      "Thank you for making our day memorable, we love what the brnadd gave us!",
+  },
+  {
+    id: 5,
+    image: "/images/Rectangle 3712 (1).png",
+    title: "Taylor",
+    details:
+      "I was impressed by their creativity and attention to detail. Highly recommended!",
+  },
+  {
+    id: 6,
+    image: "/images/Rectangle 3712 (1).png",
+    title: "Taylor",
+    details:
+      "I was impressed by their creativity and attention to detail. Highly recommended!",
+  },
+];
+
+
 export const aboutSwiper: aboutSwiper[] = [
   {
     id: 1,
