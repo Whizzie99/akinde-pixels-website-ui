@@ -153,7 +153,7 @@ export const footerNav: footerNavItems[] = [
   {
     id: 3,
     name: "About Us",
-    link: "/about",
+    link: "/about-us",
   },
   {
     id: 4,
