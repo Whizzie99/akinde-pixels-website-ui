@@ -1,8 +1,8 @@
-import PrivacyPolicyFragment from '@/fragments/PrivacyPolicyFragment'
-import React from 'react'
+import PrivacyPolicyFragment from "@/fragments/PrivacyPolicyFragment";
+import React from "react";
 
 const page = () => {
-  return <PrivacyPolicyFragment/>
-}
+  return <PrivacyPolicyFragment />;
+};
 
-export default page
+export default page;
