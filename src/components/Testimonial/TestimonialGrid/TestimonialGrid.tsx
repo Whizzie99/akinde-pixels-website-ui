@@ -1,20 +1,29 @@
 import { testimonies } from "../../../../db/data";
 import { IoMdStar } from "react-icons/io";
 import Image from "next/image";
-import React from 'react';
+import React from "react";
 
 const TestimonialGrid = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-8 relative w-[85vw] mx-auto px-4 pt-8">
-      <div className="absolute top-0 -left-[7%] w-[90vw] h-[1px] bg-black"></div>
-      <div className="absolute lg:-top-[10%] -top-8 left-0 h-full w-[1px] bg-black"></div>
+      <div className="absolute top-0 -left-[7%] w-[90vw] h-[1px] bg-[#CCCCCC]"></div>
+      <div className="absolute lg:-top-[10%] -top-8 left-0 h-full w-[1px] bg-[#CCCCCC]"></div>
 
       {testimonies.map(({ id, image, title, details }) => (
-        <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 items-start lg:items-center" key={id}>
+        <div
+          className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 items-start lg:items-center"
+          key={id}
+        >
           <div className="w-full">
-            <Image src={image} alt={title} height={500} width={500} className="object-cover" />
+            <Image
+              src={image}
+              alt={title}
+              height={500}
+              width={500}
+              className="object-cover"
+            />
           </div>
-          
+
           <div className="flex flex-col space-y-2">
             <p className="text-base lg:text-xl">{title}</p>
             <p className="text-sm lg:text-base ">{details}</p>
@@ -28,6 +37,6 @@ const TestimonialGrid = () => {
       ))}
     </div>
   );
-}
+};
 
 export default TestimonialGrid;

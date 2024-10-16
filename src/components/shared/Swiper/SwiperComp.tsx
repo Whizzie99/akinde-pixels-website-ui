@@ -59,7 +59,9 @@ const TestimonialCarousel = () => {
                 className="w-full h-auto object-cover rounded-lg"
               />
               <div className="mt-2 flex flex-col items-center">
-                <p className="text-center pb-2 text-[#F28E2C]">{slide.caption}</p>
+                <p className="text-center pb-2 text-[#F28E2C]">
+                  {slide.caption}
+                </p>
                 <hr className="w-[35%] border-[#F28E2C]" />
               </div>
             </SwiperSlide>
@@ -69,7 +71,6 @@ const TestimonialCarousel = () => {
         <div className="swiper-button-next"></div>
       </div>
     </div>
-    
   );
 };
 

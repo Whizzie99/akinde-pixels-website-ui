@@ -86,7 +86,6 @@ export const testimonies: Testimony[] = [
   },
 ];
 
-
 export const aboutSwiper: aboutSwiper[] = [
   {
     id: 1,

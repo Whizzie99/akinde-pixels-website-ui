@@ -1,8 +1,8 @@
-import { TestimonialPageFragment } from '@/fragments/TestimonialPageFragment'
-import React from 'react'
+import { TestimonialPageFragment } from "@/fragments/TestimonialPageFragment";
+import React from "react";
 
 const page = () => {
-  return <TestimonialPageFragment/>
-}
+  return <TestimonialPageFragment />;
+};
 
-export default page
+export default page;
