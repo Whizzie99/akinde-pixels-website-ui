@@ -1,16 +1,14 @@
-'use client'
+"use client";
 
-import { faqs } from '../../../../db/data';
-import { useState } from 'react';
+import { faqs } from "../../../../db/data";
+import { useState } from "react";
 
 const FaqAccordion = () => {
-
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
 
   return (
     <div>
@@ -27,7 +25,7 @@ const FaqAccordion = () => {
               <span>{faq.questions}</span>
               <svg
                 className={`w-5 h-5 transition-transform transform ${
-                  activeIndex === index ? 'rotate-180' : ''
+                  activeIndex === index ? "rotate-180" : ""
                 }`}
                 fill="none"
                 stroke="currentColor"
@@ -44,19 +42,17 @@ const FaqAccordion = () => {
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                activeIndex === index ? 'max-h-screen' : 'max-h-0'
+                activeIndex === index ? "max-h-screen" : "max-h-0"
               }`}
-              style={{ maxHeight: activeIndex === index ? '500px' : '0' }}
+              style={{ maxHeight: activeIndex === index ? "500px" : "0" }}
             >
-              <div className="p-4 text-gray-600 bg-gray-50">
-                {faq.answer}
-              </div>
+              <div className="p-4 text-gray-600 bg-gray-50">{faq.answer}</div>
             </div>
           </div>
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FaqAccordion
+export default FaqAccordion;

@@ -41,48 +41,55 @@ export interface Testimony {
 }
 
 export interface faq {
-  id: number,
-  questions: string,
-  answer: string,
+  id: number;
+  questions: string;
+  answer: string;
 }
 
 export const faqs: faq[] = [
   {
     id: 1,
-    questions: 'How long does it take to receive our photographs?',
-    answer: 'It takes at most 2 weeks to receive your pictures depending on the volume and work to be done on it., you’ll receive a link to your online gallery where you can download your images. If you purchased a USB, that will be mailed to you as well.'
+    questions: "How long does it take to receive our photographs?",
+    answer:
+      "It takes at most 2 weeks to receive your pictures depending on the volume and work to be done on it., you’ll receive a link to your online gallery where you can download your images. If you purchased a USB, that will be mailed to you as well.",
   },
   {
     id: 2,
-    questions: 'What deposit is required? When is my final balance due? Do you accept credit cards?',
-    answer: 'A 40% retainer due upon signing. The final balance is due two weeks before your wedding date. We prefer a check for the balance and we DO NOT accept credit cards.'
+    questions:
+      "What deposit is required? When is my final balance due? Do you accept credit cards?",
+    answer:
+      "A 40% retainer due upon signing. The final balance is due two weeks before your wedding date. We prefer a check for the balance and we DO NOT accept credit cards.",
   },
   {
     id: 3,
-    questions: 'Do you travel for weddings?',
-    answer: 'The majority of our weddings take place in the Pennsylvania Area. However, we do travel for weddings and apply mileage fees and travel expenses to the package.'
+    questions: "Do you travel for weddings?",
+    answer:
+      "The majority of our weddings take place in the Pennsylvania Area. However, we do travel for weddings and apply mileage fees and travel expenses to the package.",
   },
   {
     id: 4,
-    questions: 'Do you offer Videography services?',
-    answer: 'Yes, we offer videography services.'
+    questions: "Do you offer Videography services?",
+    answer: "Yes, we offer videography services.",
   },
   {
     id: 5,
-    questions: 'Is my deposit refundable?',
-    answer: 'Unfortunately, deposits are non-refundable because once you secure a photographer, they turn down work to keep the date for you. However, we have been known to get creative and allow clients to turn their deposit into a credit towards other sessions and products.'
+    questions: "Is my deposit refundable?",
+    answer:
+      "Unfortunately, deposits are non-refundable because once you secure a photographer, they turn down work to keep the date for you. However, we have been known to get creative and allow clients to turn their deposit into a credit towards other sessions and products.",
   },
   {
     id: 6,
-    questions: 'Can we have the RAW images / RAW video?',
-    answer: 'We do not offer raw images or raw video. As we are ultimately judged by the product that we produce, we insist on having quality control over the finished product.'
+    questions: "Can we have the RAW images / RAW video?",
+    answer:
+      "We do not offer raw images or raw video. As we are ultimately judged by the product that we produce, we insist on having quality control over the finished product.",
   },
   {
     id: 7,
-    questions: 'How long does a portrait session last?',
-    answer: 'Typically, family portraits and engagement sessions are around 60 – 90 minutes in length.'
-  }
-]
+    questions: "How long does a portrait session last?",
+    answer:
+      "Typically, family portraits and engagement sessions are around 60 – 90 minutes in length.",
+  },
+];
 
 export const testimonies: Testimony[] = [
   {
