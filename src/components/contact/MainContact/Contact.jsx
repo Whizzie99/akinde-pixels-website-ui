@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import contactImagesm from "../../../../public/images/contact-page-sm.png";
 import Image from "next/image";
