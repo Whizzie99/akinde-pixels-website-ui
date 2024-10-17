@@ -41,8 +41,8 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="relative">
-      <div className="flex items-center justify-between py-4 px-4 md:px-8">
+    <div className="relative custom-container">
+      <div className="flex items-center justify-between py-4">
         <div className="md:hidden">
           <Image
             src={hamburgerIcon}
@@ -53,7 +53,7 @@ const Navbar = () => {
             className="cursor-pointer"
           />
         </div>
-        <Link href="/" className="w-[150px] h-[75px] relative mx-auto">
+        <Link href="/" className="w-[247.83px] h-[37.17px] relative">
           <Image
             src={logo}
             alt="Akinde Pixels"
