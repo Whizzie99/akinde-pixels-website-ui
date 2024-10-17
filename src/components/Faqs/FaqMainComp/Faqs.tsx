@@ -13,9 +13,9 @@ const Faqs = () => {
         <h1 className="lg:text-[40px] text-[28px] text-center text-[#CA7625] mb-8">
             FAQ
         </h1>
-      <div>
-        <FaqAccordion/>
-      </div>
+        <div>
+          <FaqAccordion/>
+        </div>
       <div className="my-12">
         <p className="text-2xl mb-4">Ready to Create Beautiful Memories?</p>
         <div className="flex gap-y-4 md:gap-x-4 mb-8 justify-between items-center ">
