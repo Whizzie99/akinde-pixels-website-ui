@@ -1,8 +1,7 @@
-import ContactPageFragment from '@/fragments/ContactPageFragment'
-import React from 'react'
+import ContactPageFragment from "@/fragments/ContactPageFragment";
 
 const page = () => {
-  return <ContactPageFragment/>
-}
+  return <ContactPageFragment />;
+};
 
-export default page
+export default page;

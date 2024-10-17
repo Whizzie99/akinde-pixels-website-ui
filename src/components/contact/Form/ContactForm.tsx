@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { useState, ChangeEvent, FormEvent } from 'react';
-import contactImage from '../../../../public/images/Contact-page-image.png';
-import Image from 'next/image';
+import { useState, ChangeEvent, FormEvent } from "react";
+import contactImage from "../../../../public/images/Contact-page-image.png";
+import Image from "next/image";
 
 interface FormData {
   firstName: string;
@@ -22,55 +22,64 @@ interface FormData {
 }
 
 const ContactForm = () => {
-
   const [formData, setFormData] = useState<FormData>({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    sessionType: '',
-    preferredService: '',
-    needStylist: '',
-    needMakeupArtist: '',
-    eventDate: '',
-    videoSessionDate: '',
-    venues: '',
-    budget: '',
-    guestCount: '',
-    textArea: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    sessionType: "",
+    preferredService: "",
+    needStylist: "",
+    needMakeupArtist: "",
+    eventDate: "",
+    videoSessionDate: "",
+    venues: "",
+    budget: "",
+    guestCount: "",
+    textArea: "",
   });
 
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
-
   };
 
-
-
   return (
-    <div className='lg:flex gap-6'>
-      <div className='p-4 lg:block hidden'>
-        <Image src={contactImage} width={600} height={100} alt=''/>
+    <div className="lg:flex gap-6">
+      <div className="p-4 lg:block hidden">
+        <Image src={contactImage} width={600} height={100} alt="" />
       </div>
       <div>
-        <div className='text-[#7B7B7B] border border-b-[#A3A3A3] border-l-[#A3A3A3] border-r-0 p-4'>
-          <p className='mb-2 '>Thank you for stopping by our photography website! We would love to hear from you and discuss how we can help you capture your special moments.</p>
-          <p>Whether you have a question, would like to book a session, or simply want to say hello, please don’t hesitate to reach out  as we look forward to connecting with you and capturing the beauty of your world!</p>
+        <div className="text-[#7B7B7B] border border-b-[#A3A3A3] border-l-[#A3A3A3] border-r-0 p-4">
+          <p className="mb-2 ">
+            Thank you for stopping by our photography website! We would love to
+            hear from you and discuss how we can help you capture your special
+            moments.
+          </p>
+          <p>
+            Whether you have a question, would like to book a session, or simply
+            want to say hello, please don’t hesitate to reach out as we look
+            forward to connecting with you and capturing the beauty of your
+            world!
+          </p>
         </div>
         <form onSubmit={handleSubmit} className="mt-16 space-y-8">
           <div className="grid grid-cols-2 gap-6">
             <div>
-              <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="firstName"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 First Name
               </label>
               <input
@@ -84,7 +93,10 @@ const ContactForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="lastName"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 Last Name
               </label>
               <input
@@ -98,7 +110,10 @@ const ContactForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="email"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 Email
               </label>
               <input
@@ -112,7 +127,10 @@ const ContactForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="phoneNumber" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="phoneNumber"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 Phone Number
               </label>
               <input
@@ -129,7 +147,10 @@ const ContactForm = () => {
 
           <div className="space-y-4">
             <div className="w-full">
-              <label htmlFor="sessionType" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="sessionType"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 Types of sessions
               </label>
               <select
@@ -139,7 +160,9 @@ const ContactForm = () => {
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
               >
-                <option value="" disabled>wedding</option>
+                <option value="" disabled>
+                  wedding
+                </option>
                 <option value="wedding">Wedding</option>
                 <option value="birthday">Birthday</option>
                 <option value="portraits">Portraits</option>
@@ -148,7 +171,10 @@ const ContactForm = () => {
             </div>
 
             <div className="w-full">
-              <label htmlFor="preferredService" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="preferredService"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 Preferred services
               </label>
               <select
@@ -158,14 +184,19 @@ const ContactForm = () => {
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
               >
-                <option value="" disabled>videography</option>
+                <option value="" disabled>
+                  videography
+                </option>
                 <option value="videography">Videography</option>
                 <option value="cinematography">Cinematography</option>
               </select>
             </div>
 
             <div className="w-full">
-              <label htmlFor="needStylist" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="needStylist"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 Do you need a stylist?
               </label>
               <select
@@ -175,14 +206,19 @@ const ContactForm = () => {
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
               >
-                <option value="" disabled>choose options</option>
+                <option value="" disabled>
+                  choose options
+                </option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
             </div>
 
             <div className="w-full">
-              <label htmlFor="needMakeupArtist" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="needMakeupArtist"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 Do you need a make up artist?
               </label>
               <select
@@ -192,7 +228,9 @@ const ContactForm = () => {
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
               >
-                <option value="" disabled>choose options</option>
+                <option value="" disabled>
+                  choose options
+                </option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
@@ -201,7 +239,10 @@ const ContactForm = () => {
 
           <div className="flex space-x-4">
             <div className="w-1/2">
-              <label htmlFor="eventDate" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="eventDate"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 Event Date
               </label>
               <input
@@ -214,7 +255,10 @@ const ContactForm = () => {
               />
             </div>
             <div className="w-1/2">
-              <label htmlFor="videoSessionDate" className="block mb-2 text-sm font-medium text-gray-700">
+              <label
+                htmlFor="videoSessionDate"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
                 Video Session Date
               </label>
               <input
@@ -229,60 +273,72 @@ const ContactForm = () => {
           </div>
 
           <div className="space-y-4">
-        <div className="w-full">
-          <label htmlFor="venues" className="block mb-2 text-sm font-medium text-gray-700">
-            Venue(s)
-          </label>
-          <input
-            type="text"
-            id="venues"
-            name="venues"
-            placeholder="Enter venue name(s) or location(s)"
-            value={formData.venues}
-            onChange={handleChange}
-            className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
-          />
-        </div>
+            <div className="w-full">
+              <label
+                htmlFor="venues"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
+                Venue(s)
+              </label>
+              <input
+                type="text"
+                id="venues"
+                name="venues"
+                placeholder="Enter venue name(s) or location(s)"
+                value={formData.venues}
+                onChange={handleChange}
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+              />
+            </div>
 
-        <div className="w-full">
-          <label htmlFor="budget" className="block mb-2 text-sm font-medium text-gray-700">
-            Do you have a budget? ($)
-          </label>
-          <input
-            type="text"
-            id="budget"
-            name="budget"
-            placeholder="Enter your estimated budget"
-            value={formData.budget}
-            onChange={handleChange}
-            className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
-          />
-        </div>
+            <div className="w-full">
+              <label
+                htmlFor="budget"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
+                Do you have a budget? ($)
+              </label>
+              <input
+                type="text"
+                id="budget"
+                name="budget"
+                placeholder="Enter your estimated budget"
+                value={formData.budget}
+                onChange={handleChange}
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+              />
+            </div>
 
-        <div className="w-full">
-          <label htmlFor="guestCount" className="block mb-2 text-sm font-medium text-gray-700">
-            How many guests do you expect to attend?
-          </label>
-          <input
-            type="number"
-            id="guestCount"
-            name="guestCount"
-            placeholder="Enter estimated number of guests"
-            value={formData.guestCount}
-            onChange={handleChange}
-            className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
-          />
-        </div>
-      </div>
+            <div className="w-full">
+              <label
+                htmlFor="guestCount"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
+                How many guests do you expect to attend?
+              </label>
+              <input
+                type="number"
+                id="guestCount"
+                name="guestCount"
+                placeholder="Enter estimated number of guests"
+                value={formData.guestCount}
+                onChange={handleChange}
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+              />
+            </div>
+          </div>
 
           <div>
-            <label htmlFor="textArea" className="block mb-2 text-sm font-medium text-gray-700">
-            Additional Information or questions 
+            <label
+              htmlFor="textArea"
+              className="block mb-2 text-sm font-medium text-gray-700"
+            >
+              Additional Information or questions
             </label>
             <textarea
               id="textArea"
               name="textArea"
-              placeholder='message'
+              placeholder="message"
               rows={4}
               value={formData.textArea}
               onChange={handleChange}
@@ -290,16 +346,16 @@ const ContactForm = () => {
             ></textarea>
           </div>
 
-      <button
-        type="submit"
-        className="w-full bg-[#F28E2C] text-white p-2 rounded hover:bg-[#e0954a] transition duration-300"
-      >
-        Submit
-      </button>
+          <button
+            type="submit"
+            className="w-full bg-[#F28E2C] text-white p-2 rounded hover:bg-[#e0954a] transition duration-300"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
