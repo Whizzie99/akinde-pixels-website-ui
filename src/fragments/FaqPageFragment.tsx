@@ -1,12 +1,12 @@
-import Faqs from '@/components/Faqs/FaqMainComp/Faqs'
-import React from 'react'
+import Faqs from "@/components/Faqs/FaqMainComp/Faqs";
+import React from "react";
 
 const FaqPageFragment = () => {
   return (
     <>
-      <Faqs/>
+      <Faqs />
     </>
-  )
-}
+  );
+};
 
-export default FaqPageFragment
+export default FaqPageFragment;
