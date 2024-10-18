@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import SwiperComp from "@/components/shared/Swiper/SwiperComp";
 import ModalBtn from "../shared/ModalButton/ModalBtn";
 

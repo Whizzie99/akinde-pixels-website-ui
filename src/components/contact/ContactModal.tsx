@@ -39,7 +39,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           CONTACT US
         </h2>
         <p className="text-center text-gray-600 mb-6">
-          Get in Touch and Let's Create Something Beautiful
+          Get in Touch and Let&apos;s Create Something Beautiful
         </p>
         <div className="text-start text-black grid lg:grid-cols-2 gap-12 py-6 custom-container">
           <div>

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { BsEnvelope } from "react-icons/bs";
-import ContactModal from "@/components/contact/ContactModal";
 import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
 
 const OurBrand = () => {
