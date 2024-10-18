@@ -75,7 +75,7 @@ const Navbar = () => {
           ))}
           {/* Add "Book Now" button for desktop */}
           <Link
-            href="/contact"
+            href="/booking"
             className="bg-[#F28E2C] text-white py-2 px-4 rounded-md capitalize font-lato"
           >
             Book Now
@@ -120,7 +120,7 @@ const Navbar = () => {
             </div>
             <p className="my-6 text-xl font-medium">Capture Your Moments!</p>
             <Link
-              href="/contact"
+              href="/booking"
               className="w-full bg-[#F28E2C] text-white py-3 px-12 rounded text-lg font-semibold"
             >
               Book Us Now!

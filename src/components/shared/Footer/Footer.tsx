@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="flex flex-col lg:justify-center lg:items-center ">
               <div className="mb-2">
                 <Link
-                  href="#"
+                  href="/booking"
                   className="flex items-center justify-center gap-2 mt-6 lg:w-[13rem] w-full bg-[#F28E2C] p-4 rounded-[5px] text-white "
                 >
                   Book a session

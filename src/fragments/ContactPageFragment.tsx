@@ -1,4 +1,4 @@
-import Contact from "@/components/contact/MainContact/Contact";
+import Contact from "@/components/boking/MainContact/Contact";
 
 const ContactPageFragment = () => {
   return <Contact />;
