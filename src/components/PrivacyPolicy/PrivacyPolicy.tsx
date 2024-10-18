@@ -209,7 +209,7 @@ const PrivacyPolicy = () => {
         <div className="my-12">
           <p className="text-2xl mb-4">Ready to Create Beautiful Memories?</p>
           <div>
-            <ModalBtn/>
+            <ModalBtn />
           </div>
         </div>
       </div>
