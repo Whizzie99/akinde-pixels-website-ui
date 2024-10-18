@@ -27,15 +27,15 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   if (!isOpen && !isAnimating) return null;
 
   return (
-    <div 
+    <div
       className={`fixed inset-0 bg-black z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out ${
-        isOpen ? 'bg-opacity-50' : 'bg-opacity-0 pointer-events-none'
+        isOpen ? "bg-opacity-50" : "bg-opacity-0 pointer-events-none"
       }`}
       onClick={onClose}
     >
-      <div 
+      <div
         className={`bg-white rounded-lg lg:p-8 p-4 w-[616px] h-[578px] max-w-lg transition-all duration-300 ease-in-out ${
-          isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+          isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
         }`}
         onClick={(e) => e.stopPropagation()}
       >
