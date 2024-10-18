@@ -51,7 +51,7 @@ const OurBrand = () => {
                 linger in the minds of those who view them.
               </p>
               <Link
-                href="#"
+                href="/about-us"
                 className="flex items-center justify-center gap-2 mt-6 w-full bg-[#F28E2C] p-4 rounded-[5px] text-white"
               >
                 <span className="font-lato text-xl capitalize">see more</span>

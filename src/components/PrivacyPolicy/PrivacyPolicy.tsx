@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import SwiperComp from "@/components/shared/Swiper/SwiperComp";
+import ModalBtn from "../shared/ModalButton/ModalBtn";
 
 const PrivacyPolicy = () => {
   return (
@@ -207,10 +207,8 @@ const PrivacyPolicy = () => {
 
         <div className="my-12">
           <p className="text-2xl mb-4">Ready to Create Beautiful Memories?</p>
-          <div className="md:gap-x-4 mb-8 lg:w-[40%] w-[100%]  bg-[#F28E2C] hover:bg-[#d88a3c] transition-all duration-300 shadow-md py-2 rounded-[5px] text-center">
-            <Link href="/contact" className="font-lato  text-white capitalize">
-              Contact Us!
-            </Link>
+          <div>
+            <ModalBtn />
           </div>
         </div>
       </div>
