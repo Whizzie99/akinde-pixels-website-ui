@@ -53,7 +53,7 @@ export default function App() {
         </button>
 
         <Swiper
-          effect="coverflow"
+          effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           spaceBetween={-20}
@@ -79,7 +79,9 @@ export default function App() {
           }}
           modules={[EffectCoverflow]}
           className="w-full"
-          onSwiper={setSwiper}
+          onSwiper={(swiperInstance: SwiperInstance) =>
+            setSwiper(swiperInstance)
+          }
         >
           {journalSwipers.map((num) => (
             <SwiperSlide key={num.id} className="bg-center bg-cover w-72 h-72">
