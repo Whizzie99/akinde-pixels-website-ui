@@ -1,3 +1,5 @@
+"use client";
+
 import ContactModal from "@/components/contact/ContactModal";
 import { useState } from "react";
 
