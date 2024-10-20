@@ -79,9 +79,7 @@ export default function App() {
           }}
           modules={[EffectCoverflow]}
           className="w-full"
-          onSwiper={(swiperInstance: SwiperInstance) =>
-            setSwiper(swiperInstance)
-          }
+          onSwiper={setSwiper}
         >
           {journalSwipers.map((num) => (
             <SwiperSlide key={num.id} className="bg-center bg-cover w-72 h-72">
