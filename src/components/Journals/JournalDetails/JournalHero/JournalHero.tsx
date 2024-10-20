@@ -1,10 +1,9 @@
-'use client'
+"use client";
 
-import Image from 'next/image';
-import hero from '../../../../../public/images/detailsPix1.png'
+import Image from "next/image";
+import hero from "../../../../../public/images/detailsPix1.png";
 
-const HeroSection = () =>{
-
+const HeroSection = () => {
   return (
     <div className="relative w-full h-screen">
       <Image
@@ -19,14 +18,14 @@ const HeroSection = () =>{
       <div className="absolute inset-0 flex items-center">
         <div className="container mx-auto px-4">
           <div className="max-w-lg relative top-[100px]">
-            <h1 className="text-[20px] md:text-6xl font-medium text-white mb-4 uppercase">hello world</h1>
+            <h1 className="text-[20px] md:text-6xl font-medium text-white mb-4 uppercase">
+              hello world
+            </h1>
           </div>
         </div>
       </div>
     </div>
   );
-}
-  
-
+};
 
 export default HeroSection;

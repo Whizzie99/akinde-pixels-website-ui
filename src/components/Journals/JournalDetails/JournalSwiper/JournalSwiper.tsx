@@ -1,25 +1,25 @@
-'use client'
+"use client";
 
-import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
-import type { Swiper as SwiperInstance } from 'swiper';
-import { journalSwipers } from '../../../../../db/data';
-import { EffectCoverflow } from 'swiper/modules';
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import type { Swiper as SwiperInstance } from "swiper";
+import { journalSwipers } from "../../../../../db/data";
+import { EffectCoverflow } from "swiper/modules";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
 
 export default function App() {
   const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSlideChange = (direction: 'next' | 'prev') => {
+  const handleSlideChange = (direction: "next" | "prev") => {
     if (swiper) {
-      direction === 'next' ? swiper.slideNext() : swiper.slidePrev();
+      direction === "next" ? swiper.slideNext() : swiper.slidePrev();
     } else {
-      setError('Swiper is not initialized yet. Please try again in a moment.');
+      setError("Swiper is not initialized yet. Please try again in a moment.");
       setTimeout(() => setError(null), 3000);
     }
   };
@@ -28,23 +28,32 @@ export default function App() {
     <div>
       <div className="relative pt-36 pb-16">
         {error && (
-          <div className="absolute top-0 left-0 right-0 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4" role="alert">
+          <div
+            className="absolute top-0 left-0 right-0 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4"
+            role="alert"
+          >
             <span className="block sm:inline">{error}</span>
           </div>
         )}
-        
+
         <button
           className="hidden sm:block sm:gap-8 absolute top-20 left-1/2 transform -translate-x-1/2 z-10 bg-white border border-yellow-500 rounded-md py-2 px-5 hover:bg-yellow-50 transition-colors duration-200"
-          onClick={() => handleSlideChange('next')}
+          onClick={() => handleSlideChange("next")}
           aria-label="Next slide"
         >
-          <svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 18l6-6-6-6"/>
+          <svg
+            className="w-6 h-6 text-yellow-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M9 18l6-6-6-6" />
           </svg>
         </button>
 
         <Swiper
-          effect={'coverflow'}
+          effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           spaceBetween={-20}
@@ -70,7 +79,9 @@ export default function App() {
           }}
           modules={[EffectCoverflow]}
           className="w-full"
-          onSwiper={(swiperInstance: SwiperInstance) => setSwiper(swiperInstance)}
+          onSwiper={(swiperInstance: SwiperInstance) =>
+            setSwiper(swiperInstance)
+          }
         >
           {journalSwipers.map((num) => (
             <SwiperSlide key={num.id} className="bg-center bg-cover w-72 h-72">
@@ -78,7 +89,7 @@ export default function App() {
                 src={num.image}
                 width={500}
                 height={500}
-                alt=''
+                alt=""
                 className="block w-full"
               />
             </SwiperSlide>
@@ -87,11 +98,17 @@ export default function App() {
 
         <button
           className="hidden sm:block absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 bg-white border border-yellow-500 rounded-md py-2 px-5 hover:bg-yellow-50 transition-colors duration-200"
-          onClick={() => handleSlideChange('prev')}
+          onClick={() => handleSlideChange("prev")}
           aria-label="Previous slide"
         >
-          <svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
-            <path d="M15 18l-6-6 6-6"/>
+          <svg
+            className="w-6 h-6 text-yellow-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M15 18l-6-6 6-6" />
           </svg>
         </button>
 
@@ -99,20 +116,32 @@ export default function App() {
         <div className="sm:hidden flex justify-center space-x-4 mt-4">
           <button
             className="bg-white border border-yellow-500 rounded-md py-2 px-5 hover:bg-yellow-50 transition-colors duration-200"
-            onClick={() => handleSlideChange('prev')}
+            onClick={() => handleSlideChange("prev")}
             aria-label="Previous slide"
           >
-            <svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
-              <path d="M15 18l-6-6 6-6"/>
+            <svg
+              className="w-6 h-6 text-yellow-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
           <button
             className="bg-white border border-yellow-500 rounded-md py-2 px-5 hover:bg-yellow-50 transition-colors duration-200"
-            onClick={() => handleSlideChange('next')}
+            onClick={() => handleSlideChange("next")}
             aria-label="Next slide"
           >
-            <svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18l6-6-6-6"/>
+            <svg
+              className="w-6 h-6 text-yellow-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M9 18l6-6-6-6" />
             </svg>
           </button>
         </div>

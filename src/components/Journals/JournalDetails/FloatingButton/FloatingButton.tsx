@@ -1,7 +1,6 @@
-'use client'
+"use client";
 
-
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const FloatingButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,16 +18,16 @@ const FloatingButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Smooth scroll to the top
+      behavior: "smooth", // Smooth scroll to the top
     });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener('scroll', toggleVisibility);
+      window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
 

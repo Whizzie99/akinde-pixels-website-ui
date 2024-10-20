@@ -46,14 +46,14 @@ export interface faq {
   answer: string;
 }
 
-export interface journal{
+export interface journal {
   id: number;
   image: string;
   title: string;
   name: string;
 }
 
-export interface journalSwiper{
+export interface journalSwiper {
   id: number;
   image: string;
 }
@@ -61,78 +61,78 @@ export interface journalSwiper{
 export const journalSwipers: journalSwiper[] = [
   {
     id: 1,
-    image: '/images/journalpix1.png'
+    image: "/images/journalpix1.png",
   },
 
   {
     id: 2,
-    image: '/images/journalpix2.png'
+    image: "/images/journalpix2.png",
   },
 
   {
     id: 3,
-    image: '/images/journalpix3.png'
+    image: "/images/journalpix3.png",
   },
 
   {
     id: 4,
-    image: '/images/journalpix2.png'
+    image: "/images/journalpix2.png",
   },
 
   {
     id: 5,
-    image: '/images/journalpix1.png'
+    image: "/images/journalpix1.png",
   },
 
   {
     id: 6,
-    image: '/images/journalpix3.png'
+    image: "/images/journalpix3.png",
   },
-]
+];
 
 export const journals: journal[] = [
   {
     id: 1,
-    image: '/images/journalpix1.png',
-    title: 'Family Session',
+    image: "/images/journalpix1.png",
+    title: "Family Session",
     name: "Mr Ade's Family",
   },
 
   {
     id: 2,
-    image: '/images/journalpix3.png',
-    title: 'Wedding Session',
-    name: 'Josh & Mimi',
+    image: "/images/journalpix3.png",
+    title: "Wedding Session",
+    name: "Josh & Mimi",
   },
 
   {
     id: 3,
-    image: '/images/journalpix2.png',
-    title: 'Birthday Session',
-    name: 'Jennifer',
+    image: "/images/journalpix2.png",
+    title: "Birthday Session",
+    name: "Jennifer",
   },
 
   {
     id: 4,
-    image: '/images/journalpix1.png',
-    title: 'Portrait Session',
+    image: "/images/journalpix1.png",
+    title: "Portrait Session",
     name: "Mr Cole's Family",
   },
 
   {
     id: 5,
-    image: '/images/journalpix3.png',
-    title: 'Wedding Session',
-    name: 'Josh & Mimi',
+    image: "/images/journalpix3.png",
+    title: "Wedding Session",
+    name: "Josh & Mimi",
   },
 
   {
     id: 6,
-    image: '/images/journalpix2.png',
-    title: 'Family Session',
+    image: "/images/journalpix2.png",
+    title: "Family Session",
     name: "Mr Ade's Family",
   },
-]
+];
 
 export const faqs: faq[] = [
   {

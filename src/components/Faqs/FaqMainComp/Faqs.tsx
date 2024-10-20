@@ -19,7 +19,7 @@ const Faqs = () => {
         <div className="my-12">
           <p className="text-2xl mb-4">Ready to Create Beautiful Memories?</p>
           <div className="flex gap-y-4 md:gap-x-4 mb-8 justify-between items-center ">
-            <ModalBtn/>
+            <ModalBtn />
             <div className="lg:flex items-center gap-x-2 hidden">
               <p className="text-sm py-2 px-4 shadow-xl ">Need help?</p>
               <span className="cursor-pointer bg-[#313131] p-4 rounded">
