@@ -4,7 +4,6 @@ import Image from "next/image";
 import detailsPix from "../../../../../public/images/detailsPix1.png";
 import detailsPix1 from "../../../../../public/images/detailsPix2.png";
 import detailsPix2 from "../../../../../public/images/detailsPix3.png";
-import detailsPix3 from "../../../../../public/images/detailsPix4.png";
 import detailsPix4 from "../../../../../public/images/detailsPix5.png";
 import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
 
