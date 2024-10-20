@@ -53,7 +53,7 @@ export default function App() {
         </button>
 
         <Swiper
-          effect={"coverflow"}
+          effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
           spaceBetween={-20}
