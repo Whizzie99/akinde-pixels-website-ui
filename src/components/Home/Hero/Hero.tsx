@@ -64,7 +64,7 @@ const Hero = () => {
             visual legacy that will be cherished for generations to come
           </p>
           <Link
-            href="#"
+            href="/booking"
             className="font-lato bg-[#F28E2C] text-white capitalize p-4 rounded-[5px] w-full sm:w-[50%] lg:w-[30%] text-center text-[1rem] lg:text-[1.25rem]"
           >
             book us now

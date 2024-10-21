@@ -24,7 +24,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768 && isMenuOpen) {
+      if (window.innerWidth >= 1024 && isMenuOpen) {
         setIsMenuOpen(false);
       }
     };
@@ -43,7 +43,8 @@ const Navbar = () => {
   return (
     <div className="relative custom-container">
       <div className="flex items-center justify-between py-4">
-        <div className="md:hidden">
+        {/* Hamburger Icon for screens 768px and below */}
+        <div className="lg:hidden">
           <Image
             src={hamburgerIcon}
             alt="Menu"
@@ -53,6 +54,8 @@ const Navbar = () => {
             className="cursor-pointer"
           />
         </div>
+
+        {/* Logo */}
         <Link href="/" className="w-[247.83px] h-[37.17px] relative">
           <Image
             src={logo}
@@ -63,7 +66,9 @@ const Navbar = () => {
             className="object-contain"
           />
         </Link>
-        <div className="hidden md:flex items-center gap-6">
+
+        {/* Desktop Menu for screens larger than 768px */}
+        <div className="hidden lg:flex items-center gap-6">
           {navData.map((item) => (
             <Link
               key={item.id}
@@ -73,9 +78,9 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
-          {/* Add "Book Now" button for desktop */}
+          {/* "Book Now" button for desktop */}
           <Link
-            href="/contact"
+            href="/booking"
             className="bg-[#F28E2C] text-white py-2 px-4 rounded-md capitalize font-lato"
           >
             Book Now
@@ -85,7 +90,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-white z-50 transition-all px-6 pb-8 duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 bg-white z-50 transition-all px-6 pb-8 duration-300 ease-in-out lg:hidden ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         style={{ overflowY: "auto" }}
@@ -120,7 +125,7 @@ const Navbar = () => {
             </div>
             <p className="my-6 text-xl font-medium">Capture Your Moments!</p>
             <Link
-              href="/contact"
+              href="/booking"
               className="w-full bg-[#F28E2C] text-white py-3 px-12 rounded text-lg font-semibold"
             >
               Book Us Now!
