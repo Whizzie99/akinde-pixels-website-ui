@@ -9,7 +9,7 @@ const JournalPageFragment = () => {
       <Journal />
       <JournalGrid />
       <SwiperComp />
-      <FloatingHelpButton/>
+      <FloatingHelpButton />
     </>
   );
 };

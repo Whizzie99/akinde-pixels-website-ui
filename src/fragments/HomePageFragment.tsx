@@ -13,7 +13,7 @@ export default function HomePageFragment() {
       <OurBrand />
       <AnimatedCounter />
       <Testimonials />
-      <FloatingHelpButton/>
+      <FloatingHelpButton />
     </>
   );
 }

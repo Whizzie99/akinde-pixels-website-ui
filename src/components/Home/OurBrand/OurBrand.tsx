@@ -65,7 +65,6 @@ const OurBrand = () => {
       </div>
       <div className="custom-container">
         <div className="flex items-end gap-4 mt-[7rem]">
-        
           <div className="relative w-full h-[380px] md:w-[calc(50%-0.67rem)] lg:w-[calc(33%-0.67rem)] flex items-end justify-center pb-8">
             <Image
               src={sampleImg}
@@ -76,7 +75,7 @@ const OurBrand = () => {
               className="object-cover"
             />
           </div>
-        
+
           <div className="relative w-full h-[450px] md:w-[calc(50%-0.67rem)] lg:w-[calc(33%-0.67rem)] flex items-end justify-center pb-8">
             <Image
               src={sampleImg}
@@ -87,7 +86,7 @@ const OurBrand = () => {
               className="object-cover"
             />
           </div>
-        
+
           <div className="relative hidden lg:flex w-full h-[380px] lg:w-[calc(33%-0.67rem)] items-end justify-center pb-8">
             <Image
               src={sampleImg}

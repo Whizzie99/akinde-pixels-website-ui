@@ -39,7 +39,7 @@ const OurBrand = () => {
         <p className="text-2xl mb-4">Ready to Create Beautiful Memories?</p>
         <ModalBtn />
       </div>
-      <FloatingHelpButton/>
+      <FloatingHelpButton />
     </div>
   );
 };

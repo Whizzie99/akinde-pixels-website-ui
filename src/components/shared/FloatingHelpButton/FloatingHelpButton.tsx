@@ -1,25 +1,25 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
-import { BsEnvelope, BsSend } from 'react-icons/bs';
-import { X } from 'lucide-react';
-import { Message } from '../chatbox/ChatType';
+import { useState, useEffect, useRef } from "react";
+import { BsEnvelope, BsSend } from "react-icons/bs";
+import { X } from "lucide-react";
+import { Message } from "../chatbox/ChatType";
 
 const ChatModal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: '1',
-      text: 'Hello! How can we help you today?',
-      sender: 'admin',
+      id: "1",
+      text: "Hello! How can we help you today?",
+      sender: "admin",
       timestamp: new Date(),
     },
   ]);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -39,21 +39,21 @@ const ChatModal = () => {
     const newMessage: Message = {
       id: Date.now().toString(),
       text: message,
-      sender: 'user',
+      sender: "user",
       timestamp: new Date(),
     };
 
     setMessages([...messages, newMessage]);
-    setMessage('');
+    setMessage("");
 
     setTimeout(() => {
       const adminResponse: Message = {
         id: (Date.now() + 1).toString(),
         text: "Thanks for your message! We'll respond shortly.",
-        sender: 'admin',
+        sender: "admin",
         timestamp: new Date(),
       };
-      setMessages(prev => [...prev, adminResponse]);
+      setMessages((prev) => [...prev, adminResponse]);
     }, 1000);
   };
 
@@ -70,7 +70,7 @@ const ChatModal = () => {
             <button
               onClick={toggleModal}
               className="cursor-pointer bg-[#313131] p-4 rounded shadow-lg hover:bg-[#404040] transition-colors"
-              aria-label={isOpen ? 'Close chat' : 'Open chat'}
+              aria-label={isOpen ? "Close chat" : "Open chat"}
             >
               {isOpen ? (
                 <X className="text-white h-6 w-6" />
@@ -86,7 +86,9 @@ const ChatModal = () => {
         <div className="fixed bottom-24 right-6 w-[350px] bg-white rounded-lg shadow-2xl z-40 overflow-hidden">
           <div className="bg-[#313131] p-4 text-white">
             <h3 className="font-medium">Live Chat Support</h3>
-            <p className="text-sm text-gray-300">We typically reply within minutes</p>
+            <p className="text-sm text-gray-300">
+              We typically reply within minutes
+            </p>
           </div>
 
           <div className="h-[300px] p-4 overflow-y-auto">
@@ -95,21 +97,21 @@ const ChatModal = () => {
                 <div
                   key={msg.id}
                   className={`flex ${
-                    msg.sender === 'user' ? 'justify-end' : 'justify-start'
+                    msg.sender === "user" ? "justify-end" : "justify-start"
                   }`}
                 >
                   <div
                     className={`max-w-[80%] p-3 rounded-lg ${
-                      msg.sender === 'user'
-                        ? 'bg-[#F28E2C] text-black'
-                        : 'bg-gray-100 text-gray-800'
+                      msg.sender === "user"
+                        ? "bg-[#F28E2C] text-black"
+                        : "bg-gray-100 text-gray-800"
                     }`}
                   >
                     <p className="text-sm">{msg.text}</p>
                     <span className="text-xs mt-1 opacity-70 block">
                       {msg.timestamp.toLocaleTimeString([], {
-                        hour: '2-digit',
-                        minute: '2-digit',
+                        hour: "2-digit",
+                        minute: "2-digit",
                       })}
                     </span>
                   </div>

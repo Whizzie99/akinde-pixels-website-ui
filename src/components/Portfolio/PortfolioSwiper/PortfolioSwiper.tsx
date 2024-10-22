@@ -22,16 +22,17 @@ const PortfolioSwiper = () => {
   const openModal = (slide: Slide) => {
     setSelectedSlide(slide);
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedSlide(null);
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
   };
 
-  const navigationButtonStyle = "bg-white/50 w-8 h-8 rounded flex items-center justify-center after:text-sm after:text-white";
+  const navigationButtonStyle =
+    "bg-white/50 w-8 h-8 rounded flex items-center justify-center after:text-sm after:text-white";
 
   return (
     <div className="relative w-[90%] mx-auto">
@@ -63,9 +64,7 @@ const PortfolioSwiper = () => {
               />
             </div>
             <div className="mt-2 flex flex-col items-center">
-              <p className="text-center pb-2 text-[#F28E2C]">
-                {slide.caption}
-              </p>
+              <p className="text-center pb-2 text-[#F28E2C]">{slide.caption}</p>
               <hr className="w-[35%] border-[#F28E2C]" />
             </div>
           </SwiperSlide>
@@ -74,7 +73,7 @@ const PortfolioSwiper = () => {
       <div className={`swiper-button-prev ${navigationButtonStyle}`}></div>
       <div className={`swiper-button-next ${navigationButtonStyle}`}></div>
 
-      <PorfolioModal 
+      <PorfolioModal
         isOpen={isModalOpen}
         onClose={closeModal}
         slide={selectedSlide}

@@ -1,8 +1,8 @@
-import PortfolioPageFragment from '@/fragments/PortfolioPageFragment'
-import React from 'react'
+import PortfolioPageFragment from "@/fragments/PortfolioPageFragment";
+import React from "react";
 
 const page = () => {
-  return <PortfolioPageFragment/>
-}
+  return <PortfolioPageFragment />;
+};
 
-export default page
+export default page;

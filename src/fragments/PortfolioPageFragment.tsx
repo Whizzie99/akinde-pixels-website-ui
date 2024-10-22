@@ -3,9 +3,9 @@ import Portfolio from "@/components/Portfolio/MainPortfolio/Portfolio";
 const PortfolioPageFragment = () => {
   return (
     <>
-      <Portfolio/>
+      <Portfolio />
     </>
-  )
-}
+  );
+};
 
-export default PortfolioPageFragment
+export default PortfolioPageFragment;

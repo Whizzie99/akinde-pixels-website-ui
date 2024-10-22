@@ -30,7 +30,7 @@ const Contact = () => {
       <div className="mt-12">
         <SwiperComp />
       </div>
-      <FloatingHelpButton/>
+      <FloatingHelpButton />
     </div>
   );
 };

@@ -6,7 +6,7 @@ const PrivacyPolicyFragment = () => {
   return (
     <div>
       <PrivacyPolicy />
-      <FloatingHelpButton/>
+      <FloatingHelpButton />
     </div>
   );
 };

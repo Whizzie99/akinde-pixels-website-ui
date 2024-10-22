@@ -21,7 +21,7 @@ interface FormData {
   textArea: string;
 }
 
-const  ContactForm = () => {
+const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",

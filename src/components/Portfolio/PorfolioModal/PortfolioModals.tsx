@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import { X } from "lucide-react";
@@ -25,21 +25,21 @@ const PorfolioModal = ({ isOpen, onClose, slide }: ImageGalleryModalProps) => {
 
   const getImageLayout = (index: number) => {
     const patterns = [
-      'col-span-2 row-span-2',
-      'col-span-1 row-span-1', 
-      'col-span-1 row-span-1', 
-      'col-span-2 row-span-1', 
-      'col-span-1 row-span-1', 
-      'col-span-1 row-span-2',
-      'col-span-2 row-span-2', 
-      'col-span-1 row-span-1', 
-      'col-span-2 row-span-1', 
-      'col-span-1 row-span-2',
-      'col-span-1 row-span-1', 
-      'col-span-2 row-span-1', 
-      'col-span-1 row-span-1', 
-      'col-span-1 row-span-1', 
-      'col-span-2 row-span-2', 
+      "col-span-2 row-span-2",
+      "col-span-1 row-span-1",
+      "col-span-1 row-span-1",
+      "col-span-2 row-span-1",
+      "col-span-1 row-span-1",
+      "col-span-1 row-span-2",
+      "col-span-2 row-span-2",
+      "col-span-1 row-span-1",
+      "col-span-2 row-span-1",
+      "col-span-1 row-span-2",
+      "col-span-1 row-span-1",
+      "col-span-2 row-span-1",
+      "col-span-1 row-span-1",
+      "col-span-1 row-span-1",
+      "col-span-2 row-span-2",
     ];
     return patterns[index % patterns.length];
   };
@@ -63,8 +63,8 @@ const PorfolioModal = ({ isOpen, onClose, slide }: ImageGalleryModalProps) => {
         <div className="container mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-1 auto-rows-[120px] sm:auto-rows-[150px]">
             {getModalImages(slide).map((image, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`relative overflow-hidden ${getImageLayout(index)} transform transition-transform duration-300 hover:-translate-y-1`}
               >
                 <div className="group relative w-full h-full">

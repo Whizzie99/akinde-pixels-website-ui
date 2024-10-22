@@ -15,7 +15,7 @@ const JournalDetailsPageFragment = () => {
       <FloatingButton />
       <ImageGrid />
       <SwiperComp />
-      <FloatingHelpButton/>
+      <FloatingHelpButton />
     </>
   );
 };

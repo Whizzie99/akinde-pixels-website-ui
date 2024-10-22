@@ -6,7 +6,7 @@ const FaqPageFragment = () => {
   return (
     <>
       <Faqs />
-      <FloatingHelpButton/>
+      <FloatingHelpButton />
     </>
   );
 };

@@ -1,5 +1,4 @@
-'use client'
-
+"use client";
 
 import PortfolioComp from "../PortfolioComp";
 import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
@@ -11,7 +10,7 @@ const Portfolio = () => {
       <h1 className="text-[40px] text-center uppercase text-[#CA7625] mb-8">
         Portfolio
       </h1>
-      
+
       <div className="lg:relative custom-container">
         <div className="absolute top-0 -left-[7%] w-[90vw] h-[1px] bg-[#CCCCCC]"></div>
         <div className="absolute lg:-top-[10%] -top-8 left-0 h-full w-[1px] bg-[#CCCCCC]"></div>
@@ -21,14 +20,14 @@ const Portfolio = () => {
         <div className="custom-container py-16">
           <div>
             <p className="text-2xl mb-4">Ready to Create Beautiful Memories?</p>
-            <ModalBtn />  
+            <ModalBtn />
           </div>
         </div>
       </div>
-      
+
       <FloatingHelpButton />
     </div>
   );
 };
 
-export default Portfolio; 
+export default Portfolio;
