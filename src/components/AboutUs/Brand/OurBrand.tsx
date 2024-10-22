@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { BsEnvelope } from "react-icons/bs";
+
 import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
 import FloatingHelpButton from "@/components/shared/FloatingHelpButton/FloatingHelpButton";
 
