@@ -3,10 +3,20 @@
 import Image from "next/image";
 import PortfolioSwiper from "./PortfolioSwiper/PortfolioSwiper";
 
-const PortfolioComp = () => {
+// Define a type for the slide if you know its structure, otherwise use 'any'
+type Slide = {
+  image: string;
+  caption: string;
+  id: number;
+};
+
+interface PortfolioCompProps {
+  openModal: (slide: Slide) => void; // Define the correct type for openModal
+}
+
+const PortfolioComp = ({ openModal }: PortfolioCompProps) => {
   return (
     <div>
-      {/* Main Portfolio Section */}
       <div className="lg:flex gap-6 py-6">
         <div className="p-8 lg:block hidden">
           <Image
@@ -18,7 +28,7 @@ const PortfolioComp = () => {
         </div>
         <div>
           <div className="my-8 ml-8">
-            <PortfolioSwiper />
+            <PortfolioSwiper openModal={openModal} />
           </div>
           <div className="relative">
             <div className="absolute top-0 lg:-left-[5%] w-[60vw] h-[1px] bg-[#CCCCCC]"></div>
@@ -31,8 +41,6 @@ const PortfolioComp = () => {
           </div>
         </div>
       </div>
-
-      {/* Conditionally Render the Swiper Component */}
     </div>
   );
 };
