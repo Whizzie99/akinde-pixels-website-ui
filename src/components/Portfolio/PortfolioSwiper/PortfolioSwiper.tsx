@@ -15,30 +15,30 @@ type Slide = {
 };
 
 interface PortfolioSwiperProps {
-  openModal: (slide: Slide) => void; 
+  openModal: (slide: Slide) => void;
 }
 
 const PortfolioSwiper = ({ openModal }: PortfolioSwiperProps) => {
   return (
     <div className="relative w-[90%] mx-auto">
       <style jsx>{`
-          .swiper-button-prev,
-          .swiper-button-next {
-            background-color: rgba(255, 255, 255, 0.5);
-            width: 30px;
-            height: 30px;
-            border-radius: 5%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
+        .swiper-button-prev,
+        .swiper-button-next {
+          background-color: rgba(255, 255, 255, 0.5);
+          width: 30px;
+          height: 30px;
+          border-radius: 5%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
-          .swiper-button-prev::after,
-          .swiper-button-next::after {
-            font-size: 15px;
-            color: white;
-          }
-        `}</style>
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+          font-size: 15px;
+          color: white;
+        }
+      `}</style>
       <Swiper
         modules={[Navigation]}
         spaceBetween={5}

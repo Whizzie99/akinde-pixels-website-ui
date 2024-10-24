@@ -4,7 +4,7 @@ import { useState } from "react";
 import PortfolioComp from "../PortfolioComp";
 import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
 import FloatingHelpButton from "@/components/shared/FloatingHelpButton/FloatingHelpButton";
-import PortfolioModal from "../PorfolioModal/PortfolioModals"; 
+import PortfolioModal from "../PorfolioModal/PortfolioModals";
 
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

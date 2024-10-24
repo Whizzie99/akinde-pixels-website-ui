@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
-import { X, ZoomIn} from "lucide-react";
-
+import { X, ZoomIn } from "lucide-react";
 
 interface Slide {
   id: number;
@@ -32,13 +31,7 @@ const ZoomView = ({ image, alt, onClose }: ZoomViewProps) => (
       <X className="w-6 h-6 text-white" />
     </button>
     <div className="relative w-[90vw] h-[90vh]">
-      <Image
-        src={image}
-        alt={alt}
-        fill
-        className="object-contain"
-        priority
-      />
+      <Image src={image} alt={alt} fill className="object-contain" priority />
     </div>
   </div>
 );
@@ -47,10 +40,10 @@ const ImageSkeleton = () => (
   <div className="relative aspect-[3/4] w-full bg-gray-200 rounded-lg animate-pulse" />
 );
 
-const PortfolioModal = ({ 
-  isOpen, 
-  onClose, 
-  slide 
+const PortfolioModal = ({
+  isOpen,
+  onClose,
+  slide,
 }: {
   isOpen: boolean;
   onClose: () => void;
@@ -58,10 +51,9 @@ const PortfolioModal = ({
 }) => {
   const [images, setImages] = useState<ImageWithState[]>([]);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
-  
+
   const ITEMS_PER_PAGE = 15;
 
-  
   useEffect(() => {
     if (isOpen && slide) {
       const initialImages = Array(ITEMS_PER_PAGE)
@@ -78,18 +70,18 @@ const PortfolioModal = ({
   }, [isOpen, slide]);
 
   const handleImageLoad = (id: number) => {
-    setImages(prev =>
-      prev.map(Image =>
-        Image.id === id ? { ...Image, loading: false } : Image
-      )
+    setImages((prev) =>
+      prev.map((Image) =>
+        Image.id === id ? { ...Image, loading: false } : Image,
+      ),
     );
   };
 
   const handleImageError = (id: number) => {
-    setImages(prev =>
-      prev.map(img =>
-        img.id === id ? { ...img, loading: false, error: true } : img
-      )
+    setImages((prev) =>
+      prev.map((img) =>
+        img.id === id ? { ...img, loading: false, error: true } : img,
+      ),
     );
   };
 
@@ -101,10 +93,10 @@ const PortfolioModal = ({
         <div className="flex justify-between items-center mb-6">
           <div className="w-full m-auto">
             <h2 className="text-[28px] md:text-[32px] lg:text-[40px] text-gray-500 text-center">
-            {slide.caption}
-          </h2>
+              {slide.caption}
+            </h2>
           </div>
-          
+
           <button
             onClick={onClose}
             className="p-2 hover:bg-gray-100 rounded-full transition-colors"
@@ -121,7 +113,7 @@ const PortfolioModal = ({
               className="break-inside-avoid relative group  overflow-hidden"
             >
               {image.loading && <ImageSkeleton />}
-              
+
               {!image.error ? (
                 <div className="relative aspect-[3/4] w-full">
                   <Image
@@ -133,13 +125,13 @@ const PortfolioModal = ({
                            (max-width: 1024px) 25vw,
                            20vw"
                     className={`object-cover rounded transition-transform duration-300 group-hover:scale-105
-                      ${image.loading ? 'opacity-0' : 'opacity-100'}`}
+                      ${image.loading ? "opacity-0" : "opacity-100"}`}
                     priority={image.id < 4}
                     onLoad={() => handleImageLoad(image.id)}
                     onError={() => handleImageError(image.id)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+
                   <div className="absolute bottom-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button
                       onClick={() => setZoomedImage(image.url)}
