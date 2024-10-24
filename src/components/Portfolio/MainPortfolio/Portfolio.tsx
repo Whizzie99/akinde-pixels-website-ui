@@ -10,7 +10,7 @@ type Slide = {
   id: number;
   image: string;
   caption: string;
-}
+};
 
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
