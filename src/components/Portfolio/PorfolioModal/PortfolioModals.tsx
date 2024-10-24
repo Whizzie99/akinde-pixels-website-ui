@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect} from "react";
 import Image from "next/image";
 import { X, ZoomIn } from "lucide-react";
 

@@ -6,11 +6,17 @@ import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
 import FloatingHelpButton from "@/components/shared/FloatingHelpButton/FloatingHelpButton";
 import PortfolioModal from "../PorfolioModal/PortfolioModals";
 
+type Slide = {
+  id: number;
+  image: string;
+  caption: string;
+}
+
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedSlide, setSelectedSlide] = useState(null);
+  const [selectedSlide, setSelectedSlide] = useState<Slide | null>(null);
 
-  const openModal = (slide: any) => {
+  const openModal = (slide: Slide) => {
     setSelectedSlide(slide);
     setIsModalOpen(true);
   };
@@ -33,13 +39,11 @@ const Portfolio = () => {
       </div>
 
       {isModalOpen && selectedSlide && (
-        <div className="mt-8">
-          <PortfolioModal
-            isOpen={isModalOpen}
-            onClose={closeModal}
-            slide={selectedSlide}
-          />
-        </div>
+        <PortfolioModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          slide={selectedSlide}
+        />
       )}
 
       <div className="bg-[#FEF8F2]">
