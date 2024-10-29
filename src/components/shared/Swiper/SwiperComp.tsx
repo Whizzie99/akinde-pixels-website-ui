@@ -6,10 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { aboutSwiper } from "../../../../db/data";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const TestimonialCarousel = () => {
   return (
