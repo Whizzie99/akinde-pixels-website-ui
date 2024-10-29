@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { X, ZoomIn } from "lucide-react";
-import ZoomView from "../zoomview/ZoomView"
+import ZoomView from "../zoomview/ZoomView";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import { aboutSwiper } from "../../../../db/data"; 
-import { GalleryImage } from "../../../../db/data"; 
+import { aboutSwiper } from "../../../../db/data";
+import { GalleryImage } from "../../../../db/data";
 
 interface Slide {
   id: number;
   image: string;
   caption: string;
 }
-
 
 const PortfolioModal = ({
   isOpen,
@@ -27,7 +26,7 @@ const PortfolioModal = ({
 
   useEffect(() => {
     if (isOpen && slide) {
-    // Find the selected slide from the aboutSwiper array
+      // Find the selected slide from the aboutSwiper array
       const selectedSlide = aboutSwiper.find((s) => s.id === slide.id);
       if (selectedSlide) {
         setImages(selectedSlide.galleryImages);

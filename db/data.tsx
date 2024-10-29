@@ -35,7 +35,6 @@ export interface GalleryImage {
   alt: string;
 }
 
-
 export interface aboutSwiper {
   id: number;
   image: string;
@@ -67,8 +66,6 @@ export interface journalSwiper {
   id: number;
   image: string;
 }
-
-
 
 export const journalSwipers: journalSwiper[] = [
   {
@@ -248,21 +245,21 @@ export const aboutSwiper: aboutSwiper[] = [
         url: "/images/wedding9.png",
         height: 100,
         category: "Weddings",
-        alt: "Bride and groom ceremony"
+        alt: "Bride and groom ceremony",
       },
       {
         id: 102,
         url: "/images/wedding1.png",
         height: 600,
         category: "Weddings",
-        alt: "Wedding reception"
+        alt: "Wedding reception",
       },
       {
         id: 103,
         url: "/images/wedding10.png",
         height: 200,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
 
       {
@@ -270,7 +267,7 @@ export const aboutSwiper: aboutSwiper[] = [
         url: "/images/wedding11.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
 
       {
@@ -278,7 +275,7 @@ export const aboutSwiper: aboutSwiper[] = [
         url: "/images/wedding8.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
 
       {
@@ -286,14 +283,14 @@ export const aboutSwiper: aboutSwiper[] = [
         url: "/images/wedding7.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
       {
         id: 107,
         url: "/images/wedding5.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
 
       {
@@ -301,45 +298,44 @@ export const aboutSwiper: aboutSwiper[] = [
         url: "/images/wedding14.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
       {
         id: 109,
         url: "/images/wedding12.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
       {
         id: 110,
         url: "/images/wedding3.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
       {
         id: 111,
         url: "/images/wedding11.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
       {
         id: 112,
         url: "/images/wedding6.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
       {
         id: 113,
         url: "/images/wedding.png",
         height: 300,
         category: "Weddings",
-        alt: "Wedding decorations"
+        alt: "Wedding decorations",
       },
-    ]
-
+    ],
   },
   {
     id: 2,
@@ -351,79 +347,79 @@ export const aboutSwiper: aboutSwiper[] = [
         url: "/images/portrait1.jpg",
         height: 500,
         category: "Portraits",
-        alt: "Professional headshot"
+        alt: "Professional headshot",
       },
       {
         id: 202,
         url: "/images/portrait2.jpg",
         height: 350,
         category: "Portraits",
-        alt: "Family portrait"
+        alt: "Family portrait",
       },
       {
         id: 203,
         url: "/images/portrait.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 204,
         url: "/images/portrait3.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 205,
         url: "/images/portrait10.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 206,
         url: "/images/portrait4.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 207,
         url: "/images/portrait5.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 208,
         url: "/images/portrait6.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 209,
         url: "/images/portrait7.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 210,
         url: "/images/portrait9.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 211,
         url: "/images/portrait11.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
-      }
-    ]
+        alt: "Artistic portrait",
+      },
+    ],
   },
   {
     id: 3,
@@ -435,72 +431,72 @@ export const aboutSwiper: aboutSwiper[] = [
         url: "/images/birthday.jpg",
         height: 500,
         category: "Portraits",
-        alt: "Professional headshot"
+        alt: "Professional headshot",
       },
       {
         id: 302,
         url: "/images/birthday (1).jpg",
         height: 350,
         category: "Portraits",
-        alt: "Family portrait"
+        alt: "Family portrait",
       },
       {
         id: 303,
         url: "/images/birthday (2).jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 304,
         url: "/images/birthday (3).jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 305,
         url: "/images/birthday (4).jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 306,
         url: "/images/birthday (5).jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 307,
         url: "/images/birthday (7).jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 308,
         url: "/images/birthday (6).jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 309,
         url: "/images/portrait3.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 310,
         url: "/images/portrait.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
-      }
-    ]
+        alt: "Artistic portrait",
+      },
+    ],
   },
   {
     id: 4,
@@ -512,72 +508,72 @@ export const aboutSwiper: aboutSwiper[] = [
         url: "/images/portrait1.jpg",
         height: 500,
         category: "Portraits",
-        alt: "Professional headshot"
+        alt: "Professional headshot",
       },
       {
         id: 402,
         url: "/images/portrait2.jpg",
         height: 350,
         category: "Portraits",
-        alt: "Family portrait"
+        alt: "Family portrait",
       },
       {
         id: 403,
         url: "/images/portrait3.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 404,
         url: "/images/portrait11.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 405,
         url: "/images/portrait.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 406,
         url: "/images/portrait10.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 407,
         url: "/images/portrait3.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 408,
         url: "/images/portrait8.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 409,
         url: "/images/portrait9.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
+        alt: "Artistic portrait",
       },
       {
         id: 410,
         url: "/images/portrait4.jpg",
         height: 450,
         category: "Portraits",
-        alt: "Artistic portrait"
-      }
-    ]
+        alt: "Artistic portrait",
+      },
+    ],
   },
 ];
 

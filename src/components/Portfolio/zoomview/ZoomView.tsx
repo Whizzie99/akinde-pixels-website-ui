@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { X } from "lucide-react";
 
-
 interface ZoomViewProps {
   image: string;
   alt: string;
