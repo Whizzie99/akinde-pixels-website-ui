@@ -7,7 +7,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import "swiper/css/navigation";
 import "swiper/css";
 
-
 import sampleImg from "../../../../public/images/wedding-sample-1.png";
 
 const galleryItems = [
@@ -22,7 +21,7 @@ const Galleries = () => {
   return (
     <div className="py-8">
       <div className="custom-container">
-        <h2 
+        <h2
           className="font-lato font-bold text-center capitalize text-[2.5rem]"
           data-aos="fade-down"
         >
@@ -42,8 +41,8 @@ const Galleries = () => {
             spaceBetween={16}
             slidesPerView={3}
             navigation={{
-              prevEl: '.prev-button',
-              nextEl: '.next-button',
+              prevEl: ".prev-button",
+              nextEl: ".next-button",
             }}
             autoplay={{
               delay: 3000,

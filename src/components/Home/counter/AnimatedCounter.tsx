@@ -17,8 +17,8 @@ const AnimatedCounter = () => {
         }
       },
       {
-        threshold: 0.1
-      }
+        threshold: 0.1,
+      },
     );
 
     if (containerRef.current) {
@@ -33,20 +33,12 @@ const AnimatedCounter = () => {
   }, []);
 
   return (
-    <div 
-      ref={containerRef}
-      className="lg:h-[20rem] h-[10rem] bg-[#FEF8F280]"
-    >
+    <div ref={containerRef} className="lg:h-[20rem] h-[10rem] bg-[#FEF8F280]">
       <div className="grid grid-cols-3 gap-4 place-items-center h-full custom-container ">
         <div className="text-center shadow p-2 lg:p-4">
           <div className="text-[20px] lg:text-[48px] flex items-center justify-center mb-[1.3rem] lg:mb-0">
             {isVisible && (
-              <CountUp
-                start={0}
-                end={100}
-                duration={4}
-                separator=","
-              />
+              <CountUp start={0} end={100} duration={4} separator="," />
             )}
             <p className="text-[20px] lg:text-[48px]">+</p>
           </div>
@@ -55,12 +47,7 @@ const AnimatedCounter = () => {
         <div className="text-center shadow p-2 lg:p-4">
           <div className="text-[20px] lg:text-[48px] flex items-center justify-center">
             {isVisible && (
-              <CountUp
-                start={0}
-                end={10}
-                duration={5}
-                separator=","
-              />
+              <CountUp start={0} end={10} duration={5} separator="," />
             )}
           </div>
           <h3 className="mb-2 text-[14px] lg:text-[28px]">Years in business</h3>
@@ -68,12 +55,7 @@ const AnimatedCounter = () => {
         <div className="text-center shadow p-2 lg:p-4">
           <div className="text-[20px] lg:text-[48px] flex items-center justify-center">
             {isVisible && (
-              <CountUp
-                start={0}
-                end={100}
-                duration={6}
-                separator=","
-              />
+              <CountUp start={0} end={100} duration={6} separator="," />
             )}
             <p className="text-[20px] lg:text-[48px]">+</p>
           </div>

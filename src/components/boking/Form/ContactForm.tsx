@@ -62,45 +62,45 @@ const ContactForm = () => {
       </div>
       <div>
         <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ 
-          duration: 0.8,
-          type: "spring",
-          bounce: 0.2
-        }}
-        className="text-[#7B7B7B] border border-b-[#A3A3A3] border-l-[#A3A3A3] border-r-0 p-4"
-      >
-        <motion.p
-          className="mb-2"
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ 
-            duration: 0.6,
-            delay: 0.3,
+          transition={{
+            duration: 0.8,
             type: "spring",
-            bounce: 0.2
+            bounce: 0.2,
           }}
+          className="text-[#7B7B7B] border border-b-[#A3A3A3] border-l-[#A3A3A3] border-r-0 p-4"
         >
-          Thank you for stopping by our photography website! We would love to
-          hear from you and discuss how we can help you capture your special
-          moments.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ 
-            duration: 0.6,
-            delay: 0.5,
-            type: "spring",
-            bounce: 0.2
-          }}
-        >
-          Whether you have a question, would like to book a session, or simply
-          want to say hello, please don't hesitate to reach out as we look
-          forward to connecting with you and capturing the beauty of your
-          world!
-        </motion.p>
+          <motion.p
+            className="mb-2"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.3,
+              type: "spring",
+              bounce: 0.2,
+            }}
+          >
+            Thank you for stopping by our photography website! We would love to
+            hear from you and discuss how we can help you capture your special
+            moments.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.5,
+              type: "spring",
+              bounce: 0.2,
+            }}
+          >
+            Whether you have a question, would like to book a session, or simply
+            want to say hello, please don't hesitate to reach out as we look
+            forward to connecting with you and capturing the beauty of your
+            world!
+          </motion.p>
         </motion.div>
         <motion.form
           onSubmit={handleSubmit}
@@ -425,10 +425,10 @@ const ContactForm = () => {
           </div>
 
           <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 3.8 }}
-            >
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 3.8 }}
+          >
             <label
               htmlFor="textArea"
               className="block mb-2 text-sm font-medium text-gray-700"

@@ -10,14 +10,15 @@ const OurBrand = () => {
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
         <div className="w-full flex justify-center">
           <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ 
-            duration: 0.6,
-            type: "spring",
-            bounce: 0.2
-          }} 
-          className="relative hidden lg:block h-[333.33px] top-10 lg:max-w-full ">
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              type: "spring",
+              bounce: 0.2,
+            }}
+            className="relative hidden lg:block h-[333.33px] top-10 lg:max-w-full "
+          >
             <Image
               src={logo}
               alt="sample"
@@ -31,35 +32,37 @@ const OurBrand = () => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ 
+          transition={{
             duration: 0.8,
             type: "spring",
-            bounce: 0.2
+            bounce: 0.2,
           }}
           className="font-lato text-black text-left lg:w-[550px] flex flex-col justify-center"
-         >
-          <motion.h2 
+        >
+          <motion.h2
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ 
+            transition={{
               duration: 0.8,
               delay: 0.3,
               type: "spring",
-              bounce: 0.2
+              bounce: 0.2,
             }}
-            className="uppercase text-3xl text-[#F28E2C] mb-2">
+            className="uppercase text-3xl text-[#F28E2C] mb-2"
+          >
             Introduction
           </motion.h2>
           <motion.p
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ 
-            duration: 1.0,
-            delay: 0.5,
-            type: "spring",
-            bounce: 0.2
-          }}
-          className="mb-4">
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1.0,
+              delay: 0.5,
+              type: "spring",
+              bounce: 0.2,
+            }}
+            className="mb-4"
+          >
             Welcome to our brand guidelines. These guidelines are the foundation
             of our brand identity and the visual language that defines who we
             are. Akinde Pixels is more than just a name; it is a commitment to
@@ -70,13 +73,14 @@ const OurBrand = () => {
           <motion.p
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ 
+            transition={{
               duration: 1.2,
               delay: 0.7,
               type: "spring",
-              bounce: 0.2
-            }} 
-            className="mb-4">
+              bounce: 0.2,
+            }}
+            className="mb-4"
+          >
             Our brand is built on the principles of creativity, authenticity,
             and precision. Though these guidelines, we aim to ensure that every
             representation of Akinde Pixels whether in photography, digital
@@ -91,12 +95,13 @@ const OurBrand = () => {
           <motion.p
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ 
+            transition={{
               duration: 1.4,
               delay: 0.9,
               type: "spring",
-              bounce: 0.2
-            }}>
+              bounce: 0.2,
+            }}
+          >
             Let’s continue to capture stories that resonate, inspire, and
             connect. Welcome to the world of Akinde Pixels where every image is
             masterpiece

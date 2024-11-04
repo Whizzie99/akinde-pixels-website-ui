@@ -5,9 +5,9 @@ import Link from "next/link";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 import logo from "../../../../public/images/logo-full-frame.png";
 import sampleImg from "../../../../public/images/wedding-sample-1.png";
 
@@ -16,28 +16,28 @@ const OurBrand = () => {
     AOS.init({
       duration: 1000,
       once: true,
-      easing: 'ease-out',
+      easing: "ease-out",
     });
   }, []);
 
   return (
     <div className="py-8">
       <div className="custom-container">
-        <h2 
+        <h2
           data-aos="fade-up"
           className="font-lato text-black capitalize text-2xl mb-10 font-bold"
         >
           our brand
         </h2>
       </div>
-      <div 
+      <div
         data-aos="fade-up"
         data-aos-delay="100"
         className="bg-[#FEF8F2] py-12"
       >
         <div className="custom-container">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 w-full">
-            <div 
+            <div
               data-aos="fade-right"
               data-aos-delay="200"
               className="w-full flex justify-center lg:w-auto"
@@ -53,10 +53,7 @@ const OurBrand = () => {
                 />
               </div>
             </div>
-            <div
-              data-aos="fade-left"
-              data-aos-delay="300"
-            >
+            <div data-aos="fade-left" data-aos-delay="300">
               <p className="font-lato text-black text-left mb-6 leading-[24px]">
                 Akinde Pixels is not just a visual storytelling agency; we are a
                 powerhouse of creativity and emotions. We specialize in crafting
@@ -91,13 +88,9 @@ const OurBrand = () => {
         </div>
       </div>
       <div className="custom-container">
-        <div 
-          data-aos="fade-up"
-          data-aos-delay="400"
-          className="mt-[7rem]"
-        >
+        <div data-aos="fade-up" data-aos-delay="400" className="mt-[7rem]">
           <Swiper
-            modules={[ Autoplay]}
+            modules={[Autoplay]}
             spaceBetween={16}
             slidesPerView={1}
             autoplay={{
@@ -122,7 +115,9 @@ const OurBrand = () => {
           >
             {[1, 2, 3].map((_, index) => (
               <SwiperSlide key={index}>
-                <div className={`relative w-full ${index === 1 ? 'h-[450px]' : 'h-[380px]'} flex items-end justify-center pb-8`}>
+                <div
+                  className={`relative w-full ${index === 1 ? "h-[450px]" : "h-[380px]"} flex items-end justify-center pb-8`}
+                >
                   <Image
                     src={sampleImg}
                     alt={`sample ${index + 1}`}
