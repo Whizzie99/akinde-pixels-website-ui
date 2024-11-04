@@ -97,7 +97,7 @@ const ContactForm = () => {
             }}
           >
             Whether you have a question, would like to book a session, or simply
-            want to say hello, please don't hesitate to reach out as we look
+            want to say hello, please don&apos;t hesitate to reach out as we look
             forward to connecting with you and capturing the beauty of your
             world!
           </motion.p>

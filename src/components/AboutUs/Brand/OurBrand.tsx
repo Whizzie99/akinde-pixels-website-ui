@@ -27,7 +27,7 @@ const OurBrand = (): JSX.Element => {
         <p data-aos="fade-up" data-aos-delay="200" className="mb-4">
           Akinde Pixels is not just a visual storytelling agency; we are a
           powerhouse of creativity and emotions. We specialize in crafting
-          images that don't just capture moments but immortalize them. We
+          images that don&apos;t just capture moments but immortalize them. We
           believe that every picture has the power to tell story-one that
           resonates deeply with its audience, transcending the boundaries of
           language and culture. Our passion lies in creating visually stunning
@@ -36,7 +36,7 @@ const OurBrand = (): JSX.Element => {
         </p>
         <p data-aos="fade-up" data-aos-delay="300" className="mb-4">
           At Akinde Pixels, we are driven by a commitment to excellence and a
-          deep understanding of the human experience. Whether it's raw emotion
+          deep understanding of the human experience. Whether it&apos;s raw emotion
           of wedding day, the intricate details of a product, or the powerful
           narrative of a brand, we bring an unmatched level of artistry and
           precision to every shot. Our images are not just photographs; they are
