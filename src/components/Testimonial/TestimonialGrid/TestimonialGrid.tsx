@@ -13,7 +13,7 @@ const TestimonialGrid = () => {
 
       {testimonies.map(({ id, image, title, details }) => (
         <div
-          className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 items-start lg:items-center"
+          className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 items-start lg:items-center shadow p-2 hover:shadow-md transition-all duration-300"
           key={id}
         >
           <div className="w-full">
