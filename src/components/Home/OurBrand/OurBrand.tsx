@@ -116,7 +116,7 @@ const OurBrand = () => {
             {[1, 2, 3].map((_, index) => (
               <SwiperSlide key={index}>
                 <div
-                  className={`relative w-full ${index === 1 ? "h-[450px]" : "h-[380px]"} flex items-end justify-center pb-8`}
+                  className={`relative w-full ${index === 1 ? "h-[380px]" : "h-[380px]"} flex items-end justify-center pb-8`}
                 >
                   <Image
                     src={sampleImg}

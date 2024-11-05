@@ -11,10 +11,10 @@ import sampleImg from "../../../../public/images/wedding-sample-1.png";
 
 const galleryItems = [
   { id: 1, title: "Weddings", height: "380px" },
-  { id: 2, title: "Portraits", height: "450px" },
+  { id: 2, title: "Portraits", height: "380px" },
   { id: 3, title: "Events", height: "380px" },
   { id: 4, title: "Fashion", height: "380px" },
-  { id: 5, title: "Family", height: "450px" },
+  { id: 5, title: "Family", height: "380px" },
 ];
 
 const Galleries = () => {

@@ -128,7 +128,8 @@ const ContactForm = () => {
                 placeholder="First Name"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
             </motion.div>
             <motion.div
@@ -149,7 +150,8 @@ const ContactForm = () => {
                 placeholder="Last Name"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
             </motion.div>
             <motion.div
@@ -170,7 +172,8 @@ const ContactForm = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
             </motion.div>
             <motion.div
@@ -191,7 +194,8 @@ const ContactForm = () => {
                 placeholder="Phone Number"
                 value={formData.phoneNumber}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
             </motion.div>
           </div>
@@ -214,7 +218,8 @@ const ContactForm = () => {
                 name="sessionType"
                 value={formData.sessionType}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               >
                 <option value="" disabled>
                   wedding
@@ -243,7 +248,8 @@ const ContactForm = () => {
                 name="preferredService"
                 value={formData.preferredService}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               >
                 <option value="" disabled>
                   videography
@@ -270,7 +276,8 @@ const ContactForm = () => {
                 name="needStylist"
                 value={formData.needStylist}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               >
                 <option value="" disabled>
                   choose options
@@ -297,7 +304,8 @@ const ContactForm = () => {
                 name="needMakeupArtist"
                 value={formData.needMakeupArtist}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               >
                 <option value="" disabled>
                   choose options
@@ -327,7 +335,8 @@ const ContactForm = () => {
                 name="eventDate"
                 value={formData.eventDate}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
             </motion.div>
             <motion.div
@@ -348,7 +357,8 @@ const ContactForm = () => {
                 name="videoSessionDate"
                 value={formData.videoSessionDate}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
             </motion.div>
           </div>
@@ -373,7 +383,8 @@ const ContactForm = () => {
                 placeholder="Enter venue name(s) or location(s)"
                 value={formData.venues}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
             </motion.div>
 
@@ -396,7 +407,8 @@ const ContactForm = () => {
                 placeholder="Enter your estimated budget"
                 value={formData.budget}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
             </motion.div>
 
@@ -419,7 +431,8 @@ const ContactForm = () => {
                 placeholder="Enter estimated number of guests"
                 value={formData.guestCount}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
             </motion.div>
           </div>
@@ -443,6 +456,7 @@ const ContactForm = () => {
               value={formData.textArea}
               onChange={handleChange}
               className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2 resize-none"
+              required
             ></textarea>
           </motion.div>
 
