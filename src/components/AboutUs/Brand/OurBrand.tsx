@@ -36,12 +36,12 @@ const OurBrand = (): JSX.Element => {
         </p>
         <p data-aos="fade-up" data-aos-delay="300" className="mb-4">
           At Akinde Pixels, we are driven by a commitment to excellence and a
-          deep understanding of the human experience. Whether it&apos;s raw emotion
-          of wedding day, the intricate details of a product, or the powerful
-          narrative of a brand, we bring an unmatched level of artistry and
-          precision to every shot. Our images are not just photographs; they are
-          carefully crafted stories that communicate, inspire, and connect on a
-          profound level.
+          deep understanding of the human experience. Whether it&apos;s raw
+          emotion of wedding day, the intricate details of a product, or the
+          powerful narrative of a brand, we bring an unmatched level of artistry
+          and precision to every shot. Our images are not just photographs; they
+          are carefully crafted stories that communicate, inspire, and connect
+          on a profound level.
         </p>
         <p data-aos="fade-up" data-aos-delay="400">
           We are dedicated to delivery not just pictures, but powerful visual

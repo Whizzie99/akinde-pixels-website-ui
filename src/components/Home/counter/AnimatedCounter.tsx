@@ -9,7 +9,7 @@ const AnimatedCounter = () => {
 
   useEffect(() => {
     const currentRef = containerRef.current;
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -20,7 +20,7 @@ const AnimatedCounter = () => {
       },
       {
         threshold: 0.1,
-      }
+      },
     );
 
     if (currentRef) {
@@ -39,19 +39,19 @@ const AnimatedCounter = () => {
       end: 100,
       duration: 4,
       suffix: "+",
-      label: "Photographed"
+      label: "Photographed",
     },
     {
       end: 10,
       duration: 5,
-      label: "Years in business"
+      label: "Years in business",
     },
     {
       end: 100,
       duration: 6,
       suffix: "+",
-      label: "Photographs Delivered"
-    }
+      label: "Photographs Delivered",
+    },
   ];
 
   return (
