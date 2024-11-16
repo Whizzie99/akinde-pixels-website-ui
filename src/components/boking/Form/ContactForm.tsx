@@ -3,6 +3,7 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import contactImage from "../../../../public/images/Contact-page-image.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface FormData {
   firstName: string;
@@ -60,22 +61,60 @@ const ContactForm = () => {
         <Image src={contactImage} width={600} height={100} alt="" />
       </div>
       <div>
-        <div className="text-[#7B7B7B] border border-b-[#A3A3A3] border-l-[#A3A3A3] border-r-0 p-4">
-          <p className="mb-2 ">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            type: "spring",
+            bounce: 0.2,
+          }}
+          className="text-[#7B7B7B] border border-b-[#A3A3A3] border-l-[#A3A3A3] border-r-0 p-4"
+        >
+          <motion.p
+            className="mb-2"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.3,
+              type: "spring",
+              bounce: 0.2,
+            }}
+          >
             Thank you for stopping by our photography website! We would love to
             hear from you and discuss how we can help you capture your special
             moments.
-          </p>
-          <p>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.5,
+              type: "spring",
+              bounce: 0.2,
+            }}
+          >
             Whether you have a question, would like to book a session, or simply
-            want to say hello, please don’t hesitate to reach out as we look
-            forward to connecting with you and capturing the beauty of your
+            want to say hello, please don&apos;t hesitate to reach out as we
+            look forward to connecting with you and capturing the beauty of your
             world!
-          </p>
-        </div>
-        <form onSubmit={handleSubmit} className="mt-16 space-y-8">
+          </motion.p>
+        </motion.div>
+        <motion.form
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="mt-16 space-y-8"
+        >
           <div className="grid grid-cols-2 gap-6">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+            >
               <label
                 htmlFor="firstName"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -89,10 +128,15 @@ const ContactForm = () => {
                 placeholder="First Name"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
+            >
               <label
                 htmlFor="lastName"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -106,10 +150,15 @@ const ContactForm = () => {
                 placeholder="Last Name"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.6 }}
+            >
               <label
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -123,10 +172,15 @@ const ContactForm = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.8 }}
+            >
               <label
                 htmlFor="phoneNumber"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -140,13 +194,19 @@ const ContactForm = () => {
                 placeholder="Phone Number"
                 value={formData.phoneNumber}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
-            </div>
+            </motion.div>
           </div>
 
           <div className="space-y-4">
-            <div className="w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 2.0 }}
+              className="w-full"
+            >
               <label
                 htmlFor="sessionType"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -158,7 +218,8 @@ const ContactForm = () => {
                 name="sessionType"
                 value={formData.sessionType}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               >
                 <option value="" disabled>
                   wedding
@@ -168,9 +229,14 @@ const ContactForm = () => {
                 <option value="portraits">Portraits</option>
                 <option value="editorials">Editorials</option>
               </select>
-            </div>
+            </motion.div>
 
-            <div className="w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 2.2 }}
+              className="w-full"
+            >
               <label
                 htmlFor="preferredService"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -182,7 +248,8 @@ const ContactForm = () => {
                 name="preferredService"
                 value={formData.preferredService}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               >
                 <option value="" disabled>
                   videography
@@ -190,9 +257,14 @@ const ContactForm = () => {
                 <option value="videography">Videography</option>
                 <option value="cinematography">Cinematography</option>
               </select>
-            </div>
+            </motion.div>
 
-            <div className="w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 2.4 }}
+              className="w-full"
+            >
               <label
                 htmlFor="needStylist"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -204,7 +276,8 @@ const ContactForm = () => {
                 name="needStylist"
                 value={formData.needStylist}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               >
                 <option value="" disabled>
                   choose options
@@ -212,9 +285,14 @@ const ContactForm = () => {
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
-            </div>
+            </motion.div>
 
-            <div className="w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 2.6 }}
+              className="w-full"
+            >
               <label
                 htmlFor="needMakeupArtist"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -226,7 +304,8 @@ const ContactForm = () => {
                 name="needMakeupArtist"
                 value={formData.needMakeupArtist}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               >
                 <option value="" disabled>
                   choose options
@@ -234,11 +313,16 @@ const ContactForm = () => {
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
-            </div>
+            </motion.div>
           </div>
 
           <div className="flex space-x-4">
-            <div className="w-1/2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 2.8 }}
+              className="w-1/2"
+            >
               <label
                 htmlFor="eventDate"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -251,10 +335,16 @@ const ContactForm = () => {
                 name="eventDate"
                 value={formData.eventDate}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
-            </div>
-            <div className="w-1/2">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 3.0 }}
+              className="w-1/2"
+            >
               <label
                 htmlFor="videoSessionDate"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -267,13 +357,19 @@ const ContactForm = () => {
                 name="videoSessionDate"
                 value={formData.videoSessionDate}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
-            </div>
+            </motion.div>
           </div>
 
           <div className="space-y-4">
-            <div className="w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 3.2 }}
+              className="w-full"
+            >
               <label
                 htmlFor="venues"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -287,11 +383,17 @@ const ContactForm = () => {
                 placeholder="Enter venue name(s) or location(s)"
                 value={formData.venues}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
-            </div>
+            </motion.div>
 
-            <div className="w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 3.4 }}
+              className="w-full"
+            >
               <label
                 htmlFor="budget"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -305,11 +407,17 @@ const ContactForm = () => {
                 placeholder="Enter your estimated budget"
                 value={formData.budget}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
-            </div>
+            </motion.div>
 
-            <div className="w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 3.6 }}
+              className="w-full"
+            >
               <label
                 htmlFor="guestCount"
                 className="block mb-2 text-sm font-medium text-gray-700"
@@ -323,12 +431,17 @@ const ContactForm = () => {
                 placeholder="Enter estimated number of guests"
                 value={formData.guestCount}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                required
               />
-            </div>
+            </motion.div>
           </div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 3.8 }}
+          >
             <label
               htmlFor="textArea"
               className="block mb-2 text-sm font-medium text-gray-700"
@@ -343,16 +456,20 @@ const ContactForm = () => {
               value={formData.textArea}
               onChange={handleChange}
               className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2 resize-none"
+              required
             ></textarea>
-          </div>
+          </motion.div>
 
-          <button
+          <motion.button
             type="submit"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 4.0 }}
             className="w-full bg-[#F28E2C] text-white p-2 rounded hover:bg-[#e0954a] transition duration-300"
           >
             Submit
-          </button>
-        </form>
+          </motion.button>
+        </motion.form>
       </div>
     </div>
   );
