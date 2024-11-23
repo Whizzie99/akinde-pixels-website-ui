@@ -42,7 +42,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="h-[85px] w-full" /> {/* Spacer div to prevent content jump */}
+      <div className="h-[85px] w-full" />{" "}
+      {/* Spacer div to prevent content jump */}
       <nav className="fixed top-0 left-0 right-0 bg-white z-40 shadow-sm">
         <div className="custom-container">
           <div className="flex items-center justify-between py-4">
@@ -86,7 +87,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
       {/* Mobile Menu */}
       <div
         className={`fixed inset-0 bg-white z-50 transition-all px-6 pb-8 duration-300 ease-in-out md:hidden ${

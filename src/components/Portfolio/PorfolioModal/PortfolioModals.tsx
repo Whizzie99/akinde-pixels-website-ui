@@ -1,59 +1,50 @@
-import { useState, useEffect } from "react";
+// app/portfolio/[id]/page.tsx
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { X, ZoomIn } from "lucide-react";
-import ZoomView from "../zoomview/ZoomView";
+import { ZoomIn } from "lucide-react";
+import { useParams, useRouter } from "next/navigation";
+import ZoomView from "@/components/Portfolio/zoomview/ZoomView";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import { aboutSwiper } from "../../../../db/data";
-import { GalleryImage } from "../../../../db/data";
+import { aboutSwiper, GalleryImage } from "../../../../db/data";
 
-interface Slide {
-  id: number;
-  image: string;
-  caption: string;
-}
-
-const PortfolioModal = ({
-  isOpen,
-  onClose,
-  slide,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-  slide: Slide | null;
-}) => {
+const PortfolioPage = () => {
+  const params = useParams();
+  const router = useRouter();
+  const [slide, setSlide] = useState<typeof aboutSwiper[0] | null>(null);
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
   useEffect(() => {
-    if (isOpen && slide) {
-      // Find the selected slide from the aboutSwiper array
-      const selectedSlide = aboutSwiper.find((s) => s.id === slide.id);
+    if (params.id) {
+      const selectedSlide = aboutSwiper.find(
+        (s) => s.id === parseInt(params.id as string)
+      );
       if (selectedSlide) {
+        setSlide(selectedSlide);
         setImages(selectedSlide.galleryImages);
+      } else {
+        router.push("/portfolio"); // Redirect to portfolio if ID not found
       }
-      setZoomedImage(null);
     }
-  }, [isOpen, slide]);
+  }, [params.id, router]);
 
-  if (!isOpen || !slide) return null;
+  if (!slide) return null;
 
   return (
-    <div className="w-full bg-[#D1D3D033] py-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-6">
-          <div className="w-full m-auto">
-            <h2 className="text-[28px] md:text-[32px] lg:text-[40px] text-gray-500 text-center">
-              {slide.caption}
-            </h2>
-          </div>
-
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-300 rounded-full transition-colors relative"
-            aria-label="Close gallery"
+    <div className="w-full bg-[#D1D3D033] py-16 min-h-screen -mt-8">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="mb-6">
+          <button 
+            onClick={() => router.back()} 
+            className="text-gray-500 mb-4 hover:text-gray-700"
           >
-            <X className="w-8 h-8 text-gray-500" />
+            ← Back to Portfolio
           </button>
+          <h2 className="text-[28px] md:text-[32px] lg:text-[40px] text-gray-500">
+            {slide.caption}
+          </h2>
         </div>
 
         <ResponsiveMasonry columnsCountBreakPoints={{ 300: 2, 500: 3, 700: 4 }}>
@@ -81,17 +72,17 @@ const PortfolioModal = ({
             ))}
           </Masonry>
         </ResponsiveMasonry>
-      </div>
 
-      {zoomedImage && (
-        <ZoomView
-          image={zoomedImage}
-          alt={slide.caption}
-          onClose={() => setZoomedImage(null)}
-        />
-      )}
+        {zoomedImage && (
+          <ZoomView
+            image={zoomedImage}
+            alt={slide.caption}
+            onClose={() => setZoomedImage(null)}
+          />
+        )}
+      </div>
     </div>
   );
 };
 
-export default PortfolioModal;
+export default PortfolioPage;

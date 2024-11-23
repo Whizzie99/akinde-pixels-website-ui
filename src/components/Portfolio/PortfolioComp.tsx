@@ -3,7 +3,6 @@
 import Image from "next/image";
 import PortfolioSwiper from "./PortfolioSwiper/PortfolioSwiper";
 
-// Define a type for the slide if you know its structure, otherwise use 'any'
 type Slide = {
   image: string;
   caption: string;
@@ -11,7 +10,7 @@ type Slide = {
 };
 
 interface PortfolioCompProps {
-  openModal: (slide: Slide) => void; // Define the correct type for openModal
+  openModal: (slide: Slide) => void; 
 }
 
 const PortfolioComp = ({ openModal }: PortfolioCompProps) => {
@@ -28,7 +27,7 @@ const PortfolioComp = ({ openModal }: PortfolioCompProps) => {
         </div>
         <div>
           <div className="my-8 ml-8">
-            <PortfolioSwiper openModal={openModal} />
+            <PortfolioSwiper />
           </div>
           <div className="relative">
             <div className="absolute top-0 lg:-left-[5%] w-[60vw] h-[1px] bg-[#CCCCCC]"></div>
