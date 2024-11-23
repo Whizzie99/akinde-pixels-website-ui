@@ -24,7 +24,7 @@ const PortfolioRoute = () => {
         setSlide(selectedSlide);
         setImages(selectedSlide.galleryImages);
       } else {
-        router.push("/portfolio"); 
+        router.push("/portfolio");
       }
     }
   }, [params.id, router]);

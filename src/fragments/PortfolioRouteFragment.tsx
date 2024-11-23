@@ -1,12 +1,12 @@
-import PortfolioRoute from '@/components/Portfolio/PorfolioModal/PortfolioRoute'
-import React from 'react'
+import PortfolioRoute from "@/components/Portfolio/PorfolioModal/PortfolioRoute";
+import React from "react";
 
 const PortfolioRouteFragment = () => {
   return (
     <>
-      <PortfolioRoute/>
+      <PortfolioRoute />
     </>
-  )
-}
+  );
+};
 
-export default PortfolioRouteFragment
+export default PortfolioRouteFragment;
