@@ -1,12 +1,11 @@
-import PortfolioPage from "@/components/Portfolio/PorfolioModal/PortfolioModals"
-
+import PortfolioPage from "@/components/Portfolio/PorfolioModal/PortfolioModals";
 
 const page = () => {
   return (
     <>
-      <PortfolioPage/>
+      <PortfolioPage />
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;

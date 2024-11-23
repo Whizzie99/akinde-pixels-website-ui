@@ -12,14 +12,14 @@ import { aboutSwiper, GalleryImage } from "../../../../db/data";
 const PortfolioPage = () => {
   const params = useParams();
   const router = useRouter();
-  const [slide, setSlide] = useState<typeof aboutSwiper[0] | null>(null);
+  const [slide, setSlide] = useState<(typeof aboutSwiper)[0] | null>(null);
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
   useEffect(() => {
     if (params.id) {
       const selectedSlide = aboutSwiper.find(
-        (s) => s.id === parseInt(params.id as string)
+        (s) => s.id === parseInt(params.id as string),
       );
       if (selectedSlide) {
         setSlide(selectedSlide);
@@ -36,8 +36,8 @@ const PortfolioPage = () => {
     <div className="w-full bg-[#D1D3D033] py-16 min-h-screen -mt-8">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-6">
-          <button 
-            onClick={() => router.back()} 
+          <button
+            onClick={() => router.back()}
             className="text-gray-500 mb-4 hover:text-gray-700"
           >
             ← Back to Portfolio

@@ -10,7 +10,7 @@ type Slide = {
 };
 
 interface PortfolioCompProps {
-  openModal: (slide: Slide) => void; 
+  openModal: (slide: Slide) => void;
 }
 
 const PortfolioComp = ({ openModal }: PortfolioCompProps) => {

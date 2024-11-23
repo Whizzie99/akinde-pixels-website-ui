@@ -50,8 +50,8 @@ const PortfolioSwiper = () => {
       >
         {aboutSwiper.map((slide) => (
           <SwiperSlide key={slide.id} className="flex flex-col items-center">
-            <div 
-              onClick={() => router.push(`/portfolio/${slide.id}`)} 
+            <div
+              onClick={() => router.push(`/portfolio/${slide.id}`)}
               className="relative cursor-pointer group overflow-hidden"
             >
               <Image
