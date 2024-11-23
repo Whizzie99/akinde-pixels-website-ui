@@ -37,7 +37,7 @@ const OurBrand = () => {
             type: "spring",
             bounce: 0.2,
           }}
-          className="font-lato text-black text-left lg:w-[550px] flex flex-col justify-center"
+          className="font-lato text-black text-justify lg:w-[550px] flex flex-col justify-center"
         >
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
