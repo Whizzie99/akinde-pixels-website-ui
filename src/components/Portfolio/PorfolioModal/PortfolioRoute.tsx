@@ -1,4 +1,3 @@
-// app/portfolio/[id]/page.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -9,7 +8,7 @@ import ZoomView from "@/components/Portfolio/zoomview/ZoomView";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { aboutSwiper, GalleryImage } from "../../../../db/data";
 
-const PortfolioPage = () => {
+const PortfolioRoute = () => {
   const params = useParams();
   const router = useRouter();
   const [slide, setSlide] = useState<(typeof aboutSwiper)[0] | null>(null);
@@ -25,7 +24,7 @@ const PortfolioPage = () => {
         setSlide(selectedSlide);
         setImages(selectedSlide.galleryImages);
       } else {
-        router.push("/portfolio"); // Redirect to portfolio if ID not found
+        router.push("/portfolio"); 
       }
     }
   }, [params.id, router]);
@@ -34,7 +33,7 @@ const PortfolioPage = () => {
 
   return (
     <div className="w-full bg-[#D1D3D033] py-16 min-h-screen -mt-8">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto lg:custom-container w-[90%]">
         <div className="mb-6">
           <button
             onClick={() => router.back()}
@@ -85,4 +84,4 @@ const PortfolioPage = () => {
   );
 };
 
-export default PortfolioPage;
+export default PortfolioRoute;

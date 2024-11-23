@@ -1,9 +1,10 @@
-import PortfolioPage from "@/components/Portfolio/PorfolioModal/PortfolioModals";
+import PortfolioRouteFragment from "@/fragments/PortfolioRouteFragment";
+
 
 const page = () => {
   return (
     <>
-      <PortfolioPage />
+      <PortfolioRouteFragment/> 
     </>
   );
 };

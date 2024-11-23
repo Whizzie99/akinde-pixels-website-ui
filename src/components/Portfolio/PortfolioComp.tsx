@@ -3,17 +3,7 @@
 import Image from "next/image";
 import PortfolioSwiper from "./PortfolioSwiper/PortfolioSwiper";
 
-type Slide = {
-  image: string;
-  caption: string;
-  id: number;
-};
-
-interface PortfolioCompProps {
-  openModal: (slide: Slide) => void;
-}
-
-const PortfolioComp = ({ openModal }: PortfolioCompProps) => {
+const PortfolioComp = () => {
   return (
     <div>
       <div className="lg:flex gap-6 py-6">
