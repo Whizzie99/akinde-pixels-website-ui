@@ -413,6 +413,9 @@ export default function ReviewForm() {
                   onChange={handleChange}
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 >
+                  <option value="" disabled>
+                  choose options
+                  </option>
                   <option value="yes">Turnaround Time: Yes</option>
                   <option value="no">Turnaround Time: No</option>
                   <option value="maybe">Turnaround Time: Maybe</option>
@@ -440,6 +443,9 @@ export default function ReviewForm() {
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                   required
                 >
+                  <option value="" disabled>
+                    choose options
+                  </option>
                   <option value="yes">Recommend Services: Yes</option>
                   <option value="no">Recommend Services: No</option>
                   <option value="maybe">Recommend Services: Maybe</option>
