@@ -650,6 +650,11 @@ export const footerNav: footerNavItems[] = [
     name: "Contact Us",
     link: "/contact",
   },
+  {
+    id: 8,
+    name: "Read Reviews",
+    link: "/read-reviews",
+  },
 ];
 
 export const footerSocials: FooterSocial[] = [
