@@ -16,7 +16,7 @@ const OurBrand = (): JSX.Element => {
 
   return (
     <div className="py-8 custom-container">
-      <div className="font-lato text-black text-left flex flex-col justify-center pb-8">
+      <div className="font-lato text-black text-justify flex flex-col justify-center pb-8">
         <h2
           data-aos="fade-right"
           data-aos-delay="100"

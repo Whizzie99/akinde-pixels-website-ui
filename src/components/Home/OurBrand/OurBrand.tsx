@@ -54,7 +54,7 @@ const OurBrand = () => {
               </div>
             </div>
             <div data-aos="fade-left" data-aos-delay="300">
-              <p className="font-lato text-black text-left mb-6 leading-[24px]">
+              <p className="font-lato text-black text-justify mb-6 leading-[24px]">
                 Akinde Pixels is not just a visual storytelling agency; we are a
                 powerhouse of creativity and emotions. We specialize in crafting
                 images that don&apos;t just capture moments but immortalize
@@ -64,7 +64,7 @@ const OurBrand = () => {
                 creating visually stunning and emotionally charged images that
                 linger in the minds of those who view them.
               </p>
-              <p>
+              <p className="text-justify">
                 Akinde Pixels is not just a visual storytelling agency; we are a
                 powerhouse of creativity and emotions. We specialize in crafting
                 images that don&apos;t just capture moments but immortalize

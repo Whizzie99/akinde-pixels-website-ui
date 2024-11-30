@@ -4,21 +4,15 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { aboutSwiper } from "../../../../db/data";
+import { useRouter } from "next/navigation";
+import { Plus } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
-type Slide = {
-  image: string;
-  caption: string;
-  id: number;
-};
+const PortfolioSwiper = () => {
+  const router = useRouter();
 
-interface PortfolioSwiperProps {
-  openModal: (slide: Slide) => void;
-}
-
-const PortfolioSwiper = ({ openModal }: PortfolioSwiperProps) => {
   return (
     <div className="relative w-[90%] mx-auto">
       <style jsx>{`
@@ -56,14 +50,21 @@ const PortfolioSwiper = ({ openModal }: PortfolioSwiperProps) => {
       >
         {aboutSwiper.map((slide) => (
           <SwiperSlide key={slide.id} className="flex flex-col items-center">
-            <div onClick={() => openModal(slide)} className="cursor-pointer">
+            <div
+              onClick={() => router.push(`/portfolio/${slide.id}`)}
+              className="relative cursor-pointer group overflow-hidden"
+            >
               <Image
                 src={slide.image}
                 alt={slide.caption}
                 width={500}
                 height={500}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <Plus className="text-white w-8 h-8" />
+              </div>
             </div>
             <div className="mt-2 flex flex-col items-center">
               <p className="text-center pb-2 text-[#F28E2C]">{slide.caption}</p>
