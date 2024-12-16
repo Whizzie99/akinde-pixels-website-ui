@@ -17,7 +17,6 @@ import "swiper/css/pagination";
 import Link from "next/link";
 
 const TestimonialCarousel = () => {
-
   const { data: testimonials, isPending } = useGetTestimonials();
 
   console.log(testimonials);
@@ -64,7 +63,9 @@ const TestimonialCarousel = () => {
               />
             </div>
             <h3 className="text-xl mt-4 lg:mt-8">{testimonial.fields.title}</h3>
-            <p className="mt-2 text-gray-600">{testimonial.fields.description}</p>
+            <p className="mt-2 text-gray-600">
+              {testimonial.fields.description}
+            </p>
             <div className="flex mt-4 space-x-2">
               {[...Array(testimonial.fields.rating)].map((_, index) => (
                 <IoMdStar key={index} className="text-black" size={20} />

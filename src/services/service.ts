@@ -24,4 +24,3 @@ export const getTestimonials = async () => {
     throw new Error(error);
   }
 };
-
