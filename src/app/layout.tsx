@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/Footer/Footer";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
+import { NextUIProvider } from "@nextui-org/react";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -25,9 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ReactQueryProvider>
+          <NextUIProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </NextUIProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   );

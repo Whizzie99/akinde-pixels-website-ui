@@ -4,14 +4,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { useGetTopCarouselItems } from "@/services/queries";
 
-import sampleImg from "../../../../public/images/hero-carousel-img.png";
+// import sampleImg from "../../../../public/images/hero-carousel-img.png";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 const Hero = () => {
+  const { data: carouselItems, isPending } = useGetTopCarouselItems();
+
+  console.log(carouselItems);
+  console.log(carouselItems?.fields?.imgs);
+
+  if (isPending) return <div>loading...</div>;
+
   return (
     <div>
       <div className="custom-container">
@@ -40,20 +48,24 @@ const Hero = () => {
             },
           }}
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((item: any) => (
-            <SwiperSlide key={item}>
-              <div className="w-full h-[10em] relative">
-                <Image
-                  src={sampleImg}
-                  alt="sample"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                  priority
-                  className="object-cover"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
+          {carouselItems?.fields?.imgs.length > 0 ? (
+            carouselItems.fields.imgs.map((img: any) => (
+              <SwiperSlide key={img.sys.id}>
+                <div className="w-full h-[10em] relative">
+                  <Image
+                    src={`https:${img.fields.file.url}`}
+                    alt="sample"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                    priority
+                    className="object-cover rounded-[8px]"
+                  />
+                </div>
+              </SwiperSlide>
+            ))
+          ) : (
+            <p>nothing dey here</p>
+          )}
         </Swiper>
       </div>
       <div className="h-[552px] bg-sub-hero-bg bg-cover bg-no-repeat bg-center my-10 flex items-center justify-center px-4">

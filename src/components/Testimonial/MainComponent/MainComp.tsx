@@ -7,7 +7,7 @@ const MainComp = () => {
     <div className="py-8 custom-container">
       <div className="mb-12 text-center">
         <h1 className="lg:text-[40px] text-[32px] uppercase text-[#CA7625]">
-          Testimonies
+          Testimonials
         </h1>
         <p className="text-[#7B7B7B]">See What Our Clients Are Saying</p>
       </div>

@@ -16,7 +16,7 @@ const MainReview = () => {
           layout="responsive"
           width={300}
           height={300}
-          className="object-cover"
+          className="object-cover rounded-[8px]"
         />
       </div>
       <div className="lg:relative custom-container">

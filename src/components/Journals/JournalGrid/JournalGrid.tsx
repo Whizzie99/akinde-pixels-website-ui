@@ -9,7 +9,7 @@ const JournalGrid = () => {
         return (
           <div key={id} className="">
             <div className="flex justify-center items-center w-auto">
-              <Image src={image} alt={name} width={400} height={300} />
+              <Image src={image} alt={name} width={400} height={300} className="rounded-[8px]" />
             </div>
             <div className="text-center  mt-2 ">
               <p className="text-sm font-medium">{title}</p>

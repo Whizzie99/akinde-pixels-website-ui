@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import logo from "../../../../public/images/logo-full-frame.png";
+// import logo from "../../../../public/images/logo-full-frame.png";
 import sampleImg from "../../../../public/images/wedding-sample-1.png";
 
 const OurBrand = () => {
@@ -40,9 +40,18 @@ const OurBrand = () => {
             <div
               data-aos="fade-right"
               data-aos-delay="200"
-              className="w-full flex justify-center lg:w-auto"
+              className="w-full flex justify-center lg:w-auto rounded-[8px]"
             >
-              <div className="relative w-[500px] h-[333.33px] top-10 lg:max-w-full">
+              <video
+                src="https://res.cloudinary.com/du6xx9bt9/video/upload/v1734300737/akinde_intro_206535B_a1s2ud.webm"
+                muted
+                loop
+                autoPlay
+                className="w-full h-[333.33px] rounded-[8px]"
+              >
+                Your browser does not support the video tag.
+              </video>
+              {/* <div className="relative w-[500px] h-[333.33px] top-10 lg:max-w-full">
                 <Image
                   src={logo}
                   alt="sample"
@@ -51,7 +60,7 @@ const OurBrand = () => {
                   priority
                   className="object-cover"
                 />
-              </div>
+              </div> */}
             </div>
             <div data-aos="fade-left" data-aos-delay="300">
               <p className="font-lato text-black text-justify mb-6 leading-[24px]">

@@ -31,14 +31,14 @@ const Footer = () => {
               width={150}
               height={100}
               alt=""
-              className="lg:w-full w-[382px] lg:h-auto h-[260px] object-cover"
+              className="lg:w-full w-[382px] lg:h-auto h-[260px] object-cover rounded-[8px]"
             />
             <Image
               src={footerPix1}
               width={150}
               height={100}
               alt=""
-              className="lg:w-full object-cover hidden lg:inline"
+              className="lg:w-full object-cover hidden lg:inline rounded-[8px]"
             />
           </div>
           <div className="lg:px-8 lg:mt-0 mt-4">
