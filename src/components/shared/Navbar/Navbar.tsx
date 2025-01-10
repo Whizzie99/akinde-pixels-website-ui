@@ -13,7 +13,7 @@ const navData = [
   { id: 2, name: "Portfolio", link: "/portfolio" },
   { id: 3, name: "Journals", link: "/journals" },
   { id: 4, name: "About Us", link: "/about-us" },
-  { id: 5, name: "Review", link: "/reviews" },
+  { id: 5, name: "Reviews", link: "/reviews" },
 ];
 
 const Navbar = () => {

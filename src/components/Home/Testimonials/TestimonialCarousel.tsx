@@ -68,7 +68,7 @@ const TestimonialCarousel = () => {
             </p>
             <div className="flex mt-4 space-x-2">
               {[...Array(testimonial.fields.rating)].map((_, index) => (
-                <IoMdStar key={index} className="text-black" size={20} />
+                <IoMdStar key={index} className="text-[#F28E2C]" size={20} />
               ))}
             </div>
           </SwiperSlide>
