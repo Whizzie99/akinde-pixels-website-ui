@@ -24,7 +24,7 @@ const JournalGrid = () => {
               </p>
               <div className="flex space-x-2  justify-center mt-1">
                 {[...Array(5)].map((_, index) => (
-                  <IoMdStar key={index} className="text-black" size={20} />
+                  <IoMdStar key={index} className="text-[#F28E2C]" size={20} />
                 ))}
               </div>
             </div>

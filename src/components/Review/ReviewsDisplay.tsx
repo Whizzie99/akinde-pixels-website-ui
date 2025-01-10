@@ -30,7 +30,7 @@ const StarRating = ({
         <Star
           key={star}
           className={`w-4 h-4 ${
-            star <= rating ? "text-amber-500 fill-current" : "text-gray-300"
+            star <= rating ? "text-[#F28E2C] fill-current" : "text-gray-300"
           }`}
         />
       ))}
@@ -122,7 +122,7 @@ const ReviewsDisplay = () => {
                 <button
                   key={type}
                   onClick={() => setSelectedType(type)}
-                  className={`px-3 py-1 rounded-md text-sm transition-colors ${
+                  className={`px-3 py-1 rounded-md text-sm transition-colors capitalize ${
                     selectedType === type
                       ? "bg-[#F28E2C] text-white"
                       : "text-gray-600 hover:bg-gray-100"
@@ -153,9 +153,12 @@ const ReviewsDisplay = () => {
             No reviews available
           </div>
         ) : (
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {filteredReviews.map((review) => (
-              <div key={review._id} className="border-b pb-6 last:border-b-0">
+              <div
+                key={review._id}
+                className="pb-6 last:border-b-0 p-4 bg-[#FEF8F2] rounded-[10px]"
+              >
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800">
@@ -170,10 +173,11 @@ const ReviewsDisplay = () => {
                   </div>
                 </div>
 
-                <div className="mb-4">
-                  <div className="flex items-center space-x-4 mb-2">
+                <div className="mb-2">
+                  <div className="flex items-center space-x-4 mb-1">
                     <span className="text-sm font-medium text-gray-700 capitalize">
-                      {review.sessionType} Session
+                      {/* {review.sessionType} Session */}
+                      Project quality
                     </span>
                     <StarRating rating={review.overallSatisfaction} />
                   </div>
@@ -184,19 +188,31 @@ const ReviewsDisplay = () => {
                     </p>
                   )}
                 </div>
-
-                <div className="gap-4 text-sm">
-                  <div>
-                    <span className="font-medium text-gray-700">
+                <div className="gap-4 text-sm flex flex-col gap-y-1">
+                  <div className="flex gap-x-4">
+                    {/* <span className="font-medium text-gray-700">
                       Photo Quality:
                     </span>
                     <span className="ml-2 text-gray-600 capitalize">
                       {review.photographQuality}
+                    </span> */}
+                    <span className="font-medium text-gray-700">
+                      Delivery Timeliness:
                     </span>
+                    <StarRating rating={review.overallSatisfaction} />
                   </div>
                   <div>
                     <span className="font-medium text-gray-700">
-                      Photographer Professionalism:
+                      Professionalism:
+                    </span>
+                    <StarRating
+                      rating={review.photographerProfessionalism}
+                      className="inline-flex ml-2"
+                    />
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">
+                      Performance:
                     </span>
                     <StarRating
                       rating={review.photographerProfessionalism}

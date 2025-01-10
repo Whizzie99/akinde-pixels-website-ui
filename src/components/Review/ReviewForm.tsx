@@ -197,6 +197,10 @@ export default function ReviewForm() {
                 </span>
               </div>
             )}
+            <p className="mb-4">
+              Please note that fields marked with{" "}
+              <span className="text-red-500">*</span> are required
+            </p>
             <div className="grid grid-cols-2 gap-4">
               <motion.div
                 initial={{ opacity: 0, y: -30 }}
@@ -207,7 +211,7 @@ export default function ReviewForm() {
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-gray-700"
                 >
-                  Email
+                  Email <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="email"
@@ -228,7 +232,7 @@ export default function ReviewForm() {
                   htmlFor="fullName"
                   className="block mb-2 text-sm font-medium text-gray-700"
                 >
-                  Full Name
+                  Full Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -290,7 +294,7 @@ export default function ReviewForm() {
                   htmlFor="sessionType"
                   className="block  text-sm font-medium text-gray-700"
                 >
-                  Types of sessions
+                  Types of session <span className="text-red-500">*</span>
                 </label>
                 <select
                   id="sessionType"
@@ -320,18 +324,18 @@ export default function ReviewForm() {
                   htmlFor="photographQuality"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Were you satisfied with the quality of the photographs?
+                  How would you rate the quality of the project delivered?{" "}
+                  <span className="text-red-500">*</span>
                 </label>
-                <select
+                <input
+                  type="number"
                   name="photographQuality"
-                  value={formData.photographQuality}
+                  min="0"
+                  max="5"
+                  value={formData.overallSatisfaction}
                   onChange={handleChange}
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                >
-                  <option value="yes">Photo Quality: Yes</option>
-                  <option value="no">Photo Quality: No</option>
-                  <option value="maybe">Photo Quality: Maybe</option>
-                </select>
+                />
               </motion.div>
             </div>
 
@@ -347,7 +351,7 @@ export default function ReviewForm() {
                   className="block text-sm font-medium text-gray-700"
                 >
                   How would you rate your overall satisfaction with our
-                  services? (0-5)
+                  services? (0-5) <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="number"
@@ -366,8 +370,8 @@ export default function ReviewForm() {
                 className="w-full"
               >
                 <label className="block text-sm font-medium text-gray-700">
-                  How would you rate the professionalism of the photographer?
-                  (0-5):
+                  How would you rate our professionalism? (0-5){" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="number"
@@ -389,19 +393,18 @@ export default function ReviewForm() {
                   htmlFor="moodCapture"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Did the photographer effectively capture the desired
-                  atmosphere or mood?
+                  How would you rate the performance of the photographer?{" "}
+                  <span className="text-red-500">*</span>
                 </label>
-                <select
+                <input
+                  type="number"
                   name="moodCapture"
+                  min="0"
+                  max="5"
                   value={formData.moodCapture}
                   onChange={handleChange}
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                >
-                  <option value="yes">Mood Capture: Yes</option>
-                  <option value="no">Mood Capture: No</option>
-                  <option value="maybe">Mood Capture: Maybe</option>
-                </select>
+                />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -413,22 +416,18 @@ export default function ReviewForm() {
                   htmlFor="photoEditing"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Were you happy with the turnaround time for receiving your
-                  photos?
+                  How would you rate the delivery timeliness?{" "}
+                  <span className="text-red-500">*</span>
                 </label>
-                <select
-                  name="turnaroundTime"
+                <input
+                  type="number"
+                  name="moodCapture"
+                  min="0"
+                  max="5"
                   value={formData.turnaroundTime}
                   onChange={handleChange}
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                >
-                  <option value="" disabled>
-                    choose options
-                  </option>
-                  <option value="yes">Turnaround Time: Yes</option>
-                  <option value="no">Turnaround Time: No</option>
-                  <option value="maybe">Turnaround Time: Maybe</option>
-                </select>
+                />
               </motion.div>
             </div>
 

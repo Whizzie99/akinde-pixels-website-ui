@@ -56,7 +56,7 @@ const Footer = () => {
               </div>
               <div className="text-center">
                 <p>Connect with Us</p>
-                <small>Akindeixels@gmail.com</small>
+                <small>support@akindepixels.com</small>
                 <div className="flex space-x-2 mt-2 items-center justify-center">
                   {footerSocials.map((item) => (
                     <Link key={item.id} href={item.link} className="text-xl">
