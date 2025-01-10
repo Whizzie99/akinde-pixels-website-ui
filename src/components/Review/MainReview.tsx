@@ -1,4 +1,4 @@
-import contactImagesm from "../../../public/images/contact-page-sm.png";
+// import contactImagesm from "../../../public/images/side-img.jpg";
 import Image from "next/image";
 import ReviewForm from "./ReviewForm";
 import SwiperComp from "@/components/shared/Swiper/SwiperComp";
@@ -12,7 +12,7 @@ const MainReview = () => {
       <div className="lg:hidden block w-full mb-4">
         <Image
           alt="Contact image for small screens"
-          src={contactImagesm}
+          src="/images/side-img.jpg"
           layout="responsive"
           width={300}
           height={300}

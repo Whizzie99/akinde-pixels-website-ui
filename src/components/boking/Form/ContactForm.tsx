@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from "react";
-import contactImage from "../../../../public/images/Contact-page-image.png";
+import contactImage from "../../../../public/images/side-img.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -57,8 +57,17 @@ const ContactForm = () => {
 
   return (
     <div className="lg:flex gap-6">
-      <div className="p-4 lg:block hidden">
-        <Image src={contactImage} width={600} height={100} alt="" />
+      <div className="p-4 lg:block hidden w-[600px]">
+        <div className="relative w-full h-full">
+          <Image
+            src={contactImage}
+            alt="akinde pixels"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            priority
+            className="object-cover object-center"
+          />
+        </div>
       </div>
       <div>
         <motion.div
