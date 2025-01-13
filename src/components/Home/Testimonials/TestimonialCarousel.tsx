@@ -81,7 +81,7 @@ const TestimonialCarousel = () => {
 
       <div className="mt-4 text-right">
         <Link
-          href="/testimonial"
+          href="#"
           className="text-[#F28E2C] hover:underline transition-all duration-300"
         >
           View all

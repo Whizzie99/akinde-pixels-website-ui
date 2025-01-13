@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 const OurBrand = () => {
   return (
-    <div className="custom-container py-8 ">
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
-        <div className="w-full flex justify-center">
+    <div className="custom-container py-8 pt-[110px] font-lato">
+      <div className="flex items-center lg:gap-x-6">
+        <div className="w-1/2 lg:block hidden">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -17,96 +17,95 @@ const OurBrand = () => {
               type: "spring",
               bounce: 0.2,
             }}
-            className="relative hidden lg:block h-[333.33px] top-10 lg:max-w-full "
           >
-            <Image
-              src={logo}
-              alt="sample"
-              height={568}
-              width={628}
-              priority
-              className="object-cover"
-            />
+            <div className="relative w-full h-[300px] border-y-[4px] border-y-black">
+              <Image
+                src={logo}
+                alt="sample"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                priority
+                fill
+                className="object-cover"
+              />
+            </div>
           </motion.div>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            type: "spring",
-            bounce: 0.2,
-          }}
-          className="font-lato text-black text-justify lg:w-[550px] flex flex-col justify-center"
-        >
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
+        <div className="lg:w-1/2 w-full">
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.8,
-              delay: 0.3,
               type: "spring",
               bounce: 0.2,
             }}
-            className="uppercase text-3xl text-[#F28E2C] mb-2"
+            className="font-lato text-black text-justify flex flex-col justify-center"
           >
-            Introduction
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1.0,
-              delay: 0.5,
-              type: "spring",
-              bounce: 0.2,
-            }}
-            className="mb-4"
-          >
-            Welcome to our brand guidelines. These guidelines are the foundation
-            of our brand identity and the visual language that defines who we
-            are. Akinde Pixels is more than just a name; it is a commitment to
-            excellence in visual storytelling. We believe in the power of
-            imagery to transcend words, evoke emotions, and capture the essence
-            of every moment
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1.2,
-              delay: 0.7,
-              type: "spring",
-              bounce: 0.2,
-            }}
-            className="mb-4"
-          >
-            Our brand is built on the principles of creativity, authenticity,
-            and precision. Though these guidelines, we aim to ensure that every
-            representation of Akinde Pixels whether in photography, digital
-            media, or print remains consistent, impactful, and true to our core
-            values. This document serves as a roadmap for how we present
-            ourselves to the world. It covers everything from our logo usage and
-            color palette to our photographic style and tone of voice. Whether
-            you are a part of the Akinde Pixels team or collaborating with us,
-            these guidelines are here to help you create work that reflects the
-            qualiy and artistry that our brand stands for.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1.4,
-              delay: 0.9,
-              type: "spring",
-              bounce: 0.2,
-            }}
-          >
-            Let’s continue to capture stories that resonate, inspire, and
-            connect. Welcome to the world of Akinde Pixels where every image is
-            masterpiece
-          </motion.p>
-        </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.3,
+                type: "spring",
+                bounce: 0.2,
+              }}
+              className="uppercase text-3xl text-[#F28E2C] mb-2 font-sofia"
+            >
+              Introduction
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1.0,
+                delay: 0.5,
+                type: "spring",
+                bounce: 0.2,
+              }}
+              className="mb-4"
+            >
+              More than just a name, Akinde Pixels is a commitment to{" "}
+              <b>
+                capturing timeless moments through stunning photography and
+                videography.
+              </b>{" "}
+              We believe in the power of imagery to evoke emotions, capture the
+              essence of every moment, and inspire.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1.2,
+                delay: 0.7,
+                type: "spring",
+                bounce: 0.2,
+              }}
+              className="mb-4"
+            >
+              At the heart of Akinde Pixels lies a dedication to creativity,
+              authenticity, and precision. These principles guide every aspect
+              of our work, from{" "}
+              <b>masterful photography to cinematic videography.</b>
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1.4,
+                delay: 0.9,
+                type: "spring",
+                bounce: 0.2,
+              }}
+            >
+              These brand guidelines serve as your compass, ensuring that every
+              representation of Akinde Pixels – whether in print, on screen, or
+              in person – reflects the <b>quality and artistry</b> that defines
+              us.
+            </motion.p>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

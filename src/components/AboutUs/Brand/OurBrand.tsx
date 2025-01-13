@@ -19,7 +19,7 @@ const OurBrand = (): JSX.Element => {
         <h2
           data-aos="fade-right"
           data-aos-delay="100"
-          className="uppercase text-3xl text-[#F28E2C] mb-2"
+          className="uppercase text-3xl text-[#F28E2C] mb-2 font-sofia"
         >
           Our Brand
         </h2>
@@ -49,7 +49,11 @@ const OurBrand = (): JSX.Element => {
         </p>
       </div>
       <div>
-        <p data-aos="fade-right" data-aos-delay="500" className="text-2xl mb-4">
+        <p
+          data-aos="fade-right"
+          data-aos-delay="500"
+          className="text-2xl mb-4 font-sofia"
+        >
           Ready to Create Beautiful Memories?
         </p>
         <div data-aos="fade-up" data-aos-delay="600">
