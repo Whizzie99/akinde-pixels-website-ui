@@ -10,7 +10,7 @@ import "swiper/css";
 export const galleryItems = [
   {
     id: 1,
-    title: "Weddings",
+    title: "Wedding",
     height: "380px",
     img: "/images/new_assets/gallery/wedding.jpg",
   },
@@ -48,7 +48,7 @@ const Galleries = () => {
           className="font-sofia font-bold text-center capitalize text-[2.8rem]"
           data-aos="fade-down"
         >
-          galleries
+          gallery
         </h2>
         <div className="mt-[5rem] relative gallery-slider" data-aos="fade-up">
           {/* Custom navigation buttons */}

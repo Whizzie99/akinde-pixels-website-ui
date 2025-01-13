@@ -57,11 +57,11 @@ const AnimatedCounter = () => {
   return (
     <div ref={containerRef} className="bg-[rgba(254,248,242,0.5)] py-20">
       <div className="custom-container">
-        <div className="flex items-center justify-center h-full space-x-[2rem]">
+        <div className="lg:flex lg:items-center lg:justify-center lg:space-x-[2rem] grid grid-cols-1 gap-y-12">
           {counterItems.map((item, index) => (
             <div
               key={index}
-              className="text-center bg-white p-2 lg:p-4 rounded w-[calc(95%/3)] shadow-custom"
+              className="text-center bg-white p-2 lg:p-4 rounded w-full lg:w-[calc(95%/3)] shadow-custom"
             >
               <div className="text-[20px] lg:text-[48px] flex items-center justify-center mb-[1.3rem] lg:mb-0">
                 {isVisible && (
@@ -70,14 +70,14 @@ const AnimatedCounter = () => {
                     end={item.end}
                     duration={item.duration}
                     separator=","
-                    className="font-lato font-bold"
+                    className="font-lato font-bold text-[30px]"
                   />
                 )}
                 {item.suffix && (
-                  <p className="text-[20px] lg:text-[48px]">{item.suffix}</p>
+                  <p className="text-[30px] lg:text-[30px]">{item.suffix}</p>
                 )}
               </div>
-              <h3 className="mb-2 text-[14px] lg:text-[28px] font-sofia">
+              <h3 className="mb-2 text-[20px] lg:text-[28px] font-sofia">
                 {item.label}
               </h3>
             </div>
