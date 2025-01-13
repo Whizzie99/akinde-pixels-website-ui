@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import logo from "../../../../public/images/logo.png";
 import hamburgerIcon from "../../../../public/images/hamburger-icon.png";
@@ -18,6 +19,7 @@ const navData = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -42,12 +44,12 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <>
-      <div className="h-[85px] w-full" />{" "}
+    <div className="w-full overflow-x-hidden">
+      {/* <div className="h-[85px] w-full" />{" "} */}
       {/* Spacer div to prevent content jump */}
-      <nav className="fixed top-0 left-0 right-0 bg-white z-40 shadow-sm">
+      <nav className="fixed top-0 left-0 w-full bg-white z-40 shadow-sm">
         <div className="custom-container">
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-between py-4 w-full">
             <div className="md:hidden">
               <Image
                 src={hamburgerIcon}
@@ -58,16 +60,20 @@ const Navbar = () => {
                 className="cursor-pointer"
               />
             </div>
-            <Link href="/" className="w-[247.83px] h-[37.17px] relative">
+            <div
+              role="presentation"
+              className="lg:w-[247.83px] w-[187.83px] h-[37.17px] relative cursor-pointer"
+              onClick={() => router.push("/")}
+            >
               <Image
                 src={logo}
                 alt="Akinde Pixels"
                 fill
-                sizes="150px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                 priority
                 className="object-contain"
               />
-            </Link>
+            </div>
             <div className="hidden md:flex items-center gap-6">
               {navData.map((item) => (
                 <Link
@@ -133,7 +139,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

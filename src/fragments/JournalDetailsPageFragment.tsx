@@ -4,7 +4,6 @@ import JournalParagraph from "@/components/Journals/JournalDetails/JournalLandin
 import FloatingButton from "@/components/Journals/JournalDetails/FloatingButton/FloatingButton";
 import ImageGrid from "@/components/Journals/JournalDetails/ImageGrid/ImageGrid";
 import SwiperComp from "@/components/shared/Swiper/SwiperComp";
-import FloatingHelpButton from "@/components/shared/FloatingHelpButton/FloatingHelpButton";
 
 const JournalDetailsPageFragment = () => {
   return (
@@ -15,7 +14,6 @@ const JournalDetailsPageFragment = () => {
       <FloatingButton />
       <ImageGrid />
       <SwiperComp />
-      <FloatingHelpButton />
     </>
   );
 };

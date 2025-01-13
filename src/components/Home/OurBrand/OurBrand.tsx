@@ -8,8 +8,7 @@ import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-// import logo from "../../../../public/images/logo-full-frame.png";
-import sampleImg from "../../../../public/images/wedding-sample-1.png";
+import { galleryItems } from "../Galleries/Galleries";
 
 const OurBrand = () => {
   useEffect(() => {
@@ -25,7 +24,7 @@ const OurBrand = () => {
       <div className="custom-container">
         <h2
           data-aos="fade-up"
-          className="font-lato text-black capitalize text-2xl mb-10 font-bold"
+          className="font-sofia text-black capitalize text-[2.2rem] mb-10 font-bold"
         >
           our brand
         </h2>
@@ -51,37 +50,29 @@ const OurBrand = () => {
               >
                 Your browser does not support the video tag.
               </video>
-              {/* <div className="relative w-[500px] h-[333.33px] top-10 lg:max-w-full">
-                <Image
-                  src={logo}
-                  alt="sample"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                  priority
-                  className="object-cover"
-                />
-              </div> */}
             </div>
             <div data-aos="fade-left" data-aos-delay="300">
-              <p className="font-lato text-black text-justify mb-6 leading-[24px]">
-                Akinde Pixels is not just a visual storytelling agency; we are a
-                powerhouse of creativity and emotions. We specialize in crafting
-                images that don&apos;t just capture moments but immortalize
-                them. We believe that every picture has the power to tell
-                story-one that resonates deeply with its audience, transcending
-                the boundaries of language and culture. Our passion lies in
-                creating visually stunning and emotionally charged images that
-                linger in the minds of those who view them.
+              <p className="font-lato text-black text-justify mb-4 leading-[24px] first-letter:uppercase">
+                We&apos;re not just photographers; we&apos;re{" "}
+                <b>visual artists</b> who <b>immortalize moments.</b> At Akinde
+                Pixels, we believe every image has the power to tell a story –
+                one that resonates deeply and transcends boundaries.
               </p>
-              <p className="text-justify">
-                Akinde Pixels is not just a visual storytelling agency; we are a
-                powerhouse of creativity and emotions. We specialize in crafting
-                images that don&apos;t just capture moments but immortalize
-                them. We believe that every picture has the power to tell
-                story-one that resonates deeply with its audience, transcending
-                the boundaries of language and culture. Our passion lies in
-                creating visually stunning and emotionally charged images that
-                linger in the minds of those who view them.
+              <p className="text-justify text-black mb-4 leading-[24px] first-letter:uppercase">
+                We specialize in{" "}
+                <b>crafting stunning photography and videography</b> that evoke
+                powerful emotions and leave a lasting impact. From the raw
+                emotion of a wedding day to the intricate details of a product,
+                we bring an unmatched level of artistry and precision to every
+                shot.
+              </p>
+              <p className="text-justify text-black mb-4 leading-[24px] first-letter:uppercase">
+                <b>
+                  Our passion lies in creating visual experiences that captivate
+                  and inspire.
+                </b>{" "}
+                We&apos;re driven by a commitment to excellence and a deep
+                understanding of the human experience.
               </p>
               <Link
                 href="/about-us"
@@ -108,7 +99,7 @@ const OurBrand = () => {
             }}
             breakpoints={{
               320: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 8,
               },
               768: {
@@ -122,18 +113,16 @@ const OurBrand = () => {
             }}
             className="w-full"
           >
-            {[1, 2, 3].map((_, index) => (
+            {galleryItems.map((item, index) => (
               <SwiperSlide key={index}>
-                <div
-                  className={`relative w-full ${index === 1 ? "h-[380px]" : "h-[380px]"} flex items-end justify-center pb-8`}
-                >
+                <div className="relative w-full h-[380px] flex items-end justify-center pb-8 rounded-[10px]">
                   <Image
-                    src={sampleImg}
-                    alt={`sample ${index + 1}`}
+                    src={item.img}
+                    alt={item.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                     priority
-                    className="object-cover"
+                    className="object-cover rounded-[10px]"
                   />
                 </div>
               </SwiperSlide>

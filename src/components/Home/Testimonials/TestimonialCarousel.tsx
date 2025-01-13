@@ -53,7 +53,7 @@ const TestimonialCarousel = () => {
       >
         {testimonials?.map((testimonial: any) => (
           <SwiperSlide key={testimonial.sys.id} className="py-6">
-            <div className="relative w-full h-48">
+            <div className="relative w-full h-[300px]">
               <Image
                 src={`https:${testimonial?.fields?.img?.fields?.file.url}`}
                 alt={testimonial.fields.title}
@@ -62,8 +62,10 @@ const TestimonialCarousel = () => {
                 className="rounded-[8px]"
               />
             </div>
-            <h3 className="text-xl mt-4 lg:mt-8">{testimonial.fields.title}</h3>
-            <p className="mt-2 text-gray-600">
+            <h3 className="text-2xl mt-4 lg:mt-8 font-sofia">
+              {testimonial.fields.title}
+            </h3>
+            <p className="mt-2 text-gray-600 font-lato text-[18px]">
               {testimonial.fields.description}
             </p>
             <div className="flex mt-4 space-x-2">

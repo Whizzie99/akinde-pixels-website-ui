@@ -21,56 +21,58 @@ const Hero = () => {
   if (isPending) return <div>loading...</div>;
 
   return (
-    <div>
-      <div className="custom-container">
-        <Swiper
-          modules={[Autoplay]}
-          slidesPerView={3}
-          spaceBetween={10}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 7,
-              spaceBetween: 30,
-            },
-          }}
-        >
-          {carouselItems?.fields?.imgs.length > 0 ? (
-            carouselItems.fields.imgs.map((img: any) => (
-              <SwiperSlide key={img.sys.id}>
-                <div className="w-full h-[10em] relative">
-                  <Image
-                    src={`https:${img.fields.file.url}`}
-                    alt="sample"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                    priority
-                    className="object-cover rounded-[8px]"
-                  />
-                </div>
-              </SwiperSlide>
-            ))
-          ) : (
-            <p>nothing dey here</p>
-          )}
-        </Swiper>
+    <div className="w-full">
+      <div className="pt-[85px]">
+        <div className="custom-container">
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView={3}
+            spaceBetween={10}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 7,
+                spaceBetween: 30,
+              },
+            }}
+          >
+            {carouselItems?.fields?.imgs.length > 0 ? (
+              carouselItems.fields.imgs.map((img: any) => (
+                <SwiperSlide key={img.sys.id}>
+                  <div className="w-full h-[10em] relative">
+                    <Image
+                      src={`https:${img.fields.file.url}`}
+                      alt="sample"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                      priority
+                      className="object-cover rounded-[8px]"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))
+            ) : (
+              <p>nothing dey here</p>
+            )}
+          </Swiper>
+        </div>
       </div>
       <div className="h-[552px] bg-sub-hero-bg bg-cover bg-no-repeat bg-center my-10 flex items-center justify-center px-4">
-        <div className="w-full md:w-[70%] lg:w-[50%] backdrop-filter backdrop-blur-[20px] py-12 px-8 rounded-[20px] flex flex-col items-center gap-y-4 text-center">
-          <p className="font-lato text-white text-[18px] md:text-[1.5rem] lg:text-[2rem]">
+        <div className="w-full md:w-[70%] lg:w-[50%] backdrop-filter backdrop-blur-[10px] py-12 px-8 rounded-[20px] flex flex-col items-center gap-y-4 text-center">
+          <p className="text-white text-[22px] md:text-[1.5rem] lg:text-[2rem] font-niconne">
             Let us be your story teller, your memory keeper, and your partner in
             preserving the beauty of your world. Together, let&apos;s create a
             visual legacy that will be cherished for generations to come
