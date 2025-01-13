@@ -1,20 +1,32 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { aboutSwiper } from "../../../../db/data";
 import { useRouter } from "next/navigation";
 import { Plus } from "lucide-react";
+import { useGetPortfolioItems } from "@/services/queries";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 const PortfolioSwiper = () => {
+  const { data: portfolioItems, isPending, isError } = useGetPortfolioItems();
   const router = useRouter();
 
+  console.log(portfolioItems);
+
+  if (isPending) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error fetching portfolio items</div>;
+  }
+
   return (
-    <div className="relative w-[90%] mx-auto">
+    <div className="relative w-full lg:w-[90%] mx-auto font-lato">
       <style jsx>{`
         .swiper-button-prev,
         .swiper-button-next {
@@ -36,7 +48,7 @@ const PortfolioSwiper = () => {
       <Swiper
         modules={[Navigation]}
         spaceBetween={5}
-        slidesPerView={2.5}
+        slidesPerView={2}
         navigation={{
           prevEl: ".swiper-button-prev",
           nextEl: ".swiper-button-next",
@@ -48,18 +60,20 @@ const PortfolioSwiper = () => {
         }}
         className="w-full"
       >
-        {aboutSwiper.map((slide) => (
-          <SwiperSlide key={slide.id} className="flex flex-col items-center">
+        {portfolioItems.map((item: any) => (
+          <SwiperSlide key={item.sys.id} className="flex flex-col items-center">
             <div
-              onClick={() => router.push(`/portfolio/${slide.id}`)}
-              className="relative cursor-pointer group overflow-hidden"
+              role="presentation"
+              onClick={() => router.push(`/portfolio/${item.fields.slug}`)}
+              className="relative cursor-pointer group overflow-hidden h-[300px] w-full rounded-[10px]"
             >
               <Image
-                src={slide.image}
-                alt={slide.caption}
-                width={500}
-                height={500}
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                src={`https:${item.fields.thumbnail.fields.file.url}`}
+                alt={item.fields.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                priority
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 rounded-[10px]"
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -67,7 +81,9 @@ const PortfolioSwiper = () => {
               </div>
             </div>
             <div className="mt-2 flex flex-col items-center">
-              <p className="text-center pb-2 text-[#F28E2C]">{slide.caption}</p>
+              <p className="text-center pb-2 text-[#F28E2C] font-sofia">
+                {item.fields.title}
+              </p>
               <hr className="w-[35%] border-[#F28E2C]" />
             </div>
           </SwiperSlide>

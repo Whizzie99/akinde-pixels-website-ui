@@ -16,7 +16,7 @@ const PortfolioComp = () => {
           />
         </div>
         <div>
-          <div className="my-8 ml-8">
+          <div className="my-8 lg:ml-8">
             <PortfolioSwiper />
           </div>
           <div className="relative">

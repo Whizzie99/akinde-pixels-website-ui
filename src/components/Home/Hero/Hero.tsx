@@ -15,9 +15,6 @@ import "swiper/css/pagination";
 const Hero = () => {
   const { data: carouselItems, isPending } = useGetTopCarouselItems();
 
-  console.log(carouselItems);
-  console.log(carouselItems?.fields?.imgs);
-
   if (isPending) return <div>loading...</div>;
 
   return (
