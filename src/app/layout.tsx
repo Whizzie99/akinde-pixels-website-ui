@@ -54,7 +54,7 @@ export default function RootLayout({
           </NextUIProvider>
         </ReactQueryProvider>
       </body>
-      <Script>
+      <Script id="tawk-widget">
         {`
           var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
