@@ -5,8 +5,8 @@ import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
 
 const Portfolio = () => {
   return (
-    <div className="mt-8">
-      <h1 className="text-[40px] text-center uppercase text-[#CA7625] mb-8">
+    <div className="pt-[100px]">
+      <h1 className="text-[40px] text-center font-sofia uppercase text-[#F28E2C] my-8">
         Portfolio
       </h1>
 
@@ -19,7 +19,9 @@ const Portfolio = () => {
       <div className="bg-[#FEF8F2]">
         <div className="custom-container py-16">
           <div>
-            <p className="text-2xl mb-4">Ready to Create Beautiful Memories?</p>
+            <p className="text-2xl mb-4 font-sofia">
+              Ready to Create Beautiful Memories?
+            </p>
             <ModalBtn />
           </div>
         </div>

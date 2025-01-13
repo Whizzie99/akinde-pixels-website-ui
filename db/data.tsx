@@ -625,8 +625,8 @@ export const footerNav: footerNavItems[] = [
   },
   {
     id: 4,
-    name: "Testimonies",
-    link: "/testimonial",
+    name: "Testimonials",
+    link: "#",
   },
   {
     id: 5,

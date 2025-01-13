@@ -24,3 +24,27 @@ export const getTestimonials = async () => {
     throw new Error(error);
   }
 };
+
+export const getPortfolioItems = async () => {
+  try {
+    const { items } = await client.getEntries({
+      content_type: "portoflio",
+      order: ["sys.createdAt"],
+    });
+    return items as any;
+  } catch (error: any) {
+    throw new Error(error);
+  }
+};
+
+export const getJournals = async () => {
+  try {
+    const { items } = await client.getEntries({
+      content_type: "journal",
+      order: ["sys.createdAt"],
+    });
+    return items as any;
+  } catch (error: any) {
+    throw new Error(error);
+  }
+};
