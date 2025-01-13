@@ -5,6 +5,7 @@ import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/Footer/Footer";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
 import { NextUIProvider } from "@nextui-org/react";
+import Script from "next/script";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -53,6 +54,19 @@ export default function RootLayout({
           </NextUIProvider>
         </ReactQueryProvider>
       </body>
+      <Script>
+        {`
+          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67859492af5bfec1dbeb051b/1ihgsonu4';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+        `}
+      </Script>
     </html>
   );
 }
