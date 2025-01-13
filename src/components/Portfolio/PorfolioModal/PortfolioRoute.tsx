@@ -16,8 +16,6 @@ const PortfolioRoute = ({ portfolio }: Props) => {
   const router = useRouter();
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
-  console.log(portfolio);
-
   function getRandomNumber(min: number = 100, max: number = 600): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }

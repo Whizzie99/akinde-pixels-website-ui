@@ -52,7 +52,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
   };
 
   return (

@@ -19,8 +19,6 @@ import Link from "next/link";
 const TestimonialCarousel = () => {
   const { data: testimonials, isPending } = useGetTestimonials();
 
-  console.log(testimonials);
-
   if (isPending) {
     return <div>Loading...</div>;
   }

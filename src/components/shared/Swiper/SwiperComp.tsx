@@ -14,8 +14,6 @@ import "swiper/css/navigation";
 const TestimonialCarousel = () => {
   const { data: portfolioItems, isPending, isError } = useGetPortfolioItems();
 
-  console.log(portfolioItems);
-
   if (isPending) {
     return <div>Loading...</div>;
   }

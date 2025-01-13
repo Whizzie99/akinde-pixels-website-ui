@@ -20,8 +20,6 @@ export default async function PortfolioRouteFragment({ slug }: Props) {
   const { items } = await getPortfolio(slug);
   const portfolio: any = items[0];
 
-  console.log(portfolio);
-
   return (
     <>
       <PortfolioRoute portfolio={portfolio} />
