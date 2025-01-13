@@ -648,7 +648,7 @@ export const footerNav: footerNavItems[] = [
   {
     id: 8,
     name: "Contact Us",
-    link: "/contact",
+    link: "#",
   },
   {
     id: 8,

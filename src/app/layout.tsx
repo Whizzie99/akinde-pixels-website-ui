@@ -1,6 +1,6 @@
 import "./globals.scss";
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Lato, Sofia, Niconne } from "next/font/google";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/Footer/Footer";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
@@ -11,6 +11,22 @@ const lato = Lato({
   style: "normal",
   subsets: ["latin"],
   variable: "--font-lato",
+  display: "swap",
+});
+
+const sofia = Sofia({
+  weight: ["400"],
+  style: "normal",
+  subsets: ["latin"],
+  variable: "--font-sofia",
+  display: "swap",
+});
+
+const niconne = Niconne({
+  weight: ["400"],
+  style: "normal",
+  subsets: ["latin"],
+  variable: "--font-niconne",
   display: "swap",
 });
 
@@ -26,7 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.variable} antialiased`}>
+      <body
+        className={`${lato.variable} ${sofia.variable} ${niconne.variable} antialiased`}
+      >
         <ReactQueryProvider>
           <NextUIProvider>
             <Navbar />

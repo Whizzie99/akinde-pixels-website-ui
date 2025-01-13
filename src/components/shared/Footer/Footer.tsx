@@ -1,7 +1,7 @@
 "use client";
 
-import footpix from "../../../../public/images/footer-pix.png";
-import footerPix1 from "../../../../public/images/footer-pix1.png";
+import footpix from "../../../../public/images/new_assets/footer-1.jpg";
+import footerPix1 from "../../../../public/images/new_assets/footer-2.jpg";
 
 import Link from "next/link";
 import { footerNav, footerSocials } from "../../../../db/data";
@@ -11,7 +11,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#7B7B7B4D] py-8">
+    <footer className="bg-[#F3F3F3] py-8 font-lato">
       <div className="custom-container">
         <div className="flex justify-between items-center py-8">
           <hr className="bg-black lg:w-[40%] w-full h-[12px] my-4" />
@@ -25,7 +25,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="flex gap-2 lg:mt-0 mt-4">
+          <div className="flex justify-center gap-2 lg:mt-0 mt-4">
             <Image
               src={footpix}
               width={150}
@@ -42,8 +42,8 @@ const Footer = () => {
             />
           </div>
           <div className="lg:px-8 lg:mt-0 mt-4">
-            <p className="text-[24px] capitalize text-center">
-              Capture your moment
+            <p className="text-[24px] capitalize text-center font-sofia">
+              Capture your moment!
             </p>
             <div className="flex flex-col lg:justify-center lg:items-center ">
               <div className="mb-2">
@@ -56,10 +56,14 @@ const Footer = () => {
               </div>
               <div className="text-center">
                 <p>Connect with Us</p>
-                <small>support@akindepixels.com</small>
+                <small>bookings@akindepixels.com</small>
                 <div className="flex space-x-2 mt-2 items-center justify-center">
                   {footerSocials.map((item) => (
-                    <Link key={item.id} href={item.link} className="text-xl">
+                    <Link
+                      key={item.id}
+                      href={item.link}
+                      className="text-xl font-lato"
+                    >
                       <item.icon />
                     </Link>
                   ))}

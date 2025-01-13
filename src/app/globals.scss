@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 .custom-container {
-  width: 80%;
-  margin: 0 auto;
+  @apply mx-auto w-[90%] lg:w-[80%];
 }
 
 @layer utilities {
@@ -28,3 +27,7 @@
 .swiper-pagination-bullet-active {
   background: rgba(0, 0, 0, 0.8);
 }
+
+// * {
+//   border: 0.1em solid red;
+// }

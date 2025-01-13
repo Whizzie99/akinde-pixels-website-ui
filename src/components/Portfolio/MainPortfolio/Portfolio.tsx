@@ -2,7 +2,6 @@
 
 import PortfolioComp from "../PortfolioComp";
 import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
-import FloatingHelpButton from "@/components/shared/FloatingHelpButton/FloatingHelpButton";
 
 const Portfolio = () => {
   return (
@@ -25,8 +24,6 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-
-      <FloatingHelpButton />
     </div>
   );
 };
