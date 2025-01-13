@@ -4,7 +4,9 @@ import TestimonialCarousel from "./TestimonialCarousel";
 const Testimonials = () => {
   return (
     <div className="custom-container py-8">
-      <h1 className="lg:text-[40px] text-[32px]">Testimonials</h1>
+      <h1 className="lg:text-[40px] text-[32px] font-sofia capitalize">
+        Testimonials
+      </h1>
       <div>
         <TestimonialCarousel />
       </div>

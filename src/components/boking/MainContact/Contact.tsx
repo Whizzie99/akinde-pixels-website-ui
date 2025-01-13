@@ -4,7 +4,6 @@ import contactImagesm from "../../../../public/images/contact-page-sm.png";
 import Image from "next/image";
 import ContactForm from "../Form/ContactForm";
 import SwiperComp from "@/components/shared/Swiper/SwiperComp";
-import FloatingHelpButton from "@/components/shared/FloatingHelpButton/FloatingHelpButton";
 
 const Contact = () => {
   return (
@@ -30,7 +29,6 @@ const Contact = () => {
       <div className="mt-12">
         <SwiperComp />
       </div>
-      <FloatingHelpButton />
     </div>
   );
 };

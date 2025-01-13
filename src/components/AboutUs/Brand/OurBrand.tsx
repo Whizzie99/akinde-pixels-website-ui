@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
-import FloatingHelpButton from "@/components/shared/FloatingHelpButton/FloatingHelpButton";
 
 const OurBrand = (): JSX.Element => {
   useEffect(() => {
@@ -57,7 +56,6 @@ const OurBrand = (): JSX.Element => {
           <ModalBtn />
         </div>
       </div>
-      <FloatingHelpButton />
     </div>
   );
 };
