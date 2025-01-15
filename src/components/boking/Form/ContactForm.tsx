@@ -133,7 +133,6 @@ const ContactForm = () => {
     try {
       setIsLoading(true);
       const response = await axios.post("/api/booking", formData);
-      // console.log(response);
       setFormData({
         firstName: "",
         lastName: "",
@@ -157,7 +156,6 @@ const ContactForm = () => {
     }
 
     // Send form data to the server
-    // console.log(formData);
   };
 
   return (

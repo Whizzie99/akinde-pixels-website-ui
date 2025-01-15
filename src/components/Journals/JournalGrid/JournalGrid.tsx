@@ -8,8 +8,6 @@ import { useGetJournals } from "@/services/queries";
 const JournalGrid = () => {
   const { data: journals, isPending, isError } = useGetJournals();
 
-  console.log(journals);
-
   function createArray(length: number): any[] {
     if (length < 0) {
       throw new Error("Length must be a non-negative number.");
