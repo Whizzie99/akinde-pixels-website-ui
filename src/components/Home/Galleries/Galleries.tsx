@@ -44,12 +44,14 @@ const Galleries = () => {
   return (
     <div className="py-8 overflow-x-hidden">
       <div className="custom-container">
-        <h2
-          className="font-sofia font-bold text-center capitalize text-[2.8rem]"
-          data-aos="fade-down"
-        >
-          gallery
-        </h2>
+        <div className="flex justify-center items-center">
+          <h2
+            className="font-sofia font-bold text-center capitalize text-[2.8rem] shadow-custom inline-block p-4 bg-white"
+            data-aos="fade-down"
+          >
+            gallery
+          </h2>
+        </div>
         <div className="mt-[5rem] relative gallery-slider" data-aos="fade-up">
           {/* Custom navigation buttons */}
           <button className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white rounded p-2 shadow-md hover:bg-gray-100 transition-all prev-button">

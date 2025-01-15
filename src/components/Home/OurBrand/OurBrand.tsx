@@ -22,12 +22,14 @@ const OurBrand = () => {
   return (
     <div className="py-8">
       <div className="custom-container">
-        <h2
-          data-aos="fade-up"
-          className="font-sofia text-black capitalize text-[2.2rem] mb-10 font-bold"
-        >
-          our brand
-        </h2>
+        <div className="flex justify-center items-center">
+          <h2
+            data-aos="fade-up"
+            className="font-sofia text-black capitalize text-[2.2rem] mb-10 font-bold shadow-custom inline-block p-4"
+          >
+            our brand
+          </h2>
+        </div>
       </div>
       <div
         data-aos="fade-up"

@@ -5,9 +5,9 @@ import ModalBtn from "../shared/ModalButton/ModalBtn";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="py-8 ">
+    <div className="py-8 pt-[100px] font-lato">
       <div className="custom-container">
-        <h1 className="lg:text-[40px] text-[28px]  text-[#CA7625] mb-8">
+        <h1 className="lg:text-[40px] text-[28px]  text-[#CA7625] mb-8 font-lato">
           Privacy and Policies for Akinde Pixels
         </h1>
 
