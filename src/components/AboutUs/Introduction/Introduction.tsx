@@ -65,13 +65,9 @@ const OurBrand = () => {
               }}
               className="mb-4"
             >
-              More than just a name, Akinde Pixels is a commitment to{" "}
-              <b>
-                capturing timeless moments through stunning photography and
-                videography.
-              </b>{" "}
-              We believe in the power of imagery to evoke emotions, capture the
-              essence of every moment, and inspire.
+              More than just a name, Akinde Pixels is a brand that captures
+              amazing pictures. We believe pictures can show how special every
+              moment is.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: -30 }}
@@ -84,10 +80,9 @@ const OurBrand = () => {
               }}
               className="mb-4"
             >
-              At the heart of Akinde Pixels lies a dedication to creativity,
-              authenticity, and precision. These principles guide every aspect
-              of our work, from{" "}
-              <b>masterful photography to cinematic videography.</b>
+              Akinde Pixels is all about being creative, real, and careful in
+              everything we do. We make beautiful pictures and videos that tell
+              your story.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: -30 }}
@@ -99,10 +94,9 @@ const OurBrand = () => {
                 bounce: 0.2,
               }}
             >
-              These brand guidelines serve as your compass, ensuring that every
-              representation of Akinde Pixels – whether in print, on screen, or
-              in person – reflects the <b>quality and artistry</b> that defines
-              us.
+              These guidelines help us ensure everything we do – whether
+              it&apos;s on paper, on a screen, or when you meet us – shows how
+              good and artistic we are.
             </motion.p>
           </motion.div>
         </div>

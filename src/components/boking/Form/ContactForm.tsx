@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from "react";
 import contactImage from "../../../../public/images/side-img.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import axios from "axios";
+import { toast } from "sonner";
 
 interface FormData {
   firstName: string;
@@ -15,14 +18,58 @@ interface FormData {
   needStylist: string;
   needMakeupArtist: string;
   eventDate: string;
-  videoSessionDate: string;
-  venues: string;
+  // videoSessionDate: string;
+  // venues: string;
   budget: string;
-  guestCount: string;
+  // guestCount: string;
   textArea: string;
 }
 
+type PreferredService =
+  | "videography"
+  | "photography"
+  | "both"
+  | "headshots"
+  | "group potrait"
+  | "conceptual portriat"
+  | "fine art portrait"
+  | "others";
+
+type PreferredServiceToShow = {
+  wedding: PreferredService[];
+  birthday: PreferredService[];
+  graduation: PreferredService[];
+  maternity: PreferredService[];
+  newBorn: PreferredService[];
+  portrait: PreferredService[];
+};
+
+const preferredServiceToShow: PreferredServiceToShow = {
+  wedding: ["videography", "photography", "both"],
+  birthday: ["videography", "photography", "both"],
+  graduation: ["videography", "photography", "both"],
+  maternity: ["videography", "photography", "both"],
+  newBorn: ["videography", "photography", "both"],
+  portrait: [
+    "headshots",
+    "group potrait",
+    "conceptual portriat",
+    "fine art portrait",
+    "others",
+  ],
+};
+
+const sessionTypesData = [
+  "wedding",
+  "birthday",
+  "graduation",
+  "maternity",
+  "newBorn",
+  "portrait",
+];
+
 const ContactForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -33,10 +80,10 @@ const ContactForm = () => {
     needStylist: "",
     needMakeupArtist: "",
     eventDate: "",
-    videoSessionDate: "",
-    venues: "",
+    // videoSessionDate: "",
+    // venues: "",
     budget: "",
-    guestCount: "",
+    // guestCount: "",
     textArea: "",
   });
 
@@ -50,13 +97,69 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // console.log(formData);
+
+    if (!formData.firstName) {
+      toast.error("Please enter your first name");
+      return;
+    }
+
+    if (!formData.lastName) {
+      toast.error("Please enter your last name");
+      return;
+    }
+
+    if (!formData.email) {
+      toast.error("Please enter your email");
+      return;
+    }
+
+    if (!formData.phoneNumber) {
+      toast.error("Please enter your phone number");
+      return;
+    }
+
+    if (!formData.sessionType) {
+      toast.error("Please select a session type");
+      return;
+    }
+
+    if (!formData.preferredService) {
+      toast.error("Please select a preferred service");
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      const response = await axios.post("/api/booking", formData);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        sessionType: "",
+        preferredService: "",
+        needStylist: "",
+        needMakeupArtist: "",
+        eventDate: "",
+        budget: "",
+        textArea: "",
+      });
+      toast.success("Booking submitted successfully");
+      return response;
+    } catch (error) {
+      toast.error("Something went wrong");
+      return false;
+    } finally {
+      setIsLoading(false);
+    }
+
+    // Send form data to the server
   };
 
   return (
-    <div className="lg:flex gap-6">
+    <div className="lg:flex gap-6 font-lato">
       <div className="p-4 lg:block hidden w-[600px]">
         <div className="relative w-full h-full">
           <Image
@@ -91,9 +194,10 @@ const ContactForm = () => {
               bounce: 0.2,
             }}
           >
-            Thank you for stopping by our photography website! We would love to
-            hear from you and discuss how we can help you capture your special
-            moments.
+            At Akinde Pixel&apos;s, we capture the essence of life&apos;s most
+            precious moments. From weddings and families to portraits and
+            special events, we create stunning photographs that tell your unique
+            story.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: -30 }}
@@ -105,10 +209,8 @@ const ContactForm = () => {
               bounce: 0.2,
             }}
           >
-            Whether you have a question, would like to book a session, or simply
-            want to say hello, please don&apos;t hesitate to reach out as we
-            look forward to connecting with you and capturing the beauty of your
-            world!
+            Explore our services and book your session today to experience the
+            magic of our photography. We can&apos;t wait to work with you!
           </motion.p>
         </motion.div>
         <motion.form
@@ -118,6 +220,10 @@ const ContactForm = () => {
           transition={{ duration: 0.8, delay: 1.0 }}
           className="mt-16 space-y-8"
         >
+          <p>
+            Fields marked with <span className="text-red-500">*</span> are
+            required
+          </p>
           <div className="grid grid-cols-2 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -128,7 +234,7 @@ const ContactForm = () => {
                 htmlFor="firstName"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                First Name
+                First Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -138,7 +244,6 @@ const ContactForm = () => {
                 value={formData.firstName}
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
               />
             </motion.div>
             <motion.div
@@ -150,7 +255,7 @@ const ContactForm = () => {
                 htmlFor="lastName"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                Last Name
+                Last Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -160,7 +265,6 @@ const ContactForm = () => {
                 value={formData.lastName}
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
               />
             </motion.div>
             <motion.div
@@ -172,7 +276,7 @@ const ContactForm = () => {
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                Email
+                Email <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -182,7 +286,6 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
               />
             </motion.div>
             <motion.div
@@ -194,7 +297,7 @@ const ContactForm = () => {
                 htmlFor="phoneNumber"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                Phone Number
+                Phone Number <span className="text-red-500">*</span>
               </label>
               <input
                 type="tel"
@@ -204,7 +307,6 @@ const ContactForm = () => {
                 value={formData.phoneNumber}
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
               />
             </motion.div>
           </div>
@@ -220,23 +322,23 @@ const ContactForm = () => {
                 htmlFor="sessionType"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                Types of sessions
+                Types of session <span className="text-red-500">*</span>
               </label>
               <select
                 id="sessionType"
                 name="sessionType"
                 value={formData.sessionType}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2 capitalize"
               >
-                <option value="" disabled>
-                  wedding
+                <option label="please select" disabled>
+                  please select
                 </option>
-                <option value="wedding">Wedding</option>
-                <option value="birthday">Birthday</option>
-                <option value="portraits">Portraits</option>
-                <option value="editorials">Editorials</option>
+                {sessionTypesData.map((type, index) => (
+                  <option key={index} value={type} className="capitalizie">
+                    {type}
+                  </option>
+                ))}
               </select>
             </motion.div>
 
@@ -250,21 +352,30 @@ const ContactForm = () => {
                 htmlFor="preferredService"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                Preferred services
+                Preferred services <span className="text-red-500">*</span>
               </label>
               <select
                 id="preferredService"
                 name="preferredService"
                 value={formData.preferredService}
                 onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2 capitalize"
               >
-                <option value="" disabled>
-                  videography
+                <option label="please select" disabled>
+                  Please select
                 </option>
-                <option value="videography">Videography</option>
-                <option value="cinematography">Cinematography</option>
+                {formData.sessionType &&
+                  preferredServiceToShow[
+                    formData.sessionType as keyof PreferredServiceToShow
+                  ].map((service) => (
+                    <option
+                      key={service}
+                      value={service}
+                      className="capitalize"
+                    >
+                      {service}
+                    </option>
+                  ))}
               </select>
             </motion.div>
 
@@ -286,7 +397,6 @@ const ContactForm = () => {
                 value={formData.needStylist}
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
               >
                 <option value="" disabled>
                   choose options
@@ -314,7 +424,6 @@ const ContactForm = () => {
                 value={formData.needMakeupArtist}
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
               >
                 <option value="" disabled>
                   choose options
@@ -330,7 +439,7 @@ const ContactForm = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 2.8 }}
-              className="w-1/2"
+              className="w-full"
             >
               <label
                 htmlFor="eventDate"
@@ -345,14 +454,13 @@ const ContactForm = () => {
                 value={formData.eventDate}
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
               />
             </motion.div>
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 3.0 }}
-              className="w-1/2"
+              className="w-full"
             >
               <label
                 htmlFor="videoSessionDate"
@@ -369,11 +477,11 @@ const ContactForm = () => {
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 required
               />
-            </motion.div>
+            </motion.div> */}
           </div>
 
           <div className="space-y-4">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 3.2 }}
@@ -395,7 +503,7 @@ const ContactForm = () => {
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 required
               />
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -417,11 +525,10 @@ const ContactForm = () => {
                 value={formData.budget}
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
               />
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 3.6 }}
@@ -443,7 +550,7 @@ const ContactForm = () => {
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 required
               />
-            </motion.div>
+            </motion.div> */}
           </div>
 
           <motion.div
@@ -460,12 +567,11 @@ const ContactForm = () => {
             <textarea
               id="textArea"
               name="textArea"
-              placeholder="message"
+              placeholder="Message"
               rows={4}
               value={formData.textArea}
               onChange={handleChange}
               className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#A3A3A3] p-2 resize-none"
-              required
             ></textarea>
           </motion.div>
 
@@ -475,8 +581,9 @@ const ContactForm = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 4.0 }}
             className="w-full bg-[#F28E2C] text-white p-2 rounded hover:bg-[#e0954a] transition duration-300"
+            disabled={isLoading}
           >
-            Submit
+            {isLoading ? "Please wait.." : "Submit"}
           </motion.button>
         </motion.form>
       </div>

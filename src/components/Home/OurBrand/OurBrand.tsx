@@ -53,26 +53,24 @@ const OurBrand = () => {
             </div>
             <div data-aos="fade-left" data-aos-delay="300">
               <p className="font-lato text-black text-justify mb-4 leading-[24px] first-letter:uppercase">
-                We&apos;re not just photographers; we&apos;re{" "}
-                <b>visual artists</b> who <b>immortalize moments.</b> At Akinde
-                Pixels, we believe every image has the power to tell a story –
-                one that resonates deeply and transcends boundaries.
+                At Akinde Pixels, we don&apos;t just take pictures, we create
+                lasting memories. We believe every photo tells a special story,
+                and we create those stories with artistry and care.
               </p>
               <p className="text-justify text-black mb-4 leading-[24px] first-letter:uppercase">
-                We specialize in{" "}
-                <b>crafting stunning photography and videography</b> that evoke
-                powerful emotions and leave a lasting impact. From the raw
-                emotion of a wedding day to the intricate details of a product,
-                we bring an unmatched level of artistry and precision to every
-                shot.
+                On your wedding day or any important event, more than just
+                photographers, we are artists who will capture the love and joy
+                of that day, capturing images you&apos;ll cherish forever. These
+                images will not just serve for you and your partner but for the
+                whole family to enjoy, both now and in the future.
               </p>
               <p className="text-justify text-black mb-4 leading-[24px] first-letter:uppercase">
-                <b>
-                  Our passion lies in creating visual experiences that captivate
-                  and inspire.
-                </b>{" "}
-                We&apos;re driven by a commitment to excellence and a deep
-                understanding of the human experience.
+                We love capturing beautiful photos and videos that make you feel
+                something special. From the happy moments of your wedding to the
+                unique details of a photoshoot, we put our hearts and skill into
+                every image. We strive to capture moments that inspire and
+                amaze, we are always with a deep understanding of what truly
+                matters in life.
               </p>
               <Link
                 href="/about-us"

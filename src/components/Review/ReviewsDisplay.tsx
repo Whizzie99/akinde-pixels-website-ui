@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Star, Camera } from "lucide-react";
+import Link from "next/link";
 
 interface Review {
   _id: string;
@@ -97,13 +98,13 @@ const ReviewsDisplay = () => {
     );
 
   return (
-    <div className="custom-container py-20">
+    <div className="custom-container py-20 pt-[150px] font-lato">
       <div className="">
         <div className="mb-8">
-          <h1 className="text-center uppercase text-[#CA7625] font-bold lg:text-3xl text-xl">
+          <h1 className="text-center capitalize text-[#F28E2C] font-bold lg:text-3xl text-[40px] font-sofia">
             Client Reviews
           </h1>
-          <p className="text-center mb-8 text-gray-500 pt-2">
+          <p className="text-center mb-8 text-gray-500 pt-2 font-lato">
             Read what our clients say about us
           </p>
           <div className="lg:flex justify-between space-y-4 items-center border-b pb-4">
@@ -181,12 +182,6 @@ const ReviewsDisplay = () => {
                     </span>
                     <StarRating rating={review.overallSatisfaction} />
                   </div>
-
-                  {review.overallExperience && (
-                    <p className="text-gray-600 italic">
-                      &quot;{review.overallExperience}&quot;
-                    </p>
-                  )}
                 </div>
                 <div className="gap-4 text-sm flex flex-col gap-y-1">
                   <div className="flex gap-x-4">
@@ -219,11 +214,25 @@ const ReviewsDisplay = () => {
                       className="inline-flex ml-2"
                     />
                   </div>
+                  {review.overallExperience && (
+                    <p className="text-gray-600 italic mt-2 first-letter:uppercase">
+                      &quot;{review.overallExperience}&quot;
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
           </div>
         )}
+
+        <div className="mt-10 flex justify-center items-center">
+          <Link
+            href="/reviews"
+            className="font-lato first-letter:uppercase bg-[#F28E2C] py-2 px-4 rounded-[10px] text-white"
+          >
+            give a review
+          </Link>
+        </div>
       </div>
     </div>
   );
