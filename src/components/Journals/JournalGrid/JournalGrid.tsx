@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-// import { journals } from "../../../../db/data";
 import { IoMdStar } from "react-icons/io";
 import Image from "next/image";
 import { useGetJournals } from "@/services/queries";
@@ -28,7 +27,7 @@ const JournalGrid = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pb-16 ">
         {journals.map((journal: any) => {
           return (
-            <div key={journal.sys.id} className="">
+            <div key={journal.sys.id}>
               <div className="relative flex justify-center items-center w-full h-[400px]">
                 <Image
                   src={`https:${journal.fields.img.fields.file.url}`}
