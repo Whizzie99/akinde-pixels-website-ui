@@ -23,29 +23,25 @@ const OurBrand = (): JSX.Element => {
         >
           Our Brand
         </h2>
-        <p data-aos="fade-up" data-aos-delay="200" className="mb-4">
-          Akinde Pixels is not just a visual storytelling agency; we are a
-          powerhouse of creativity and emotions. We specialize in crafting
-          images that don&apos;t just capture moments but immortalize them. We
-          believe that every picture has the power to tell story-one that
-          resonates deeply with its audience, transcending the boundaries of
-          language and culture. Our passion lies in creating visually stunning
-          and emotionally charged images that linger in the minds of those who
-          view them.
-        </p>
+        <p data-aos="fade-up" data-aos-delay="200" className="mb-4"></p>
         <p data-aos="fade-up" data-aos-delay="300" className="mb-4">
-          At Akinde Pixels, we are driven by a commitment to excellence and a
-          deep understanding of the human experience. Whether it&apos;s raw
-          emotion of wedding day, the intricate details of a product, or the
-          powerful narrative of a brand, we bring an unmatched level of artistry
-          and precision to every shot. Our images are not just photographs; they
-          are carefully crafted stories that communicate, inspire, and connect
-          on a profound level.
+          At Akinde Pixels, we don&apos;t just take pictures, we create lasting
+          memories. We believe every photo tells a special story, and we create
+          those stories with artistry and care.
         </p>
         <p data-aos="fade-up" data-aos-delay="400">
-          We are dedicated to delivery not just pictures, but powerful visual
-          narratives that speak louder than words and leave a lasting impact. At
-          Akinde Pixels, your stostory is our masterpiece.
+          On your wedding day or any important event, more than just
+          photographers, we are artists who will capture the love and joy of
+          that day, capturing images you&apos;ll cherish forever. These images
+          will not just serve for you and your partner but for the whole family
+          to enjoy, both now and in the future.
+        </p>
+        <p data-aos="fade-up" data-aos-delay="400">
+          We love capturing beautiful photos and videos that make you feel
+          something special. From the happy moments of your wedding to the
+          unique details of a photoshoot, we put our hearts and skill into every
+          image. We strive to capture moments that inspire and amaze, we are
+          always with a deep understanding of what truly matters in life.
         </p>
       </div>
       <div>
