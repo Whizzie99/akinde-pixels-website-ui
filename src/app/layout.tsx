@@ -6,6 +6,8 @@ import Footer from "@/components/shared/Footer/Footer";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
 import { NextUIProvider } from "@nextui-org/react";
 import Script from "next/script";
+import { Toaster } from "sonner";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -46,6 +48,8 @@ export default function RootLayout({
       <body
         className={`${lato.variable} ${sofia.variable} ${niconne.variable} antialiased`}
       >
+        <GoogleAnalytics gaId="G-YXJPDHKPCD" />
+
         <ReactQueryProvider>
           <NextUIProvider>
             <Navbar />
@@ -53,6 +57,7 @@ export default function RootLayout({
             <Footer />
           </NextUIProvider>
         </ReactQueryProvider>
+        <Toaster position="top-center" richColors duration={5000} />
       </body>
       <Script id="tawk-widget">
         {`

@@ -5,8 +5,8 @@ import SwiperComp from "@/components/shared/Swiper/SwiperComp";
 
 const MainReview = () => {
   return (
-    <div className="mt-16">
-      <h1 className="lg:text-[40px] text-2xl text-center uppercase  text-[#CA7625] mb-8">
+    <div className="pt-[100px] font-lato">
+      <h1 className="lg:text-[40px] text-2xl text-center uppercase  text-[#F28E2C] mb-8 font-sofia">
         Review
       </h1>
       <div className="lg:hidden block w-full mb-4">

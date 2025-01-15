@@ -75,7 +75,7 @@ const TestimonialCarousel = () => {
                 />
               </div>
               <div className="mt-2 flex flex-col items-center">
-                <p className="text-center pb-2 text-[#F28E2C]">
+                <p className="text-center pb-2 text-[#F28E2C] font-sofia">
                   {item.fields.title}
                 </p>
                 <hr className="w-[35%] border-[#F28E2C]" />

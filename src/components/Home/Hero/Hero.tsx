@@ -68,8 +68,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="h-[552px] bg-sub-hero-bg bg-cover bg-no-repeat bg-center my-10 flex items-center justify-center px-4">
-        <div className="w-full md:w-[70%] lg:w-[50%] backdrop-filter backdrop-blur-[10px] py-12 px-8 rounded-[20px] flex flex-col items-center gap-y-4 text-center">
-          <p className="text-white text-[22px] md:text-[1.5rem] lg:text-[2rem] font-niconne">
+        <div className="w-full md:w-[70%] lg:w-[50%] bg-white py-12 px-8 rounded-[20px] flex flex-col items-center gap-y-4 text-center">
+          <p className="text-[#F28E2C] text-[22px] md:text-[1.5rem] lg:text-[2rem] font-niconne">
             Let us be your story teller, your memory keeper, and your partner in
             preserving the beauty of your world. Together, let&apos;s create a
             visual legacy that will be cherished for generations to come

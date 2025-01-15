@@ -7,8 +7,8 @@ import SwiperComp from "@/components/shared/Swiper/SwiperComp";
 
 const Contact = () => {
   return (
-    <div className="mt-8 ">
-      <h1 className="text-[40px] text-center uppercase lg:hidden block text-[#CA7625] mb-8">
+    <div className="mt-8 pt-[100px]">
+      <h1 className="text-[40px] text-center uppercase lg:hidden block text-[#CA7625] mb-8 font-sofia">
         Bookings
       </h1>
       <div className="lg:hidden block w-full mb-4">

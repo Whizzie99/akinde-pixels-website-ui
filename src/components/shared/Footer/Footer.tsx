@@ -1,7 +1,7 @@
 "use client";
 
-import footpix from "../../../../public/images/new_assets/footer-1.jpg";
-import footerPix1 from "../../../../public/images/new_assets/footer-2.jpg";
+import footpix from "../../../../public/images/new_assets/grad-1.jpg";
+import footerPix1 from "../../../../public/images/new_assets/grad-2.jpg";
 
 import Link from "next/link";
 import { footerNav, footerSocials } from "../../../../db/data";

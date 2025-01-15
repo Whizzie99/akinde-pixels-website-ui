@@ -44,7 +44,7 @@ const TestimonialCarousel = () => {
             slidesPerView: 2,
           },
           1024: {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
         }}
         className="mySwiper mt-2"

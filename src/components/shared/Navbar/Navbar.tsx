@@ -14,7 +14,7 @@ const navData = [
   { id: 2, name: "Portfolio", link: "/portfolio" },
   { id: 3, name: "Journals", link: "/journals" },
   { id: 4, name: "About Us", link: "/about-us" },
-  { id: 5, name: "Reviews", link: "/reviews" },
+  { id: 5, name: "Reviews", link: "/read-reviews" },
 ];
 
 const Navbar = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden font-lato">
       {/* <div className="h-[85px] w-full" />{" "} */}
       {/* Spacer div to prevent content jump */}
       <nav className="fixed top-0 left-0 w-full bg-white z-40 shadow-sm">
