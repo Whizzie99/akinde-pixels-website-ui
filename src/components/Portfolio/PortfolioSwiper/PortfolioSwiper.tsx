@@ -15,8 +15,6 @@ const PortfolioSwiper = () => {
   const { data: portfolioItems, isPending, isError } = useGetPortfolioItems();
   const router = useRouter();
 
-  console.log(portfolioItems);
-
   if (isPending) {
     return <div>Loading...</div>;
   }
