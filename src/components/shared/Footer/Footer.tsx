@@ -18,14 +18,14 @@ const Footer = () => {
           <hr className="bg-black w-[40%] h-[12px] my-4 hidden lg:block" />
         </div>
         <div className="flex gap-x-4 lg:flex-row flex-col w-full">
-          <div className="grid grid-cols-2 gap-6 w-[calc(100%-33.3%)]">
+          <div className="grid grid-cols-2 gap-6 lg:w-[calc(100%-33.3%)]">
             {footerNav.map((item) => (
               <div key={item.id}>
                 <Link href={item.link}>{item.name}</Link>
               </div>
             ))}
           </div>
-          <div className="flex justify-center gap-2 lg:mt-0 mt-4 w-[calc(100%-33.3%)]">
+          <div className="flex justify-center gap-2 lg:mt-0 mt-4 lg:w-[calc(100%-33.3%)]">
             <div className="h-[260px] w-full relative">
               <Image
                 src={footpix}
@@ -36,22 +36,8 @@ const Footer = () => {
                 className="object-cover rounded-[8px]"
               />
             </div>
-            {/* <Image
-              src={footpix}
-              width={150}
-              height={100}
-              alt=""
-              className="lg:w-full w-[382px] lg:h-auto h-[260px] object-cover rounded-[8px]"
-            /> */}
-            {/* <Image
-              src={footerPix1}
-              width={150}
-              height={100}
-              alt=""
-              className="lg:w-full object-cover hidden lg:inline rounded-[8px]"
-            /> */}
           </div>
-          <div className="lg:px-8 lg:mt-0 mt-4 w-[calc(100%-33.3%)]">
+          <div className="lg:px-8 lg:mt-0 mt-4 lg:w-[calc(100%-33.3%)]">
             <p className="text-[24px] capitalize text-center font-sofia">
               Capture your moment!
             </p>
