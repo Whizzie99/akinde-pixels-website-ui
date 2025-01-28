@@ -16,13 +16,11 @@ const OurBrand = (): JSX.Element => {
   return (
     <div className="py-8 custom-container">
       <div className="font-lato text-black text-justify flex flex-col justify-center pb-8">
-        <h2
-          data-aos="fade-right"
-          data-aos-delay="100"
-          className="uppercase text-3xl text-[#F28E2C] mb-2 font-sofia"
-        >
-          Our Brand
-        </h2>
+        <div data-aos="fade-right" data-aos-delay="100">
+          <h2 className="capitalize text-3xl text-black shadow-custom py-2 px-4 inline-block mb-2 font-sofia">
+            Our Brand
+          </h2>
+        </div>
         <p data-aos="fade-up" data-aos-delay="200" className="mb-4"></p>
         <p data-aos="fade-up" data-aos-delay="300" className="mb-4">
           At Akinde Pixels, we don&apos;t just take pictures, we create lasting
