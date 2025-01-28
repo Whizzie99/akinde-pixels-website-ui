@@ -29,9 +29,9 @@ const config: Config = {
         custom: `
           rgba(242, 142, 44, 0.4) 5px 5px, 
           rgba(242, 142, 44, 0.3) 10px 10px, 
-          rgba(242, 142, 44, 0.2) 15px 15px, 
-          rgba(242, 142, 44, 0.1) 20px 20px, 
-          rgba(242, 142, 44, 0.05) 25px 25px
+          rgba(242, 142, 44, 0.07) 15px 15px, 
+          rgba(242, 142, 44, 0.02) 20px 20px, 
+          rgba(242, 142, 44, 0.01) 25px 25px
         `,
       },
     },

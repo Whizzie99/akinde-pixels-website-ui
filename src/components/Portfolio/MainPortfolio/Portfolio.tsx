@@ -6,9 +6,11 @@ import ModalBtn from "@/components/shared/ModalButton/ModalBtn";
 const Portfolio = () => {
   return (
     <div className="pt-[100px]">
-      <h1 className="text-[40px] text-center font-sofia uppercase text-[#F28E2C] my-8">
-        Portfolio
-      </h1>
+      <div className="flex justify-center">
+        <h1 className="text-[40px] p-4 text-center font-sofia capitalize text-black shadow-custom my-8 inline-block">
+          Portfolio
+        </h1>
+      </div>
 
       <div className="lg:relative custom-container">
         <div className="absolute top-0 -left-[7%] w-[90vw] h-[1px] bg-[#CCCCCC]"></div>

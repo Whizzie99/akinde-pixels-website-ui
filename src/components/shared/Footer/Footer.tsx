@@ -1,7 +1,7 @@
 "use client";
 
 import footpix from "../../../../public/images/new_assets/grad-1.jpg";
-import footerPix1 from "../../../../public/images/new_assets/grad-2.jpg";
+// import footerPix1 from "../../../../public/images/new_assets/grad-2.jpg";
 
 import Link from "next/link";
 import { footerNav, footerSocials } from "../../../../db/data";
@@ -17,31 +17,41 @@ const Footer = () => {
           <hr className="bg-black lg:w-[40%] w-full h-[12px] my-4" />
           <hr className="bg-black w-[40%] h-[12px] my-4 hidden lg:block" />
         </div>
-        <div className="flex justify-between lg:flex-row flex-col">
-          <div className="grid grid-cols-2 gap-6">
+        <div className="flex gap-x-4 lg:flex-row flex-col w-full">
+          <div className="grid grid-cols-2 gap-6 w-[calc(100%-33.3%)]">
             {footerNav.map((item) => (
               <div key={item.id}>
                 <Link href={item.link}>{item.name}</Link>
               </div>
             ))}
           </div>
-          <div className="flex justify-center gap-2 lg:mt-0 mt-4">
-            <Image
+          <div className="flex justify-center gap-2 lg:mt-0 mt-4 w-[calc(100%-33.3%)]">
+            <div className="h-[260px] w-full relative">
+              <Image
+                src={footpix}
+                alt="sample"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                priority
+                className="object-cover rounded-[8px]"
+              />
+            </div>
+            {/* <Image
               src={footpix}
               width={150}
               height={100}
               alt=""
               className="lg:w-full w-[382px] lg:h-auto h-[260px] object-cover rounded-[8px]"
-            />
-            <Image
+            /> */}
+            {/* <Image
               src={footerPix1}
               width={150}
               height={100}
               alt=""
               className="lg:w-full object-cover hidden lg:inline rounded-[8px]"
-            />
+            /> */}
           </div>
-          <div className="lg:px-8 lg:mt-0 mt-4">
+          <div className="lg:px-8 lg:mt-0 mt-4 w-[calc(100%-33.3%)]">
             <p className="text-[24px] capitalize text-center font-sofia">
               Capture your moment!
             </p>
@@ -73,7 +83,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <hr className="bg-black lg:w-[40%] w-full h-[12px] my-4" />
+          <hr className="bg-black lg:w-[33.3%] w-full h-[12px] my-4 lg:ml-[-33px]" />
         </div>
         <div className="text-center py-4 text-sm text-gray-600">
           &copy; copyrights Akinde Pixels {currentYear}

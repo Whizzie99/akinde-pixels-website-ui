@@ -18,7 +18,7 @@ export const galleryItems = [
     id: 2,
     title: "Portraits",
     height: "380px",
-    img: "/images/new_assets/gallery/potrait.jpg",
+    img: "/images/new_assets/new-portrait-1.webp",
   },
   {
     id: 3,
