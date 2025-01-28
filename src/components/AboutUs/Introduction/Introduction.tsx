@@ -41,7 +41,7 @@ const OurBrand = () => {
             }}
             className="font-lato text-black text-justify flex flex-col justify-center"
           >
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -50,10 +50,11 @@ const OurBrand = () => {
                 type: "spring",
                 bounce: 0.2,
               }}
-              className="uppercase text-3xl text-[#F28E2C] mb-2 font-sofia"
             >
-              Introduction
-            </motion.h2>
+              <h1 className="capitalize text-[40px] inline-block text-black shadow-custom mb-4 py-2 px-4  font-sofia">
+                Introduction
+              </h1>
+            </motion.div>
             <motion.p
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}

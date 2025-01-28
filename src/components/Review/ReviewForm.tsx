@@ -332,7 +332,7 @@ export default function ReviewForm() {
                   name="photographQuality"
                   min="0"
                   max="5"
-                  value={formData.overallSatisfaction}
+                  value={formData.photographQuality}
                   onChange={handleChange}
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 />
@@ -421,7 +421,7 @@ export default function ReviewForm() {
                 </label>
                 <input
                   type="number"
-                  name="moodCapture"
+                  name="turnaroundTime"
                   min="0"
                   max="5"
                   value={formData.turnaroundTime}

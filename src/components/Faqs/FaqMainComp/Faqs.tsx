@@ -13,16 +13,17 @@ const Faqs = () => {
         <h1 className="lg:text-[40px] text-[28px] text-center text-[#F28E2C] mb-8 font-sofia">
           FAQ
         </h1>
-        <div>
-          <FaqAccordion />
-        </div>
-        <div className="my-12">
-          <p className="text-2xl mb-4 font-sofia">
-            Ready to Create Beautiful Memories?
-          </p>
-          <div className="flex gap-y-4 md:gap-x-4 mb-8 justify-between items-center ">
-            <ModalBtn />
-            {/* <div className="lg:flex items-center gap-x-2 hidden">
+        <div className="relative w-full before:absolute before:top-0 before:left-[-10%] before:w-[110%] before:h-[1px] before:content-[''] pt-10 before:bg-[#E5E7EB] after:absolute after:top-[-10%] after:left-0 after:w-[1px] after:h-[110%] after:content-[''] after:bg-[#E5E7EB] pl-10">
+          <div>
+            <FaqAccordion />
+          </div>
+          <div className="my-12">
+            <p className="text-2xl mb-4 font-sofia">
+              Ready to Create Beautiful Memories?
+            </p>
+            <div className="flex gap-y-4 md:gap-x-4 mb-8 justify-between items-center ">
+              <ModalBtn />
+              {/* <div className="lg:flex items-center gap-x-2 hidden">
               <p className="text-sm py-2 px-4 shadow-xl ">Need help?</p>
               <span className="cursor-pointer bg-[#313131] p-4 rounded">
                 <Link href="/contact">
@@ -30,6 +31,7 @@ const Faqs = () => {
                 </Link>
               </span>
             </div> */}
+            </div>
           </div>
         </div>
       </div>
