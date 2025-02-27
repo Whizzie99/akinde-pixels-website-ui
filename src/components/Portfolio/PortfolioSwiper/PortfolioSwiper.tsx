@@ -63,26 +63,28 @@ const PortfolioSwiper = () => {
             <div
               role="presentation"
               onClick={() => router.push(`/portfolio/${item.fields.slug}`)}
-              className="relative cursor-pointer group overflow-hidden h-[300px] w-full rounded-[10px]"
+              className="cursor-pointer"
             >
-              <Image
-                src={`https:${item.fields.thumbnail.fields.file.url}`}
-                alt={item.fields.title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                priority
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 rounded-[10px]"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <Plus className="text-white w-8 h-8" />
+              <div className="relative group overflow-hidden h-[300px] w-full rounded-[10px]">
+                <Image
+                  src={`https:${item.fields.thumbnail.fields.file.url}`}
+                  alt={item.fields.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                  priority
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 rounded-[10px]"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Plus className="text-white w-8 h-8" />
+                </div>
               </div>
-            </div>
-            <div className="mt-2 flex flex-col items-center">
-              <p className="text-center pb-2 text-[#F28E2C] font-sofia">
-                {item.fields.title}
-              </p>
-              <hr className="w-[35%] border-[#F28E2C]" />
+              <div className="mt-2 flex flex-col items-center">
+                <p className="text-center pb-2 text-[#F28E2C] font-sofia">
+                  {item.fields.title}
+                </p>
+                <hr className="w-[35%] border-[#F28E2C]" />
+              </div>
             </div>
           </SwiperSlide>
         ))}

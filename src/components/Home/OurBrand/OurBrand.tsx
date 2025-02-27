@@ -55,24 +55,25 @@ const OurBrand = () => {
             </div>
             <div data-aos="fade-left" data-aos-delay="300">
               <p className="font-lato text-black text-justify mb-4 leading-[24px] first-letter:uppercase">
-                At Akinde Pixels, we don&apos;t just take pictures, we create
-                lasting memories. We believe every photo tells a special story,
-                and we create those stories with artistry and care.
+                At Akinde Pixels, we are all about capturing moments. We don’t
+                just take photos, we help you hold onto memories that you can
+                look back on for years. Each event we cover is special, and we
+                treat it that way.
               </p>
               <p className="text-justify text-black mb-4 leading-[24px] first-letter:uppercase">
-                On your wedding day or any important event, more than just
-                photographers, we are artists who will capture the love and joy
-                of that day, capturing images you&apos;ll cherish forever. These
-                images will not just serve for you and your partner but for the
-                whole family to enjoy, both now and in the future.
+                Weddings? We love taking pictures of happy couples celebrating
+                their special day. Photoshoots? Absolutely! We are here to help
+                you get your best poses. Special occasions? Name it. Birthdays,
+                anniversaries, Graduation or just a get together with friends.
+                We got you covered.We want every picture to tell your story. We
+                believe every moment has its own beauty, and it’s our job to
+                make it happen.
               </p>
               <p className="text-justify text-black mb-4 leading-[24px] first-letter:uppercase">
-                We love capturing beautiful photos and videos that make you feel
-                something special. From the happy moments of your wedding to the
-                unique details of a photoshoot, we put our hearts and skill into
-                every image. We strive to capture moments that inspire and
-                amaze, we are always with a deep understanding of what truly
-                matters in life.
+                When you look at your photos, we want those memories to come
+                alive again and again. It&apos;s all about you. Your memories
+                matter to us. At Akinde Pixels... we are the pixel that speaks.
+                Reserve your spot today!
               </p>
               <Link
                 href="/about-us"
