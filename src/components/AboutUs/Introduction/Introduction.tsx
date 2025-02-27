@@ -66,11 +66,14 @@ const OurBrand = () => {
               }}
               className="mb-4"
             >
-              More than just a name, Akinde Pixels is a brand that captures
-              amazing pictures. We believe pictures can show how special every
-              moment is.
+              At Akinde Pixels, we love sharing stories through pictures and
+              videos. We capture your memories, achievements, and memories
+              without saying a word. Every picture has a story behind it, and
+              every video captured is a treasure that lasts forever. Our goal is
+              to make each shot speak for itself and give you a remarkable
+              experience.
             </motion.p>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -98,7 +101,7 @@ const OurBrand = () => {
               These guidelines help us ensure everything we do – whether
               it&apos;s on paper, on a screen, or when you meet us – shows how
               good and artistic we are.
-            </motion.p>
+            </motion.p> */}
           </motion.div>
         </div>
       </div>
