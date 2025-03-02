@@ -21,17 +21,7 @@ const Faqs = () => {
             <p className="text-2xl mb-4 font-sofia">
               Ready to Create Beautiful Memories?
             </p>
-            <div className="flex gap-y-4 md:gap-x-4 mb-8 justify-between items-center ">
-              <ModalBtn />
-              {/* <div className="lg:flex items-center gap-x-2 hidden">
-              <p className="text-sm py-2 px-4 shadow-xl ">Need help?</p>
-              <span className="cursor-pointer bg-[#313131] p-4 rounded">
-                <Link href="/contact">
-                  <BsEnvelope className="text text-white " />
-                </Link>
-              </span>
-            </div> */}
-            </div>
+            <ModalBtn />
           </div>
         </div>
       </div>

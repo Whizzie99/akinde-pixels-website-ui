@@ -50,9 +50,7 @@ const OurBrand = (): JSX.Element => {
         >
           Ready to Create Beautiful Memories?
         </p>
-        <div data-aos="fade-up" data-aos-delay="600">
-          <ModalBtn />
-        </div>
+        <ModalBtn />
       </div>
     </div>
   );

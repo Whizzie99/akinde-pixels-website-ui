@@ -48,15 +48,24 @@ const TestimonialCarousel = () => {
         <Swiper
           modules={[Navigation]}
           spaceBetween={20}
-          slidesPerView={2}
+          slidesPerView={1}
           loop={true}
           navigation={{
             prevEl: ".swiper-button-prev",
             nextEl: ".swiper-button-next",
           }}
           breakpoints={{
-            1024: {
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1200: {
               slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 3,
             },
           }}
           className="w-full"
