@@ -34,6 +34,9 @@ const config: Config = {
           rgba(242, 142, 44, 0.01) 25px 25px
         `,
       },
+      backgroundColor: {
+        "black-alpha-1": "rgba(0, 0, 0, 0.9)",
+      },
     },
   },
   plugins: [nextui()],

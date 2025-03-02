@@ -20,6 +20,7 @@ export interface FooterSocial {
   id: number;
   icon: IconType;
   link: string;
+  name: string;
 }
 
 export interface footerPix {
@@ -662,16 +663,19 @@ export const footerSocials: FooterSocial[] = [
     id: 1,
     icon: FaFacebookF,
     link: "https://www.facebook.com/akinde.pixels",
+    name: "Facebook",
   },
   {
     id: 2,
     icon: FaInstagram,
     link: "https://www.instagram.com/akinde.pixels",
+    name: "Instagram",
   },
   {
     id: 3,
     icon: FaTwitter,
     link: "https://www.twitter.com/akinde.pixels",
+    name: "Twitter",
   },
 ];
 

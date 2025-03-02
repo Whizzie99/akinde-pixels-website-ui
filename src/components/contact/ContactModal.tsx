@@ -1,43 +1,41 @@
 "use client";
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { X } from "lucide-react";
+import Link from "next/link";
+import { footerSocials } from "../../../db/data";
 
 interface ContactModalProps {
-  isOpen: boolean;
+  // isOpen: boolean;
   onClose: () => void;
 }
 
-const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
-  const [isAnimating, setIsAnimating] = useState(false);
+const ContactModal = ({ onClose }: ContactModalProps) => {
+  // const [isAnimating, setIsAnimating] = useState(false);
 
-  useEffect(() => {
-    if (isOpen) {
-      setIsAnimating(true);
-      document.body.classList.add("overflow-hidden");
-    } else {
-      const timer = setTimeout(() => {
-        setIsAnimating(false);
-      }, 300); // Match this with the transition duration
-      document.body.classList.remove("overflow-hidden");
-      return () => clearTimeout(timer);
-    }
-  }, [isOpen]);
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     setIsAnimating(true);
+  //     document.body.classList.add("overflow-hidden");
+  //   } else {
+  //     const timer = setTimeout(() => {
+  //       setIsAnimating(false);
+  //     }, 300); // Match this with the transition duration
+  //     document.body.classList.remove("overflow-hidden");
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [isOpen]);
 
-  if (!isOpen && !isAnimating) return null;
+  // if (!isOpen && !isAnimating) return null;
 
   return (
     <div
-      className={`fixed inset-0 bg-black z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out ${
-        isOpen ? "bg-opacity-50" : "bg-opacity-0 pointer-events-none"
-      }`}
+      className={`fixed top-0 left-0 h-screen w-full bg-black-alpha-1 z-[9999] flex items-center justify-center`}
       onClick={onClose}
     >
       <div
-        className={`bg-white rounded-lg lg:p-8 p-4 w-[616px] h-[578px] max-w-lg transition-all duration-300 ease-in-out ${
-          isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
-        }`}
-        onClick={(e) => e.stopPropagation()}
+        className="bg-white rounded-lg lg:p-8 p-4 xl:w-[30%] w-[80%] transition-all duration-300 ease-in-out"
+        // onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-end mt-8">
           <button
@@ -47,37 +45,59 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             <X size={24} />
           </button>
         </div>
-        <h2 className="text-2xl font-bold text-orange-500 pt-12 pb-4 lg:text-center text-start custom-container">
+        <h2 className="text-2xl font-bold text-orange-500 pt-6 pb-4 text-center custom-container">
           CONTACT US
         </h2>
-        <div className="custom-container">
-          <p className="lg:text-center text-start text-gray-600 mb-6 text-[12px] lg:text-base">
+        <div className="w-full mx-auto">
+          <p className="text-center text-gray-600 mb-6 text-[12px] lg:text-base">
             Get in Touch and Let&apos;s Create Something Beautiful
           </p>
-          <div className="text-start text-black grid grid-cols-2 gap-16 py-4 ">
+          <div className="text-start text-black grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 ">
             <div>
-              <h3 className="font-semibold">Email</h3>
-              <p className="text-gray-600 text-sm">Akindepixels@gmail.com</p>
+              <h3 className="font-semibold text-center">Email</h3>
+              <p className="text-gray-600 text-sm cursor-pointer text-center inline-block w-full">
+                bookings@akindepixels.com
+              </p>
+            </div>
+            {/* <div>
+              <h3 className="font-semibold text-center">Contact Number</h3>
+              <p className="text-gray-600 text-sm cursor-pointer text-center inline-block w-full">XXXXXXXXX</p>
+            </div> */}
+            <div>
+              <h3 className="font-semibold text-center">
+                {footerSocials[0].name}
+              </h3>
+              <Link
+                href={footerSocials[0].link}
+                target="_blank"
+                className="text-gray-600 text-sm cursor-pointer text-center inline-block w-full"
+              >
+                AkindePixels
+              </Link>
             </div>
             <div>
-              <h3 className="font-semibold">Contact Number</h3>
-              <p className="text-gray-600 text-sm">XXXXXXXXX</p>
+              <h3 className="font-semibold text-center">
+                {footerSocials[1].name}
+              </h3>
+              <Link
+                href={footerSocials[1].link}
+                target="_blank"
+                className="text-gray-600 text-sm cursor-pointer text-center inline-block w-full"
+              >
+                AkindePixels
+              </Link>
             </div>
             <div>
-              <h3 className="font-semibold">Instagram</h3>
-              <p className="text-gray-600 text-sm">XXXXXXXX</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">X</h3>
-              <p className="text-gray-600 text-sm">XXXXXXXXXX</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Facebook</h3>
-              <p className="text-gray-600 text-sm">XXXXXXXX</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">TikTok</h3>
-              <p className="text-gray-600 text-sm">XXXXXXXX</p>
+              <h3 className="font-semibold text-center">
+                {footerSocials[2].name}
+              </h3>
+              <Link
+                href={footerSocials[2].link}
+                target="_blank"
+                className="text-gray-600 text-sm cursor-pointer text-center inline-block w-full"
+              >
+                AkindePixels
+              </Link>
             </div>
           </div>
         </div>
