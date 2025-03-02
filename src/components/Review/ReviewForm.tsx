@@ -8,34 +8,32 @@ import contactImage from "../../../public/images/side-img.jpg";
 import Link from "next/link";
 
 interface ReviewFormData {
-  email: string;
   fullName: string;
   socialMediaHandle: string;
   dateOfService: string;
   sessionType: "portraits" | "birthday" | "wedding" | "family" | "other";
   overallSatisfaction: number;
-  photographQuality: "yes" | "no" | "maybe";
-  photographerProfessionalism: number;
-  moodCapture: "yes" | "no" | "maybe";
-  turnaroundTime: "yes" | "no" | "maybe";
+  projectQuality: number;
+  professionalism: number;
+  performance: number;
+  deliveryTimeliness: number;
   recommendation: "yes" | "no" | "maybe";
-  overallExperience: string;
+  extraRemarks: string;
 }
 
 export default function ReviewForm() {
   const [formData, setFormData] = useState<ReviewFormData>({
-    email: "",
     fullName: "",
     socialMediaHandle: "",
     dateOfService: "",
-    sessionType: "other",
+    sessionType: "portraits",
     overallSatisfaction: 0,
-    photographQuality: "maybe",
-    photographerProfessionalism: 0,
-    moodCapture: "maybe",
-    turnaroundTime: "maybe",
+    projectQuality: 0,
+    professionalism: 0,
+    performance: 0,
+    deliveryTimeliness: 0,
     recommendation: "maybe",
-    overallExperience: "",
+    extraRemarks: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,24 +48,23 @@ export default function ReviewForm() {
 
     try {
       await axios.post(
-        "https://akinde-backend.onrender.com/api/reviews",
+        "https://akinde-backend-equf.onrender.com/api/reviews",
         formData,
       );
       setSubmitStatus("success");
       // Reset form after successful submission
       setFormData({
-        email: "",
         fullName: "",
         socialMediaHandle: "",
         dateOfService: "",
-        sessionType: "other",
+        sessionType: "portraits",
         overallSatisfaction: 0,
-        photographQuality: "maybe",
-        photographerProfessionalism: 0,
-        moodCapture: "maybe",
-        turnaroundTime: "maybe",
+        projectQuality: 0,
+        professionalism: 0,
+        performance: 0,
+        deliveryTimeliness: 0,
         recommendation: "maybe",
-        overallExperience: "",
+        extraRemarks: "",
       });
     } catch (error) {
       console.error("Submission error:", error);
@@ -201,8 +198,8 @@ export default function ReviewForm() {
               Please note that fields marked with{" "}
               <span className="text-red-500">*</span> are required
             </p>
-            <div className="grid grid-cols-2 gap-4">
-              <motion.div
+            <div className="grid grid-cols-1 gap-4">
+              {/* <motion.div
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
@@ -222,7 +219,7 @@ export default function ReviewForm() {
                   required
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 />
-              </motion.div>
+              </motion.div> */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -321,7 +318,7 @@ export default function ReviewForm() {
                 className="w-full"
               >
                 <label
-                  htmlFor="photographQuality"
+                  htmlFor="projectQuality"
                   className="block text-sm font-medium text-gray-700"
                 >
                   How would you rate the quality of the project delivered?{" "}
@@ -329,10 +326,10 @@ export default function ReviewForm() {
                 </label>
                 <input
                   type="number"
-                  name="photographQuality"
+                  name="projectQuality"
                   min="0"
                   max="5"
-                  value={formData.photographQuality}
+                  value={formData.projectQuality}
                   onChange={handleChange}
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 />
@@ -369,16 +366,19 @@ export default function ReviewForm() {
                 transition={{ duration: 0.6, delay: 2.6 }}
                 className="w-full"
               >
-                <label className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="professionalism"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   How would you rate our professionalism? (0-5){" "}
                   <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="number"
-                  name="photographerProfessionalism"
+                  name="professionalism"
                   min="0"
                   max="5"
-                  value={formData.photographerProfessionalism}
+                  value={formData.professionalism}
                   onChange={handleChange}
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 />
@@ -390,7 +390,7 @@ export default function ReviewForm() {
                 className="w-full"
               >
                 <label
-                  htmlFor="moodCapture"
+                  htmlFor="performance"
                   className="block text-sm font-medium text-gray-700"
                 >
                   How would you rate the performance of the photographer?{" "}
@@ -398,10 +398,10 @@ export default function ReviewForm() {
                 </label>
                 <input
                   type="number"
-                  name="moodCapture"
+                  name="performance"
                   min="0"
                   max="5"
-                  value={formData.moodCapture}
+                  value={formData.performance}
                   onChange={handleChange}
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 />
@@ -413,7 +413,7 @@ export default function ReviewForm() {
                 className="w-full"
               >
                 <label
-                  htmlFor="photoEditing"
+                  htmlFor="deliveryTimeliness"
                   className="block text-sm font-medium text-gray-700"
                 >
                   How would you rate the delivery timeliness?{" "}
@@ -421,10 +421,10 @@ export default function ReviewForm() {
                 </label>
                 <input
                   type="number"
-                  name="turnaroundTime"
+                  name="deliveryTimeliness"
                   min="0"
                   max="5"
-                  value={formData.turnaroundTime}
+                  value={formData.deliveryTimeliness}
                   onChange={handleChange}
                   className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
                 />
@@ -467,14 +467,14 @@ export default function ReviewForm() {
                 className="w-full"
               >
                 <label
-                  htmlFor="overallExperience"
+                  htmlFor="extraRemarks"
                   className="block text-sm font-medium text-gray-700"
                 >
                   What can you say about the overall experience of service?
                 </label>
                 <textarea
-                  name="overallExperience"
-                  value={formData.overallExperience}
+                  name="extraRemarks"
+                  value={formData.extraRemarks}
                   onChange={handleChange}
                   placeholder="Tell us about your overall experience"
                   className="w-full p-2 border rounded"

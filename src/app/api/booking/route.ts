@@ -31,9 +31,10 @@ export async function POST(req: Request) {
         <p><strong>Phone:</strong> ${data.phoneNumber}</p>
         <p><strong>Session Type:</strong> ${data.sessionType}</p>
         <p><strong>Preferred Service:</strong> ${data.preferredService}</p>
-        <p><strong>Requires Stylist:</strong> ${data.needStylist || "Not selected"}</p>
-        <p><strong>Requires Makeup Artist:</strong> ${data.needMakeupArtist || "Not selected"}</p>
+        <p><strong>Alternative session type:</strong> ${data.alternativeSessionType || "Not selected"}</p>
+        <p><strong>Event location:</strong> ${data.location || "Not selected"}</p>
         <p><strong>Event Date:</strong> ${data.eventDate || "Not selected"}</p>
+        <p><strong>Event Time:</strong> ${data.eventTimes || "Not selected"}</p>
         <p><strong>Budget:</strong> ${data.budget || "Not selected"}</p>
         <p><strong>Additional Messages:</strong> ${data.textArea || "No info entered"}</p>
       `,

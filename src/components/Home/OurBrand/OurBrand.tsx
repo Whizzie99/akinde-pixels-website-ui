@@ -44,7 +44,7 @@ const OurBrand = () => {
               className="w-full flex justify-center lg:w-auto rounded-[8px]"
             >
               <video
-                src="https://res.cloudinary.com/du6xx9bt9/video/upload/v1734300737/akinde_intro_206535B_a1s2ud.webm"
+                src="https://res.cloudinary.com/du6xx9bt9/video/upload/v1740932888/akinde-uplaod_u6mphv.mp4"
                 muted
                 loop
                 autoPlay
