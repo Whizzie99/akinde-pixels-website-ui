@@ -14,9 +14,12 @@ interface FormData {
   email: string;
   phoneNumber: string;
   sessionType: string;
+  alternativeSessionType?: string;
   preferredService: string;
-  needStylist: string;
-  needMakeupArtist: string;
+  location: string;
+  eventTimes: string;
+  // needStylist: string;
+  // needMakeupArtist: string;
   eventDate: string;
   // videoSessionDate: string;
   // venues: string;
@@ -42,6 +45,8 @@ type PreferredServiceToShow = {
   maternity: PreferredService[];
   newBorn: PreferredService[];
   portrait: PreferredService[];
+  commercialEvents: PreferredService[];
+  others: PreferredService[];
 };
 
 const preferredServiceToShow: PreferredServiceToShow = {
@@ -57,6 +62,8 @@ const preferredServiceToShow: PreferredServiceToShow = {
     "fine art portrait",
     "others",
   ],
+  commercialEvents: ["videography", "photography", "both"],
+  others: ["videography", "photography", "both"],
 };
 
 const sessionTypesData = [
@@ -66,6 +73,26 @@ const sessionTypesData = [
   "maternity",
   "newBorn",
   "portrait",
+  "commercialEvents",
+  "others",
+];
+
+const times = [
+  "8:00 AM",
+  "9:00 AM",
+  "10:00 AM",
+  "11:00 AM",
+  "12:00 PM",
+  "1:00 PM",
+  "2:00 PM",
+  "3:00 PM",
+  "4:00 PM",
+  "5:00 PM",
+  "6:00 PM",
+  "7:00 PM",
+  "8:00 PM",
+  "9:00 PM",
+  "10:00 PM",
 ];
 
 const ContactForm = () => {
@@ -76,15 +103,13 @@ const ContactForm = () => {
     email: "",
     phoneNumber: "",
     sessionType: "",
+    alternativeSessionType: "",
     preferredService: "",
-    needStylist: "",
-    needMakeupArtist: "",
+    location: "",
     eventDate: "",
-    // videoSessionDate: "",
-    // venues: "",
     budget: "",
-    // guestCount: "",
     textArea: "",
+    eventTimes: "",
   });
 
   const handleChange = (
@@ -140,11 +165,11 @@ const ContactForm = () => {
         phoneNumber: "",
         sessionType: "",
         preferredService: "",
-        needStylist: "",
-        needMakeupArtist: "",
+        eventTimes: "",
         eventDate: "",
         budget: "",
         textArea: "",
+        location: "",
       });
       toast.success("Booking submitted successfully");
       return response;
@@ -224,7 +249,7 @@ const ContactForm = () => {
             Fields marked with <span className="text-red-500">*</span> are
             required
           </p>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -322,7 +347,7 @@ const ContactForm = () => {
                 htmlFor="sessionType"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                Types of session <span className="text-red-500">*</span>
+                Type of session <span className="text-red-500">*</span>
               </label>
               <select
                 id="sessionType"
@@ -378,61 +403,35 @@ const ContactForm = () => {
                   ))}
               </select>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 2.4 }}
-              className="w-full"
-            >
-              <label
-                htmlFor="needStylist"
-                className="block mb-2 text-sm font-medium text-gray-700"
-              >
-                Do you need a stylist?
-              </label>
-              <select
-                id="needStylist"
-                name="needStylist"
-                value={formData.needStylist}
-                onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-              >
-                <option value="" disabled>
-                  choose options
-                </option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 2.6 }}
-              className="w-full"
-            >
-              <label
-                htmlFor="needMakeupArtist"
-                className="block mb-2 text-sm font-medium text-gray-700"
-              >
-                Do you need a make up artist?
-              </label>
-              <select
-                id="needMakeupArtist"
-                name="needMakeupArtist"
-                value={formData.needMakeupArtist}
-                onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-              >
-                <option value="" disabled>
-                  choose options
-                </option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </motion.div>
           </div>
+
+          {formData.sessionType === "others" && (
+            <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 2.0 }}
+                className="w-full"
+              >
+                <label
+                  htmlFor="sessionType"
+                  className="block mb-2 text-sm font-medium text-gray-700"
+                >
+                  Kindly specify the type of session{" "}
+                  <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="alternativeSessionType"
+                  name="alternativeSessionType"
+                  placeholder="specify the type of session"
+                  value={formData.alternativeSessionType}
+                  onChange={handleChange}
+                  className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
+                />
+              </motion.div>
+            </div>
+          )}
 
           <div className="flex space-x-4">
             <motion.div
@@ -456,55 +455,64 @@ const ContactForm = () => {
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
               />
             </motion.div>
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 3.0 }}
-              className="w-full"
-            >
-              <label
-                htmlFor="videoSessionDate"
-                className="block mb-2 text-sm font-medium text-gray-700"
-              >
-                Video Session Date
-              </label>
-              <input
-                type="date"
-                id="videoSessionDate"
-                name="videoSessionDate"
-                value={formData.videoSessionDate}
-                onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
-              />
-            </motion.div> */}
           </div>
 
-          <div className="space-y-4">
-            {/* <motion.div
+          <div className="grid lg:grid-cols-2 gap-4 grid-cols-1">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 3.2 }}
+              transition={{ duration: 0.6, delay: 2.8 }}
               className="w-full"
             >
               <label
-                htmlFor="venues"
+                htmlFor="location"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                Venue(s)
+                Event Location
               </label>
               <input
                 type="text"
-                id="venues"
-                name="venues"
-                placeholder="Enter venue name(s) or location(s)"
-                value={formData.venues}
+                id="location"
+                name="location"
+                value={formData.location}
+                placeholder="Event Location"
                 onChange={handleChange}
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
               />
-            </motion.div> */}
+            </motion.div>
 
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 2.0 }}
+              className="w-full"
+            >
+              <label
+                htmlFor="eventTimes"
+                className="block mb-2 text-sm font-medium text-gray-700"
+              >
+                Time of event <span className="text-red-500">*</span>
+              </label>
+              <select
+                id="eventTimes"
+                name="eventTimes"
+                value={formData.eventTimes}
+                onChange={handleChange}
+                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2 capitalize"
+              >
+                <option label="please select" disabled>
+                  please select
+                </option>
+                {times.map((time, index) => (
+                  <option key={index} value={time} className="capitalizie">
+                    {time}
+                  </option>
+                ))}
+              </select>
+            </motion.div>
+          </div>
+
+          <div className="space-y-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -515,7 +523,7 @@ const ContactForm = () => {
                 htmlFor="budget"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                Do you have a budget? ($)
+                What is your estimated budget? ($)
               </label>
               <input
                 type="text"
@@ -527,30 +535,6 @@ const ContactForm = () => {
                 className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
               />
             </motion.div>
-
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 3.6 }}
-              className="w-full"
-            >
-              <label
-                htmlFor="guestCount"
-                className="block mb-2 text-sm font-medium text-gray-700"
-              >
-                How many guests do you expect to attend?
-              </label>
-              <input
-                type="number"
-                id="guestCount"
-                name="guestCount"
-                placeholder="Enter estimated number of guests"
-                value={formData.guestCount}
-                onChange={handleChange}
-                className="w-full bg-[#F8F8F8] text-[#A3A3A3] border-b border-gray-300 focus:outline-none focus:border-[#F28E2C] p-2"
-                required
-              />
-            </motion.div> */}
           </div>
 
           <motion.div
@@ -562,7 +546,7 @@ const ContactForm = () => {
               htmlFor="textArea"
               className="block mb-2 text-sm font-medium text-gray-700"
             >
-              Additional Information or questions
+              Can you provide more information about this sesssion?
             </label>
             <textarea
               id="textArea"

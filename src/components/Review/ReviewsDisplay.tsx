@@ -12,9 +12,12 @@ interface Review {
   dateOfService: string;
   sessionType: string;
   overallSatisfaction: number;
-  photographQuality: string;
-  photographerProfessionalism: number;
-  overallExperience: string;
+  projectQuality: number;
+  professionalism: number;
+  performance: number;
+  deliveryTimeliness: number;
+  recommendation: string;
+  extraRemarks: string;
   createdAt: string;
 }
 
@@ -180,7 +183,7 @@ const ReviewsDisplay = () => {
                       {/* {review.sessionType} Session */}
                       Project quality
                     </span>
-                    <StarRating rating={review.overallSatisfaction} />
+                    <StarRating rating={review.projectQuality} />
                   </div>
                 </div>
                 <div className="gap-4 text-sm flex flex-col gap-y-1">
@@ -201,7 +204,7 @@ const ReviewsDisplay = () => {
                       Professionalism:
                     </span>
                     <StarRating
-                      rating={review.photographerProfessionalism}
+                      rating={review.professionalism}
                       className="inline-flex ml-2"
                     />
                   </div>
@@ -210,13 +213,13 @@ const ReviewsDisplay = () => {
                       Performance:
                     </span>
                     <StarRating
-                      rating={review.photographerProfessionalism}
+                      rating={review.performance}
                       className="inline-flex ml-2"
                     />
                   </div>
-                  {review.overallExperience && (
+                  {review.extraRemarks && (
                     <p className="text-gray-600 italic mt-2 first-letter:uppercase">
-                      &quot;{review.overallExperience}&quot;
+                      &quot;{review.extraRemarks}&quot;
                     </p>
                   )}
                 </div>
