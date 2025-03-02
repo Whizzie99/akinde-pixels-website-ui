@@ -34,7 +34,7 @@ export async function POST(req: Request) {
         <p><strong>Alternative session type:</strong> ${data.alternativeSessionType || "Not selected"}</p>
         <p><strong>Event location:</strong> ${data.location || "Not selected"}</p>
         <p><strong>Event Date:</strong> ${data.eventDate || "Not selected"}</p>
-        <p><strong>Event Time(s):</strong> ${data.eventTimes || "Not selected"}</p>
+        <p><strong>Event Time:</strong> ${data.eventTimes || "Not selected"}</p>
         <p><strong>Budget:</strong> ${data.budget || "Not selected"}</p>
         <p><strong>Additional Messages:</strong> ${data.textArea || "No info entered"}</p>
       `,
