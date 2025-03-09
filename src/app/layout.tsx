@@ -36,6 +36,19 @@ const niconne = Niconne({
 export const metadata: Metadata = {
   title: "Akinde Pixels",
   description: "Making moments stand still, one pixel at a time.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+  openGraph: {
+    title: "Akinde Pixels",
+    description: "Making moments stand still, one pixel at a time.",
+    type: "website",
+    url: "/",
+    images: [
+      "https://res.cloudinary.com/du6xx9bt9/image/upload/v1741526815/akinde-og_oaudzs.jpg",
+    ],
+  },
 };
 
 export default function RootLayout({
